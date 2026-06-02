@@ -1,0 +1,44 @@
+{{define "title"}}Ajukan Inquiry &mdash; PT. Umbra Jaya Angkasa{{end}}
+
+{{define "content"}}
+<section class="form-section">
+  <div class="form-card wide">
+    <h1>Ajukan Inquiry</h1>
+    <p class="form-desc">Isi formulir di bawah untuk mengajukan pertanyaan, konsultasi, atau permintaan proyek baru. Tim kami akan merespon melalui email yang Anda daftarkan.</p>
+    <form action="/do_inquiry" method="post">
+      <div class="field">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required />
+      </div>
+      <div class="field">
+        <label for="company">Perusahaan / Organisasi</label>
+        <input type="text" id="company" name="company" />
+      </div>
+      <div class="field">
+        <label for="type">Jenis Permintaan</label>
+        <select id="type" name="type" required>
+          <option value="">Pilih jenis permintaan...</option>
+          <option value="konsultasi">Konsultasi Proyek</option>
+          <option value="proyek">Proyek Baru</option>
+          <option value="dukungan">Dukungan Teknis</option>
+          <option value="informasi">Informasi Umum</option>
+          <option value="lainnya">Lainnya</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="subject">Subjek</label>
+        <input type="text" id="subject" name="subject" required />
+      </div>
+      <div class="field">
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <input type="submit" value="Kirim Inquiry" />
+    </form>
+  </div>
+</section>
+{{end}}
