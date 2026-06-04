@@ -1,0 +1,37 @@
+{{define "title"}}Dashboard &mdash; CMS Umbra{{end}}
+{{define "content"}}
+<section>
+  <div class="container">
+    <span class="section-label">CMS</span>
+    <h1 class="section-title">Dashboard</h1>
+  </div>
+</section>
+
+{{range .Site.Divisions}}
+<section>
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+      <h2 style="margin:0;">{{.Name}}</h2>
+      <a href="/admin/division/{{.Slug}}" class="nav-btn">Edit</a>
+    </div>
+    <div class="portfolio-columns">
+      {{range .PortfolioColumns}}
+      <div class="portfolio-col">
+        <h3 style="font-size:0.9rem;font-weight:600;color:#bbb;margin-bottom:0.5rem;padding-bottom:0.3rem;border-bottom:1px solid rgba(139,92,246,0.2);">{{.Title}} <span style="font-weight:300;color:#666;">({{len .Projects}})</span></h3>
+        <div class="portfolio-list">
+          {{range .Projects}}
+          <div class="portfolio-item" style="padding:0.4rem 0;">
+            <div class="portfolio-body">
+              <div class="portfolio-year" style="font-size:0.7rem;">{{.Year}}</div>
+              <div class="portfolio-name" style="font-size:0.8rem;">{{.Name}}</div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}

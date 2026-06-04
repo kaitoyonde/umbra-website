@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{block "title" .}}Admin &mdash; PT. Umbra Jaya Angkasa{{end}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.5rem;background:#0a0a0a;border-bottom:1px solid rgba(255,255,255,0.04);">
+    <div><a href="/admin/dashboard" style="font-size:1rem;font-weight:600;color:#e0e0e0;">CMS Umbra</a></div>
+    <div style="display:flex;gap:0.75rem;align-items:center;">
+      <a href="/admin/images" class="nav-btn">Images</a>
+      <a href="/admin/dashboard" class="nav-btn">Dashboard</a>
+      <a href="/admin/logout" class="nav-btn">Logout</a>
+    </div>
+  </nav>
+  {{block "content" .}}{{end}}
+</body>
+</html>

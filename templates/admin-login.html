@@ -1,0 +1,16 @@
+{{define "title"}}Admin Login &mdash; PT. Umbra Jaya Angkasa{{end}}
+{{define "content"}}
+<section class="form-section">
+  <div class="form-card">
+    <h1>Admin Login</h1>
+    {{if .Error}}<p class="form-desc" style="color:#ef4444;">{{.Error}}</p>{{end}}
+    <form action="/admin" method="post">
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <input type="submit" value="Masuk" />
+    </form>
+  </div>
+</section>
+{{end}}

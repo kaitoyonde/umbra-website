@@ -1,0 +1,1099 @@
+{
+  "divisions": [
+    {
+      "slug": "softworks",
+      "name": "Umbra Creative Softworks",
+      "route": "/UmbraCreativeSoftworks",
+      "banner_title": "Custom Software \u0026 Creative Technology",
+      "banner_subtitle": "Mengubah ide abstrak menjadi perangkat lunak inovatif — untuk pameran, panggung interaktif, dan solusi digital kustom.",
+      "banner_image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200\u0026h=675\u0026fit=crop\u0026auto=format",
+      "banner_image_id": "",
+      "description": "Divisi pengembang perangkat lunak yang menjembatani teknologi dan ekspresi kreatif. Kami merancang solusi digital kustom untuk perusahaan, individu, serta grup artis, baik untuk efisiensi operasional, proyek personal, pameran seni, maupun kebutuhan panggung interaktif. Kami berkomitmen mengubah ide abstrak Anda menjadi perangkat lunak yang inovatif dan fungsional.",
+      "portfolio_columns": [
+        {
+          "title": "Software",
+          "projects": [
+            {
+              "id": "sw1",
+              "year": "2024 – 2025",
+              "name": "Immersive Gallery Platform",
+              "subtitle": "Aplikasi galeri imersif berbasis web untuk pengalaman pameran digital.",
+              "client": "Galeri Nasional Indonesia",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Immersive Gallery Platform** adalah aplikasi web yang dirancang untuk Galeri Nasional Indonesia guna menyajikan pengalaman pameran seni secara digital. Platform ini mendukung navigasi ruang 3D ringan, integrasi multimedia, dan tampilan kuratorial yang adaptif.\n\nFitur utama meliputi tur virtual 360°, informasi karya interaktif, dan sistem kurasi dinamis yang memudahkan kurator menata ulang pameran tanpa campur tangan teknis.",
+              "tech_description": "Dibangun dengan pendekatan JAMstack untuk performa tinggi dan kemudahan deployment.",
+              "tech_table": [
+                {
+                  "label": "Frontend",
+                  "value": "React, Three.js, Tailwind CSS"
+                },
+                {
+                  "label": "Backend",
+                  "value": "Go, GraphQL"
+                },
+                {
+                  "label": "Database",
+                  "value": "PostgreSQL, Redis"
+                },
+                {
+                  "label": "Deployment",
+                  "value": "Docker, Vercel"
+                },
+                {
+                  "label": "Integrasi",
+                  "value": "REST API untuk museum partner"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1560930950-5cc20e80e3e9?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Tampilan utama galeri virtual"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1531913764164-f85c3e08c38b?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Mode tur interaktif"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1614032686060-f39d2c1e1589?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Dashboard kurator"
+                }
+              ]
+            },
+            {
+              "id": "sw2",
+              "year": "2023 – 2024",
+              "name": "Real-Time Motion Capture Pipeline",
+              "subtitle": "Sistem motion capture real-time untuk produksi film dan konten digital.",
+              "client": "LIMA Production House",
+              "image_url": "https://images.unsplash.com/photo-1624969862644-791f3dc98927?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Real-Time Motion Capture Pipeline** adalah solusi end-to-end untuk menangkap, memproses, dan menerjemahkan data gerakan manusia ke dalam aset digital secara real-time. Dikembangkan untuk LIMA Production House guna mempercepat alur kerja produksi konten animasi dan VFX.\n\nPipeline ini mendukung berbagai konfigurasi kamera, koreksi latensi otomatis, dan ekspor langsung ke engine 3D populer seperti Unreal Engine dan Blender.",
+              "tech_description": "Menggunakan komputer visi dan sensor fusion untuk akurasi tinggi tanpa marker fisik.",
+              "tech_table": [
+                {
+                  "label": "Teknologi",
+                  "value": "Computer Vision, Sensor Fusion"
+                },
+                {
+                  "label": "Bahasa",
+                  "value": "C++, Python, CUDA"
+                },
+                {
+                  "label": "Framework",
+                  "value": "OpenCV, TensorFlow, MediaPipe"
+                },
+                {
+                  "label": "Ekspor",
+                  "value": "FBX, BVH, Unreal Engine Live Link"
+                },
+                {
+                  "label": "Latensi",
+                  "value": "\u003c 30ms end-to-end"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1563207153-f403bf289096?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Setup motion capture"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Real-time skeleton tracking"
+                }
+              ]
+            },
+            {
+              "id": "sw3",
+              "year": "2022 – 2023",
+              "name": "Interactive AR Try-On System",
+              "subtitle": "Sistem augmented reality untuk try-on produk fashion secara virtual.",
+              "client": "Buttonscarves Retail",
+              "image_url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Interactive AR Try-On System** memungkinkan pelanggan Buttonscarves mencoba berbagai produk fashion secara virtual melalui perangkat seluler mereka. Menggunakan teknologi AR berbasis browser (WebAR), sistem ini mendukung deteksi wajah dan tubuh untuk mencoba hijab, aksesori, dan pakaian. Tanpa perlu mengunduh aplikasi terpisah.",
+              "tech_description": "WebAR dengan TensorFlow.js untuk deteksi wajah dan mesh 3D real-time.",
+              "tech_table": [
+                {
+                  "label": "Platform",
+                  "value": "WebAR (WebGL, WebRTC)"
+                },
+                {
+                  "label": "ML Engine",
+                  "value": "TensorFlow.js, MediaPipe"
+                },
+                {
+                  "label": "3D Rendering",
+                  "value": "Three.js, GLTF/GLB"
+                },
+                {
+                  "label": "Integrasi",
+                  "value": "Shopify API, Midtrans"
+                },
+                {
+                  "label": "Dukungan Device",
+                  "value": "iOS 15+, Android 10+"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "AR try-on hijab"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1617195738786-7bba7de4b15b?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Deteksi wajah real-time"
+                }
+              ]
+            },
+            {
+              "id": "sw4",
+              "year": "2021 – 2022",
+              "name": "Generative Visuals Engine",
+              "subtitle": "Engine visual generatif untuk pertunjukan live dan proyeksi panggung.",
+              "client": "Java Jazz Festival",
+              "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Generative Visuals Engine** adalah platform real-time yang menghasilkan visual proyeksi berdasarkan input audio dan data sensor. Digunakan oleh Java Jazz Festival untuk menciptakan pengalaman visual yang sinkron dengan pertunjukan musik. Engine ini mendukung berbagai sumber audio, MIDI, dan kontrol DMX untuk integrasi pencahayaan panggung.",
+              "tech_description": "Real-time audio-reactive visualization dengan pipeline GPU-accelerated.",
+              "tech_table": [
+                {
+                  "label": "Engine",
+                  "value": "Custom OpenGL, GLSL Shaders"
+                },
+                {
+                  "label": "Audio Analysis",
+                  "value": "FFT, Onset Detection, Beat Tracking"
+                },
+                {
+                  "label": "Output",
+                  "value": "HDMI 4K, NDI, Syphon/Spout"
+                },
+                {
+                  "label": "Kontrol",
+                  "value": "MIDI, OSC, DMX512"
+                },
+                {
+                  "label": "Performa",
+                  "value": "60 FPS pada 4K output"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Proyeksi visual di panggung"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Audio-reactive visualization"
+                },
+                {
+                  "type": "video",
+                  "url": "https://www.w3schools.com/html/mov_bbb.mp4",
+                  "alt": "Demo real-time engine"
+                }
+              ]
+            },
+            {
+              "id": "sw5",
+              "year": "2020 – 2021",
+              "name": "Projection Mapping Controller",
+              "subtitle": "Sistem kontrol proyeksi mapping untuk instalasi seni berskala besar.",
+              "client": "Art Jakarta",
+              "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Projection Mapping Controller** adalah solusi perangkat lunak untuk mengelola proyeksi mapping multi-proyektor pada permukaan 3D kompleks. Digunakan oleh Art Jakarta untuk instalasi seni interaktif berskala besar. Mendukung kalibrasi otomatis, blending multi-proyektor, dan pemutaran konten tersinkronisasi.",
+              "tech_description": "Multi-projector calibration dengan computer vision-based automatic alignment.",
+              "tech_table": [
+                {
+                  "label": "Teknologi",
+                  "value": "Computer Vision, Projector-Camera System"
+                },
+                {
+                  "label": "Kalibrasi",
+                  "value": "Structured Light, Feature Matching"
+                },
+                {
+                  "label": "Blending",
+                  "value": "Edge Blending Otomatis, Gamma Correction"
+                },
+                {
+                  "label": "Media Server",
+                  "value": "Custom, support HAP/HAPQ/DXV"
+                },
+                {
+                  "label": "Resolusi Maks",
+                  "value": "8K per proyektor, total 32K"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Instalasi projection mapping"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Kalibrasi multi-proyektor"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "skills": [
+        "Creative Coding",
+        "Computer Vision",
+        "Augmented Reality",
+        "Generative Art",
+        "Interactive Installation",
+        "Real-Time Graphics",
+        "Machine Learning",
+        "Web \u0026 Mobile Apps"
+      ]
+    },
+    {
+      "slug": "suara",
+      "name": "Umbra Suara",
+      "route": "/UmbraSuara",
+      "banner_title": "Rekayasa Suara \u0026 Solusi Akustik",
+      "banner_subtitle": "Produksi musik, penataan suara film, dan konsultasi akustik presisi — dari hulu ke hilir.",
+      "banner_image": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200\u0026h=675\u0026fit=crop\u0026auto=format",
+      "banner_image_id": "",
+      "description": "Divisi rekayasa suara dan solusi akustik presisi. Umbra Suara melayani kebutuhan audio dari hulu ke hilir: mulai dari produksi musik dan penataan suara film (sound design \u0026 foley), hingga konsultasi teknis tingkat lanjut seperti perencanaan akustik ruangan, pemetaan pantulan suara, serta desain sistem audio korporasi dan arsitektural.",
+      "portfolio_columns": [
+        {
+          "title": "Songs / Audio",
+          "projects": [
+            {
+              "id": "su1",
+              "year": "2025",
+              "name": "Paribastone — \"Grave of Future\" (Single)",
+              "subtitle": "Single stoner rock/metal produksi Umbra Suara.",
+              "client": "Music Producing · Stoner Rock/Metal · Bogor",
+              "image_url": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"Grave of Future\"** adalah single perdana Paribastone, sebuah band stoner rock/metal asal Bogor. Proses produksi meliputi recording, mixing, dan mastering yang seluruhnya ditangani oleh Umbra Suara. Lagu ini mengeksplorasi tema distopia dengan riff berat dan vokal yang emosional.",
+              "tech_description": "Recording dan mixing analog-hybrid untuk mendapatkan karakter suara warm dan punchy.",
+              "tech_table": [
+                {
+                  "label": "Genre",
+                  "value": "Stoner Rock / Metal"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Pro Tools HD, Neve Pre-amps"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Analog Summing + Digital Fine-tuning"
+                },
+                {
+                  "label": "Mastering",
+                  "value": "LANDR + Manual Adjustment"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "4:23"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Sesi rekaman drum"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Mixing session"
+                }
+              ]
+            },
+            {
+              "id": "su2",
+              "year": "2024",
+              "name": "Tono Prance — \"Juru Selamat\" (Single)",
+              "subtitle": "Single rock produksi untuk band asal Jakarta.",
+              "client": "Music Producing · Rock Band · Jakarta",
+              "image_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"Juru Selamat\"** adalah single dari Tono Prance, band rock Jakarta. Lagu ini bercerita tentang pencarian makna di tengah hiruk-pikuk kota. Umbra Suara menangani seluruh proses produksi dari pre-production hingga mastering.",
+              "tech_description": "Produksi digital-first dengan sentuhan analog pada mixing.",
+              "tech_table": [
+                {
+                  "label": "Genre",
+                  "value": "Rock"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Digital (Pro Tools)"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Hybrid Analog-Digital"
+                },
+                {
+                  "label": "Mastering",
+                  "value": "Stereo Bus Processing"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "3:45"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1524650359799-842906ca1c06?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Sesi rekaman vokal"
+                }
+              ]
+            },
+            {
+              "id": "su3",
+              "year": "2024",
+              "name": "Shroom Eater — \"Gods of The Gaps\" (Album)",
+              "subtitle": "Album penuh stoner rock dengan konsep kosmik.",
+              "client": "Music Producing · Stoner Rock · Bogor",
+              "image_url": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"Gods of The Gaps\"** adalah album debut Shroom Eater, sebuah band stoner rock asal Bogor. Album ini berisi 8 trek yang mengeksplorasi tema kosmologi, eksistensialisme, dan pengalaman psikedelik. Umbra Suara menangani produksi, mixing, dan mastering untuk seluruh album.",
+              "tech_description": "Full album production dengan pendekatan konseptual pada sound design.",
+              "tech_table": [
+                {
+                  "label": "Genre",
+                  "value": "Stoner Rock, Psychedelic"
+                },
+                {
+                  "label": "Jumlah Trek",
+                  "value": "8"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Multi-session, 3 studio berbeda"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Mix analog dengan tape saturation"
+                },
+                {
+                  "label": "Mastering",
+                  "value": "Analog mastering house"
+                },
+                {
+                  "label": "Durasi Total",
+                  "value": "42:15"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Sesi rekaman gitar"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Album cover session"
+                }
+              ]
+            },
+            {
+              "id": "su4",
+              "year": "2024",
+              "name": "Deadnun — \"24\" (Single)",
+              "subtitle": "Single instrumental doom dari Bandung.",
+              "client": "Music Producing · Instrumental Loud Doom · Bandung",
+              "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"24\"** adalah single instrumental dari Deadnun, band loud doom asal Bandung. Tanpa vokal, lagu ini mengandalkan tekstur gitar yang berat, distorted bass, dan drum yang menghentak untuk menyampaikan atmosfer gelap dan mencekam.",
+              "tech_description": "Fokus pada sound design dan texture layering.",
+              "tech_table": [
+                {
+                  "label": "Genre",
+                  "value": "Instrumental Doom"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Live recording, minimal overdub"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Dark ambient processing"
+                },
+                {
+                  "label": "Mastering",
+                  "value": "Loudness war avoidance, dynamic range preserved"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "6:30"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Setup gitar doom"
+                }
+              ]
+            },
+            {
+              "id": "su5",
+              "year": "2024",
+              "name": "Halfless — \"11\" (Single)",
+              "subtitle": "Single indie dengan pendekatan DIY ethos.",
+              "client": "Music Producing · Ignorant Indie · Bogor",
+              "image_url": "https://images.unsplash.com/photo-1518894781321-630e638d0742?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"11\"** adalah single dari Halfless, band indie asal Bogor dengan pendekatan ignorant indie yang mentah dan jujur. Proses produksi sengaja dijaga sesederhana mungkin untuk mempertahankan energi live band.",
+              "tech_description": "Minimal production untuk menjaga karakter mentah.",
+              "tech_table": [
+                {
+                  "label": "Genre",
+                  "value": "Indie, Lo-fi"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Live recording, 1 take"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Minimal processing"
+                },
+                {
+                  "label": "Mastering",
+                  "value": "Light mastering"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "2:55"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1518894781321-630e638d0742?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Live recording session"
+                }
+              ]
+            },
+            {
+              "id": "su6",
+              "year": "2023",
+              "name": "Iluasi — \"Sampai\" (Album)",
+              "subtitle": "Album alternative pop penuh nuansa.",
+              "client": "Music Producing · Alternative Pop · Bogor",
+              "image_url": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"Sampai\"** adalah album dari Iluasi, band alternative pop asal Bogor. Album ini berisi 10 lagu yang berbicara tentang perjalanan, kerinduan, dan harapan. Umbra Suara menangani recording dan mixing untuk album ini, dengan pendekatan warm dan organik.",
+              "tech_description": "Warm analog production untuk sound organik.",
+              "tech_table": [
+                {
+                  "label": "Genre",
+                  "value": "Alternative Pop"
+                },
+                {
+                  "label": "Jumlah Trek",
+                  "value": "10"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Analog console, tape machine"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Fully analog"
+                },
+                {
+                  "label": "Mastering",
+                  "value": "Digital mastering"
+                },
+                {
+                  "label": "Durasi Total",
+                  "value": "38:20"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Sesi rekaman"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Studio session"
+                }
+              ]
+            },
+            {
+              "id": "su7",
+              "year": "2023",
+              "name": "Radio Bean — \"It's True\" (Single)",
+              "subtitle": "Single R\u0026B/Funk yang groovy.",
+              "client": "Music Producing · RNB/Funk · Bogor",
+              "image_url": "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"It's True\"** adalah single dari Radio Bean, band R\u0026B/Funk asal Bogor. Lagu ini menggabungkan elemen funk klasik dengan produksi modern. Umbra Suara menangani tracking, mixing, dan co-producing untuk single ini.",
+              "tech_description": "Modern R\u0026B production dengan sentuhan vintage.",
+              "tech_table": [
+                {
+                  "label": "Genre",
+                  "value": "R\u0026B, Funk"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Live band + overdub"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Modern R\u0026B processing"
+                },
+                {
+                  "label": "Mastering",
+                  "value": "Digital, loudness optimized"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "3:20"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Horn section recording"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Live Production",
+          "projects": [
+            {
+              "id": "su8",
+              "year": "2023",
+              "name": "Streems Radio — Katapel",
+              "subtitle": "Produksi acara radio live streaming.",
+              "client": "Radio Show",
+              "image_url": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "Streems Radio menghadirkan **\"Katapel\"**, sebuah program radio talk show yang diproduksi secara live oleh Umbra Suara. Meliputi setup audio, mixing siaran langsung, dan streaming ke platform digital.",
+              "tech_description": "Live broadcast mixing dengan remote contribution.",
+              "tech_table": [
+                {
+                  "label": "Jenis",
+                  "value": "Radio Show Live"
+                },
+                {
+                  "label": "Audio Chain",
+                  "value": "Midas M32, Shure Axient"
+                },
+                {
+                  "label": "Streaming",
+                  "value": "AAC+, Icecast"
+                },
+                {
+                  "label": "Remote",
+                  "value": "Cleanfeed, Source-Connect"
+                },
+                {
+                  "label": "Durasi Sesi",
+                  "value": "2 jam per episode"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Radio studio setup"
+                }
+              ]
+            },
+            {
+              "id": "su9",
+              "year": "2023",
+              "name": "Vikri \u0026 Magic Friends",
+              "subtitle": "Live session akustik recording.",
+              "client": "Live Session",
+              "image_url": "https://images.unsplash.com/photo-1524650359799-842906ca1c06?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "Vikri \u0026 Magic Friends tampil dalam sesi live akustik yang direkam dan diproduksi oleh Umbra Suara. Sesi ini menampilkan aransemen akustik dari lagu-lagu orisinal dengan pendekatan intimate dan natural.",
+              "tech_description": "Live room recording dengan minimal isolation.",
+              "tech_table": [
+                {
+                  "label": "Jenis",
+                  "value": "Live Session Recording"
+                },
+                {
+                  "label": "Mikrofon",
+                  "value": "Neumann U87, Royer 121"
+                },
+                {
+                  "label": "Recording",
+                  "value": "Live room, natural ambience"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Minimal, natural sound"
+                },
+                {
+                  "label": "Jumlah Lagu",
+                  "value": "5"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1524650359799-842906ca1c06?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Live session setup"
+                }
+              ]
+            },
+            {
+              "id": "su10",
+              "year": "2022",
+              "name": "On Deck — Sousade \u0026 Noise Clvb",
+              "subtitle": "Event creator kolaborasi musik elektronik.",
+              "client": "Event Creator",
+              "image_url": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"On Deck\"** menghadirkan kolaborasi antara Sousade dan Noise Clvb dalam sebuah event creator yang menggabungkan live electronic performance dengan visual interaktif. Umbra Suara menangani sistem audio, mixing live, dan koordinasi teknis.",
+              "tech_description": "Live electronic sound system design dan mixing.",
+              "tech_table": [
+                {
+                  "label": "Jenis",
+                  "value": "Event Production"
+                },
+                {
+                  "label": "Sistem Audio",
+                  "value": "L-Acoustics KARA"
+                },
+                {
+                  "label": "Mixing",
+                  "value": "Allen \u0026 Heath SQ-7"
+                },
+                {
+                  "label": "Monitoring",
+                  "value": "In-ear monitors"
+                },
+                {
+                  "label": "Kapasitas",
+                  "value": "300 pax"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Soundcheck sebelum acara"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "FOH mixing position"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Event Collaboration",
+          "projects": [
+            {
+              "id": "su11",
+              "year": "2024",
+              "name": "\"The Fish That Lives in Water\" — Feature Film",
+              "subtitle": "Equipment vendor untuk produksi film fitur.",
+              "client": "Equipment Vendor",
+              "image_url": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"The Fish That Lives in Water\"** adalah film fitur yang diproduksi oleh rumah produksi independen. Umbra Suara berperan sebagai equipment vendor, menyediakan peralatan audio profesional untuk kebutuhan produksi suara di lapangan, termasuk wireless microphone system, boom pole, dan field recorder.",
+              "tech_description": "Vendor peralatan audio untuk produksi film lapangan.",
+              "tech_table": [
+                {
+                  "label": "Peran",
+                  "value": "Equipment Vendor"
+                },
+                {
+                  "label": "Mikrofon",
+                  "value": "Sennheiser MKH416, DPA 4060"
+                },
+                {
+                  "label": "Recorder",
+                  "value": "Sound Devices 833"
+                },
+                {
+                  "label": "Wireless",
+                  "value": "Shure Axient Digital"
+                },
+                {
+                  "label": "Lokasi Syuting",
+                  "value": "Jakarta, Yogyakarta, Bali"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Field recording setup"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1598899134736-5e9f1eecec84?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Boom operator di lapangan"
+                }
+              ]
+            },
+            {
+              "id": "su12",
+              "year": "2023",
+              "name": "Umbra Suara × Janari Rekords — Every Picture Tells a Story",
+              "subtitle": "Kolaborasi rekaman live untuk dokumentasi musik.",
+              "client": "Kolaborasi",
+              "image_url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Umbra Suara × Janari Rekords** mempersembahkan **\"Every Picture Tells a Story\"**, sebuah proyek kolaborasi yang mendokumentasikan sesi rekaman live para musisi indie. Setiap sesi direkam dalam satu take langsung, menangkap esensi dan emosi mentah dari setiap pertunjukan.",
+              "tech_description": "Live recording kolaboratif dengan multiple artists.",
+              "tech_table": [
+                {
+                  "label": "Jenis",
+                  "value": "Kolaborasi Rekaman"
+                },
+                {
+                  "label": "Konsep",
+                  "value": "One-take live recording"
+                },
+                {
+                  "label": "Lokasi",
+                  "value": "Janari Rekords Studio"
+                },
+                {
+                  "label": "Artist",
+                  "value": "6 musisi indie berbeda"
+                },
+                {
+                  "label": "Rilis",
+                  "value": "Digital series, YouTube \u0026 Spotify"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Sesi rekaman kolaborasi"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Live recording session"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "skills": [
+        "Sound Design",
+        "Music Production",
+        "Acoustic Consulting",
+        "Spatial Audio",
+        "Foley \u0026 ADR",
+        "System Integration",
+        "Room Calibration",
+        "Live Sound Engineering"
+      ]
+    },
+    {
+      "slug": "penumbra",
+      "name": "Penumbra",
+      "route": "/Penumbra",
+      "banner_title": "Riset, Edukasi \u0026 Inovasi",
+      "banner_subtitle": "Pusat riset dan edukasi yang mengintegrasikan sains, teknologi, dan sosial untuk kemajuan bersama.",
+      "banner_image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200\u0026h=675\u0026fit=crop\u0026auto=format",
+      "banner_image_id": "",
+      "description": "Rumah Ilmu Penumbra adalah pusat riset, edukasi, dan inovasi lintas subdivisi (sains, teknologi, lingkungan, sosial) yang terinspirasi dari Baghdad House of Wisdom. Sebagai sekolah yang menjunjung tinggi kebebasan sejati (free as in freedom), kami menyediakan ruang belajar gratis yang memerdekakan siapa saja, dengan dukungan sistem bayar seikhlasnya.",
+      "portfolio_columns": [
+        {
+          "title": "Research \u0026 Education",
+          "projects": [
+            {
+              "id": "pe1",
+              "year": "2024 – 2025",
+              "name": "AI Literacy for Creative Practitioners",
+              "subtitle": "Program literasi AI untuk praktisi seni dan kreatif.",
+              "client": "Institut Kesenian Jakarta",
+              "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a46f?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**AI Literacy for Creative Practitioners** adalah program edukasi yang dirancang untuk memperkenalkan konsep dan alat kecerdasan buatan kepada praktisi seni dan kreatif di Institut Kesenian Jakarta. Program ini mencakup workshop, kuliah tamu, dan proyek praktikum yang mengintegrasikan AI ke dalam alur kerja kreatif.\n\nTopik meliputi generative art, computer vision untuk seni, natural language processing untuk penulisan kreatif, dan etika AI dalam seni.",
+              "tech_description": "Program interdisipliner yang menjembatani seni dan teknologi AI.",
+              "tech_table": [
+                {
+                  "label": "Mitra",
+                  "value": "Institut Kesenian Jakarta"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "6 bulan (2 semester)"
+                },
+                {
+                  "label": "Peserta",
+                  "value": "60 mahasiswa S1/S2"
+                },
+                {
+                  "label": "Tools",
+                  "value": "Stable Diffusion, ChatGPT, TensorFlow"
+                },
+                {
+                  "label": "Output",
+                  "value": "Pameran karya AI, publikasi jurnal"
+                },
+                {
+                  "label": "Fasilitator",
+                  "value": "3 pengajar + 2 asisten riset"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a46f?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Workshop AI untuk seniman"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Sesi praktikum"
+                }
+              ]
+            },
+            {
+              "id": "pe2",
+              "year": "2023 – 2024",
+              "name": "Environmental Soundscape Mapping",
+              "subtitle": "Pemetaan lanskap suara lingkungan untuk riset akustik ekologis.",
+              "client": "Riset Kolaborasi — ITB",
+              "image_url": "https://images.unsplash.com/photo-1470071459604-7b8ec44ffd0b?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Environmental Soundscape Mapping** adalah proyek riset kolaborasi antara Umbra Jaya Angkasa dan Institut Teknologi Bandung. Proyek ini memetakan lanskap suara (soundscape) di berbagai lokasi lingkungan di Indonesia untuk memahami dampak aktivitas manusia terhadap ekosistem akustik.\n\nData dikumpulkan menggunakan sensor suara otonom yang ditempatkan di hutan, pesisir, dan perkotaan, kemudian dianalisis menggunakan machine learning untuk mengidentifikasi pola dan anomali.",
+              "tech_description": "Riset akustik ekologis dengan sensor network dan ML analytics.",
+              "tech_table": [
+                {
+                  "label": "Mitra",
+                  "value": "ITB, Riset Kolaborasi"
+                },
+                {
+                  "label": "Lokasi",
+                  "value": "3 provinsi (Jabar, Jateng, Bali)"
+                },
+                {
+                  "label": "Sensor",
+                  "value": "Omnidirectional MEMS mic array"
+                },
+                {
+                  "label": "Data",
+                  "value": "1.200 jam rekaman lapangan"
+                },
+                {
+                  "label": "Analisis",
+                  "value": "CNN, Spektral Clustering"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "18 bulan"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1470071459604-7b8ec44ffd0b?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Pemasangan sensor suara"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Lokasi riset hutan tropis"
+                }
+              ]
+            },
+            {
+              "id": "pe3",
+              "year": "2022 – 2023",
+              "name": "Open Source Audio Toolkit",
+              "subtitle": "Toolkit audio open source untuk komunitas seni audio.",
+              "client": "Komunitas Seni Audio",
+              "image_url": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Open Source Audio Toolkit** adalah inisiatif pengembangan perangkat lunak audio sumber terbuka yang ditujukan untuk komunitas seni audio di Indonesia. Toolkit ini mencakup plugin audio, alat bantu produksi, dan dokumentasi teknis dalam Bahasa Indonesia.\n\nTujuan proyek ini adalah menurunkan hambatan akses terhadap teknologi audio berkualitas bagi praktisi seni audio di Indonesia.",
+              "tech_description": "Open source development untuk ekosistem audio Indonesia.",
+              "tech_table": [
+                {
+                  "label": "Jenis",
+                  "value": "Open Source Software"
+                },
+                {
+                  "label": "Platform",
+                  "value": "VST3, AU, LV2, Standalone"
+                },
+                {
+                  "label": "Bahasa",
+                  "value": "C++, JUCE Framework"
+                },
+                {
+                  "label": "Lisensi",
+                  "value": "GPLv3"
+                },
+                {
+                  "label": "Modul",
+                  "value": "10 plugin (EQ, Compressor, Reverb, dll)"
+                },
+                {
+                  "label": "Kontributor",
+                  "value": "12 developer dari 5 kota"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "UI prototype plugin"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Developer workshop"
+                }
+              ]
+            },
+            {
+              "id": "pe4",
+              "year": "2021 – 2022",
+              "name": "Digital Heritage Archive Platform",
+              "subtitle": "Platform digital untuk preservasi warisan budaya Indonesia.",
+              "client": "Museum Nasional",
+              "image_url": "https://images.unsplash.com/photo-1568667256549-094345857637?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Digital Heritage Archive Platform** adalah sistem arsip digital yang dibangun untuk Museum Nasional Indonesia dalam rangka melestarikan dan mendokumentasikan warisan budaya Indonesia. Platform ini mendukung berbagai format media (gambar resolusi tinggi, audio, video 3D, dokumen) dan dilengkapi dengan sistem metadata berbasis standar internasional.\n\nFitur utama meliputi katalogisasi otomatis, pencarian semantic, dan akses publik terbatas untuk riset.",
+              "tech_description": "Digital preservation platform dengan metadata standar internasional.",
+              "tech_table": [
+                {
+                  "label": "Mitra",
+                  "value": "Museum Nasional"
+                },
+                {
+                  "label": "Koleksi",
+                  "value": "15.000+ artefak terdokumentasi"
+                },
+                {
+                  "label": "Format",
+                  "value": "IIIF, TEI, METS/MODS"
+                },
+                {
+                  "label": "Storage",
+                  "value": "Distributed, 50TB capacity"
+                },
+                {
+                  "label": "Search",
+                  "value": "Elasticsearch, semantic search"
+                },
+                {
+                  "label": "Akses",
+                  "value": "Public read, restricted write"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1568667256549-094345857637?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Tampilan platform arsip"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Proses digitalisasi artefak"
+                }
+              ]
+            },
+            {
+              "id": "pe5",
+              "year": "2020 – 2021",
+              "name": "STEM Workshop Series",
+              "subtitle": "Program workshop STEM untuk siswa SMA.",
+              "client": "SMA Negeri 8 Jakarta",
+              "image_url": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**STEM Workshop Series** adalah program pengabdian masyarakat yang diselenggarakan oleh Rumah Ilmu Penumbra bekerja sama dengan SMA Negeri 8 Jakarta. Program ini memberikan pengenalan praktis tentang sains, teknologi, teknik, dan matematika melalui proyek-proyek langsung yang menyenangkan.\n\nMateri workshop meliputi pengenalan elektronika dasar, pemrograman mikrocontroller, robotika sederhana, dan sensor lingkungan. Setiap sesi dirancang untuk mendorong pemikiran kritis dan kreativitas.",
+              "tech_description": "Program edukasi STEM praktis untuk siswa menengah.",
+              "tech_table": [
+                {
+                  "label": "Mitra",
+                  "value": "SMA Negeri 8 Jakarta"
+                },
+                {
+                  "label": "Peserta",
+                  "value": "120 siswa (4 kelas)"
+                },
+                {
+                  "label": "Durasi",
+                  "value": "8 sesi @ 3 jam"
+                },
+                {
+                  "label": "Tools",
+                  "value": "Arduino, Raspberry Pi, Sensor Kit"
+                },
+                {
+                  "label": "Materi",
+                  "value": "Elektronika, Coding, Robotika"
+                },
+                {
+                  "label": "Output",
+                  "value": "15 proyek final, pameran sekolah"
+                }
+              ],
+              "gallery": [
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Workshop Arduino"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Siswa merakit robot"
+                },
+                {
+                  "type": "image",
+                  "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600\u0026h=400\u0026fit=crop",
+                  "alt": "Pameran proyek final"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "skills": [
+        "Riset \u0026 Publikasi",
+        "Kurikulum Teknologi",
+        "Workshop \u0026 Pelatihan",
+        "Konsultasi Riset",
+        "Open Source Development",
+        "Digital Preservation",
+        "Teknologi Tepat Guna",
+        "Kolaborasi Lintas Disiplin"
+      ]
+    }
+  ],
+  "images": []
+}

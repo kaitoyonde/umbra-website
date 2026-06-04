@@ -1,0 +1,62 @@
+{{define "title"}}{{.Division.Name}} &mdash; PT. Umbra Jaya Angkasa{{end}}
+
+{{define "content"}}
+
+{{$banner := imgByID .Division.BannerImageID}}
+<div class="banner">
+  <img src="{{.Division.BannerImage}}" alt="{{$banner.Alt}}" loading="lazy" />
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <h2>{{.Division.BannerTitle}}</h2>
+    <p>{{.Division.BannerSubtitle}}</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <span class="section-label">Divisi</span>
+    <h1 class="section-title">{{.Division.Name}}</h1>
+    <p class="section-body">{{.Division.Description}}</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="section-label">Portofolio</span>
+    <h1 class="section-title">Proyek Terpilih</h1>
+    <div class="portfolio-columns">
+      {{range .Division.PortfolioColumns}}
+      <div class="portfolio-col">
+        <h2 class="portfolio-col-title">{{.Title}}</h2>
+        <div class="portfolio-list">
+          {{range .Projects}}
+          {{$img := imgByID .ImageID}}
+          <a href="/project/{{.ID}}" class="portfolio-item">
+            <img class="portfolio-img" src="{{.ImageURL}}" alt="{{$img.Alt}}" loading="lazy" />
+            <div class="portfolio-body">
+              <div class="portfolio-year">{{.Year}}</div>
+              <div class="portfolio-name">{{.Name}}</div>
+              <div class="portfolio-client">{{.Client}}</div>
+            </div>
+          </a>
+          {{end}}
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="section-label">Layanan</span>
+    <h1 class="section-title">Bidang Keahlian</h1>
+    <div class="pill-list">
+      {{range .Division.Skills}}
+      <span class="pill">{{.}}</span>
+      {{end}}
+    </div>
+  </div>
+</section>
+
+{{end}}

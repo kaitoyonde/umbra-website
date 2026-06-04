@@ -1,0 +1,71 @@
+{{define "title"}}{{if .IsNew}}Tambah Proyek{{else}}Edit Proyek{{end}} &mdash; CMS Umbra{{end}}
+{{define "content"}}
+<section>
+  <div class="container">
+    <a href="/admin/division/{{.DivisionSlug}}" style="font-size:0.8rem;color:#6d6d6d;">&larr; Kembali ke divisi</a>
+    <span class="section-label" style="margin-top:1rem;">Proyek</span>
+    <h1 class="section-title">{{if .IsNew}}Tambah Proyek Baru{{else}}Edit Proyek{{end}}</h1>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <form action="{{if .IsNew}}/admin/project/add/{{.DivisionSlug}}/{{.ColIndex}}{{else}}/admin/project/edit/{{.Project.ID}}{{end}}" method="post" class="cms-form">
+      <div class="field">
+        <label for="year">Tahun</label>
+        <input type="text" id="year" name="year" value="{{.Project.Year}}" required />
+      </div>
+      <div class="field">
+        <label for="name">Nama Proyek</label>
+        <input type="text" id="name" name="name" value="{{.Project.Name}}" required />
+      </div>
+      <div class="field">
+        <label for="subtitle">Subjudul</label>
+        <input type="text" id="subtitle" name="subtitle" value="{{.Project.Subtitle}}" />
+      </div>
+      <div class="field">
+        <label for="client">Klien / Organisasi</label>
+        <input type="text" id="client" name="client" value="{{.Project.Client}}" required />
+      </div>
+      <div class="field">
+        <label>Gambar Proyek</label>
+        {{if .Images}}
+        <div class="img-selector">
+          {{range .Images}}
+          <label class="img-option{{if eq $.Project.ImageID .ID}} selected{{end}}">
+            <input type="radio" name="image_id" value="{{.ID}}"{{if eq $.Project.ImageID .ID}} checked{{end}} />
+            <img src="{{.URL}}" alt="" loading="lazy" />
+            <span class="img-option-name">{{.Name}}</span>
+          </label>
+          {{end}}
+          <label class="img-option{{if not .Project.ImageID}} selected{{end}}">
+            <input type="radio" name="image_id" value=""{{if not .Project.ImageID}} checked{{end}} />
+            <span style="padding:0.5rem;font-size:0.75rem;color:#666;">Manual URL</span>
+          </label>
+        </div>
+        {{end}}
+        <input type="text" id="image_url" name="image_url" value="{{.Project.ImageURL}}" placeholder="atau masukkan URL manual" style="margin-top:0.5rem;" />
+      </div>
+      <div class="field">
+        <label for="description_md">Deskripsi (Markdown)</label>
+        <textarea id="description_md" name="description_md" rows="10" style="font-family:monospace;font-size:0.85rem;">{{.Project.DescriptionMD}}</textarea>
+      </div>
+      <div class="field">
+        <label for="tech_description">Deskripsi Teknis</label>
+        <textarea id="tech_description" name="tech_description" rows="3">{{.Project.TechDescription}}</textarea>
+      </div>
+      <div class="field">
+        <label for="tech_table">Tabel Teknis (satu baris: <code>Label: Value</code>)</label>
+        <textarea id="tech_table" name="tech_table" rows="6" style="font-family:monospace;font-size:0.85rem;">{{range .Project.TechTable}}{{.Label}}: {{.Value}}
+{{end}}</textarea>
+      </div>
+      <div class="field">
+        <label for="gallery">Galeri (satu baris: <code>image|URL|alt</code> atau <code>video|URL|judul</code>)</label>
+        <textarea id="gallery" name="gallery" rows="6" style="font-family:monospace;font-size:0.85rem;">{{range .Project.Gallery}}{{.Type}}|{{.URL}}|{{.Alt}}
+{{end}}</textarea>
+      </div>
+      <input type="submit" value="{{if .IsNew}}Tambah{{else}}Simpan{{end}}" />
+    </form>
+  </div>
+</section>
+{{end}}

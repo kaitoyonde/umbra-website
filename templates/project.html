@@ -1,0 +1,71 @@
+{{define "title"}}{{.Project.Name}} &mdash; PT. Umbra Jaya Angkasa{{end}}
+
+{{define "content"}}
+
+{{$img := imgByID .Project.ImageID}}
+<div class="banner">
+  <img src="{{.Project.ImageURL}}" alt="{{$img.Alt}}" loading="lazy" />
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <p style="font-size:0.75rem;font-weight:500;color:#8b5cf6;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;">{{.Project.Year}}</p>
+    <h2>{{.Project.Name}}</h2>
+    {{if .Project.Subtitle}}<p style="font-size:0.9rem;color:rgba(255,255,255,0.45);margin-top:0.25rem;">{{.Project.Subtitle}}</p>{{end}}
+    <p style="font-size:0.85rem;color:rgba(255,255,255,0.35);margin-top:0.5rem;">{{.Project.Client}}</p>
+  </div>
+</div>
+
+{{if .Project.DescriptionMD}}
+<section>
+  <div class="container">
+    <span class="section-label">Deskripsi</span>
+    <h1 class="section-title">Tentang Proyek</h1>
+    <div class="section-body prose">
+      {{markdown .Project.DescriptionMD}}
+    </div>
+  </div>
+</section>
+{{end}}
+
+{{if or .Project.TechDescription .Project.TechTable}}
+<section>
+  <div class="container">
+    <span class="section-label">Teknis</span>
+    <h1 class="section-title">Detail Teknis</h1>
+    {{if .Project.TechDescription}}<p class="section-body" style="margin-bottom:1.5rem;">{{.Project.TechDescription}}</p>{{end}}
+    {{if .Project.TechTable}}
+    <div class="tech-table">
+      {{range .Project.TechTable}}
+      <div class="tech-row">
+        <div class="tech-label">{{.Label}}</div>
+        <div class="tech-value">{{.Value}}</div>
+      </div>
+      {{end}}
+    </div>
+    {{end}}
+  </div>
+</section>
+{{end}}
+
+{{if .Project.Gallery}}
+<section>
+  <div class="container">
+    <span class="section-label">Galeri</span>
+    <h1 class="section-title">Galeri Proyek</h1>
+    <div class="gallery-grid">
+      {{range .Project.Gallery}}
+      {{if eq .Type "video"}}
+      <div class="gallery-item video">
+        <video src="{{.URL}}" controls preload="metadata" {{if .Alt}}title="{{.Alt}}"{{end}}></video>
+      </div>
+      {{else}}
+      <div class="gallery-item">
+        <img src="{{.URL}}" alt="{{.Alt}}" loading="lazy" />
+      </div>
+      {{end}}
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
+
+{{end}}
