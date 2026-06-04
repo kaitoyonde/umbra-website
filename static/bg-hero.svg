@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="gradHero" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.15);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(139,92,246,0.02);stop-opacity:1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </defs>
+  
+  <!-- Hero gradient -->
+  <rect width="1200" height="800" fill="url(#gradHero)"/>
+  
+  <!-- Geometric tech background - representing innovation -->
+  <g opacity="0.05">
+    <!-- Hexagons -->
+    <g fill="none" stroke="rgba(139,92,246,0.4)" stroke-width="1.5">
+      <polygon points="300,150 350,180 350,240 300,270 250,240 250,180" />
+      <polygon points="850,200 900,230 900,290 850,320 800,290 800,230" />
+      <polygon points="200,550 250,580 250,640 200,670 150,640 150,580" />
+      <polygon points="950,500 1000,530 1000,590 950,620 900,590 900,530" />
+    </g>
+    
+    <!-- Connection lines -->
+    <g stroke="rgba(139,92,246,0.25)" stroke-width="1" opacity="0.5">
+      <line x1="300" y1="210" x2="850" y2="260" />
+      <line x1="300" y1="210" x2="200" y2="610" />
+      <line x1="850" y1="260" x2="950" y2="560" />
+      <line x1="200" y1="610" x2="950" y2="560" />
+    </g>
+  </g>
+  
+  <!-- Flowing wave pattern -->
+  <g opacity="0.03" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="2">
+    <path d="M 0 400 Q 300 350 600 400 T 1200 400" />
+    <path d="M 0 450 Q 300 400 600 450 T 1200 450" />
+    <path d="M 0 500 Q 300 450 600 500 T 1200 500" />
+  </g>
+  
+  <!-- Subtle light orbs -->
+  <g opacity="0.04" filter="url(#glow)">
+    <circle cx="100" cy="100" r="80" fill="rgba(139,92,246,0.3)" />
+    <circle cx="1100" cy="150" r="60" fill="rgba(139,92,246,0.25)" />
+  </g>
+</svg>

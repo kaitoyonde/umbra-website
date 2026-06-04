@@ -2,7 +2,7 @@
 {{define "content"}}
 <section>
   <div class="container">
-    <a href="/admin/dashboard" style="font-size:0.8rem;color:#6d6d6d;">&larr; Dashboard</a>
+    <a href="/admin/dashboard" class="admin-back">&larr; Dashboard</a>
     <span class="section-label" style="margin-top:1rem;">Edit Divisi</span>
     <h1 class="section-title">{{.Division.Name}}</h1>
   </div>
@@ -36,7 +36,7 @@
           {{end}}
           <label class="img-option{{if not .Division.BannerImageID}} selected{{end}}">
             <input type="radio" name="banner_image_id" value=""{{if not .Division.BannerImageID}} checked{{end}} />
-            <span style="padding:0.5rem;font-size:0.75rem;color:#666;">Manual URL</span>
+            <span class="img-option-name">Manual URL</span>
           </label>
         </div>
         {{end}}
@@ -45,19 +45,19 @@
       <div class="field">
         <label>Kolom Portofolio</label>
         {{range $ci, $col := .Division.PortfolioColumns}}
-        <div style="margin-bottom:1rem;padding:0.75rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:8px;">
-          <label for="col_title_{{$ci}}" style="font-size:0.75rem;">Judul Kolom</label>
+        <div class="admin-col-box">
+          <label for="col_title_{{$ci}}" class="admin-col-label">Judul Kolom</label>
           <input type="text" id="col_title_{{$ci}}" name="col_title_{{$ci}}" value="{{$col.Title}}" style="margin-bottom:0.5rem;" />
-          <div style="font-size:0.75rem;color:#666;margin-bottom:0.3rem;">Proyek ({{len $col.Projects}}):</div>
+          <div class="admin-col-label" style="margin-bottom:0.3rem;">Proyek ({{len $col.Projects}}):</div>
           {{range $col.Projects}}
-          <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.25rem;font-size:0.8rem;">
-            <span style="color:#999;flex:1;">{{.Year}} &mdash; {{.Name}}</span>
-            <a href="/admin/project/edit/{{.ID}}" class="nav-btn" style="font-size:0.7rem;padding:0.2rem 0.5rem;">Edit</a>
-            <a href="/admin/project/delete/{{.ID}}" class="nav-btn" style="font-size:0.7rem;padding:0.2rem 0.5rem;background:rgba(239,68,68,0.15);border-color:rgba(239,68,68,0.3);" onclick="return confirm('Hapus proyek ini?')">Hapus</a>
+          <div class="admin-project-row">
+            <span class="admin-project-name">{{.Year}} &mdash; {{.Name}}</span>
+            <a href="/admin/project/edit/{{.ID}}" class="nav-btn admin-btn-sm">Edit</a>
+            <a href="/admin/project/delete/{{.ID}}" class="nav-btn admin-btn-sm admin-btn-danger" onclick="return confirm('Hapus proyek ini?')">Hapus</a>
           </div>
           {{end}}
-          <div style="margin-top:0.4rem;">
-            <a href="/admin/project/add/{{$.Division.Slug}}/{{$ci}}" class="nav-btn" style="font-size:0.7rem;padding:0.25rem 0.6rem;">+ Tambah Proyek</a>
+          <div class="admin-add-link">
+            <a href="/admin/project/add/{{$.Division.Slug}}/{{$ci}}" class="nav-btn admin-btn-sm">+ Tambah Proyek</a>
           </div>
         </div>
         {{end}}

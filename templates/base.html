@@ -12,22 +12,31 @@
 <body>
 
   <nav>
-    <div class="nav-left">
-      <a href="/"><img src="/static/LOGO.svg?v={{.ImgVer}}" alt="Umbra Jaya Angkasa" class="nav-logo" /></a>
-    </div>
-    <div class="nav-center">
-      <a href="/" class="brand-name">PT. Umbra Jaya Angkasa</a>
-    </div>
-    <div class="nav-right" style="display:flex;gap:0.5rem;align-items:center;">
-      <a href="/register" class="nav-btn">Inquiry</a>
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/"><img src="/static/LOGO.svg?v={{.ImgVer}}" alt="Umbra Jaya Angkasa" class="nav-logo" /></a>
+        <a href="/" class="brand-name">PT. Umbra Jaya Angkasa</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/register" class="nav-btn">Inquiry</a></li>
+      </ul>
     </div>
   </nav>
 
   {{block "content" .}}{{end}}
 
   <footer>
-    <p>Hubungi kami melalui email: <a href="mailto:kontak@umbrajayaangkasa.com">kontak@umbrajayaangkasa.com</a></p>
-    <p>&copy; 2026 PT. Umbra Jaya Angkasa.</p>
+    <div class="container footer-container">
+      <ul class="footer-nav">
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/UmbraCreativeSoftworks">Creative Softworks</a></li>
+        <li><a href="/UmbraSuara">Umbra Suara</a></li>
+        <li><a href="/Penumbra">Rumah Ilmu Penumbra</a></li>
+        <li><a href="/register">Inquiry</a></li>
+      </ul>
+      <p>Korespondensi: <a href="mailto:kontak@umbrajayaangkasa.com">kontak@umbrajayaangkasa.com</a></p>
+      <p>&copy; 2026 PT. Umbra Jaya Angkasa. Hak Cipta Dilindungi.</p>
+    </div>
   </footer>
 
 </body>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.04);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(6,182,212,0.03);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(139,92,246,0.04);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Gradient base -->
+  <rect width="1200" height="800" fill="url(#grad4)"/>
+  
+  <!-- Representing flow and minimalism -->
+  <g opacity="0.04" fill="none" stroke="rgba(139,92,246,0.3)" stroke-width="1.5">
+    <!-- Flowing curves suggesting simplicity -->
+    <path d="M -50 300 Q 150 250 350 350 T 750 350 T 1250 300" />
+    <path d="M -50 500 Q 150 550 350 450 T 750 450 T 1250 500" />
+  </g>
+  
+  <!-- Subtle grid representing order and clarity -->
+  <g opacity="0.02" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+    <rect x="0" y="0" width="1200" height="800" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="600" y1="0" x2="600" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+  </g>
+  
+  <!-- Minimalist accent elements -->
+  <g opacity="0.03" fill="rgba(6,182,212,0.3)">
+    <rect x="50" y="150" width="3" height="500" />
+    <rect x="1147" y="150" width="3" height="500" />
+  </g>
+</svg>

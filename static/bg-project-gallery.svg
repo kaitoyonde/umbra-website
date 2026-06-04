@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="gradProj3" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.06);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(139,92,246,0.01);stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Base gradient -->
+  <rect width="1200" height="800" fill="url(#gradProj3)"/>
+
+  <!-- Gallery-inspired grid -->
+  <g opacity="0.04" fill="none" stroke="rgba(139,92,246,0.25)" stroke-width="1.5">
+    <!-- Vertical dividers -->
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="600" y1="0" x2="600" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+    
+    <!-- Horizontal dividers -->
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+  </g>
+
+  <!-- Gallery frame accents -->
+  <g opacity="0.05" fill="none" stroke="rgba(139,92,246,0.3)" stroke-width="2">
+    <rect x="50" y="50" width="200" height="200" />
+    <rect x="500" y="100" width="200" height="200" />
+    <rect x="950" y="50" width="200" height="200" />
+    
+    <rect x="100" y="450" width="200" height="200" />
+    <rect x="600" y="480" width="200" height="200" />
+    <rect x="1000" y="450" width="200" height="200" />
+  </g>
+
+  <!-- Flowing overlay -->
+  <g opacity="0.02" fill="none" stroke="rgba(139,92,246,0.15)" stroke-width="2">
+    <path d="M 0 400 Q 300 350 600 400 T 1200 400" />
+  </g>
+</svg>

@@ -233,17 +233,6 @@ func getAllImages() []ImageData {
 	return out
 }
 
-func getImageByID(id string) *ImageData {
-	dataMu.RLock()
-	defer dataMu.RUnlock()
-	for i := range siteData.Images {
-		if siteData.Images[i].ID == id {
-			return &siteData.Images[i]
-		}
-	}
-	return nil
-}
-
 func getProjectByID(id string) *ProjectData {
 	dataMu.RLock()
 	defer dataMu.RUnlock()
@@ -366,7 +355,19 @@ func main() {
 	})
 
 	mux.HandleFunc("/register", func(w http.ResponseWriter, r *http.Request) {
-		render(w, "register.html", pageDataAll())
+		success := r.URL.Query().Get("success") == "true"
+		render(w, "register.html", struct {
+			pageData
+			Success bool
+		}{pageDataAll(), success})
+	})
+
+	mux.HandleFunc("/do_inquiry", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != "POST" {
+			http.Redirect(w, r, "/register", http.StatusSeeOther)
+			return
+		}
+		http.Redirect(w, r, "/register?success=true", http.StatusSeeOther)
 	})
 
 	// Division pages

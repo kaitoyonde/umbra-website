@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="gradProj1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.06);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(139,92,246,0.02);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base gradient -->
+  <rect width="1200" height="800" fill="url(#gradProj1)"/>
+
+  <!-- Large geometric shapes -->
+  <g opacity="0.05">
+    <circle cx="150" cy="150" r="120" fill="rgba(139,92,246,0.2)" />
+    <polygon points="1050,700 1150,650 1100,750" fill="rgba(139,92,246,0.15)" />
+  </g>
+
+  <!-- Abstract ribbons -->
+  <g opacity="0.04" fill="none" stroke="rgba(139,92,246,0.3)" stroke-width="3" stroke-linecap="round">
+    <path d="M 0 200 Q 300 150 600 200 T 1200 250" />
+    <path d="M 0 500 Q 300 550 600 500 T 1200 450" />
+  </g>
+
+  <!-- Accent points -->
+  <g opacity="0.04" fill="rgba(139,92,246,0.25)">
+    <circle cx="300" cy="400" r="6" />
+    <circle cx="600" cy="300" r="5" />
+    <circle cx="900" cy="500" r="6" />
+    <circle cx="200" cy="700" r="4" />
+    <circle cx="1000" cy="200" r="5" />
+  </g>
+
+  <!-- Subtle grid overlay -->
+  <g opacity="0.02" stroke="rgba(255,255,255,0.15)" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+    <line x1="0" y1="700" x2="1200" y2="700" />
+  </g>
+</svg>

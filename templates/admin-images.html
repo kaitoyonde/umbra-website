@@ -10,7 +10,7 @@
 <section>
   <div class="container">
     <div class="cms-form">
-      <h2 style="font-size:1.1rem;margin-bottom:1rem;">Upload Gambar Baru</h2>
+      <h2>Upload Gambar Baru</h2>
       {{if .Error}}<p style="color:#ef4444;margin-bottom:1rem;">{{.Error}}</p>{{end}}
       <form action="/admin/images" method="post" enctype="multipart/form-data">
         <div class="field">
@@ -27,7 +27,7 @@
         </div>
         <div class="field">
           <label for="file">File Gambar</label>
-          <input type="file" id="file" name="file" accept="image/*" required style="color:#d4d4d4;font-family:inherit;font-size:0.85rem;" />
+          <input type="file" id="file" name="file" accept="image/*" required style="color:var(--color-muted);font-family:inherit;font-size:0.85rem;" />
         </div>
         <input type="submit" value="Upload" />
       </form>
@@ -37,29 +37,29 @@
 
 <section>
   <div class="container">
-    <h2 style="font-size:1.1rem;margin-bottom:1rem;">Gambar Tersimpan ({{len .Images}})</h2>
+    <h2 class="admin-section-title">Gambar Tersimpan ({{len .Images}})</h2>
     {{if .Images}}
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;">
+    <div class="admin-image-grid">
       {{range .Images}}
-      <div style="background:#111;border:1px solid rgba(255,255,255,0.05);border-radius:10px;overflow:hidden;">
+      <div class="admin-image-card">
         <a href="{{.URL}}" target="_blank">
-          <img src="{{.URL}}" alt="{{.Alt}}" style="width:100%;height:140px;object-fit:cover;display:block;" loading="lazy" />
+          <img src="{{.URL}}" alt="{{.Alt}}" loading="lazy" />
         </a>
-        <div style="padding:0.75rem;">
-          <div style="font-size:0.85rem;font-weight:600;color:#e0e0e0;margin-bottom:0.2rem;">{{.Name}}</div>
-          <div style="font-size:0.7rem;color:#888;margin-bottom:0.3rem;"><strong>Alt:</strong> {{.Alt}}</div>
-          {{if .Description}}<div style="font-size:0.7rem;color:#666;margin-bottom:0.4rem;">{{.Description}}</div>{{end}}
-          <div style="font-size:0.65rem;color:#555;margin-bottom:0.5rem;">{{.UploadedAt}}</div>
-          <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
-            <code style="font-size:0.65rem;color:#8b5cf6;background:rgba(139,92,246,0.08);padding:0.2rem 0.4rem;border-radius:4px;word-break:break-all;flex:1;">{{.URL}}</code>
-            <a href="/admin/images/delete/{{.ID}}" class="nav-btn" style="font-size:0.65rem;padding:0.2rem 0.5rem;background:rgba(239,68,68,0.15);border-color:rgba(239,68,68,0.3);" onclick="return confirm('Hapus gambar {{.Name}}?')">Hapus</a>
+        <div class="admin-image-body">
+          <div class="admin-image-name">{{.Name}}</div>
+          <div class="admin-image-meta"><strong>Alt:</strong> {{.Alt}}</div>
+          {{if .Description}}<div class="admin-image-desc">{{.Description}}</div>{{end}}
+          <div class="admin-image-date">{{.UploadedAt}}</div>
+          <div class="admin-image-actions">
+            <code class="admin-image-url">{{.URL}}</code>
+            <a href="/admin/images/delete/{{.ID}}" class="nav-btn admin-btn-danger" onclick="return confirm('Hapus gambar {{.Name}}?')">Hapus</a>
           </div>
         </div>
       </div>
       {{end}}
     </div>
     {{else}}
-    <p style="color:#666;text-align:center;">Belum ada gambar. Upload gambar pertama Anda di atas.</p>
+    <p class="admin-empty">Belum ada gambar. Upload gambar pertama Anda di atas.</p>
     {{end}}
   </div>
 </section>

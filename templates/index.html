@@ -2,7 +2,21 @@
 
 {{define "content"}}
 
-<section>
+<header class="hero-section">
+  <div class="container hero-content">
+    <span class="hero-badge">PT. Umbra Jaya Angkasa</span>
+    <h1 class="hero-title">Teknologi Kreatif, Tata Suara Presisi &amp; Rumah Ilmu</h1>
+    <p class="hero-subtitle">
+      Perusahaan induk yang menyatukan rekayasa perangkat lunak imersif, teknik audio presisi, dan pusat riset pendidikan terbuka demi dampak berkelanjutan.
+    </p>
+    <div class="hero-actions">
+      <a href="#subdivisi" class="hero-btn-primary">Lihat Subdivisi</a>
+      <a href="/register" class="hero-btn-secondary">Hubungi Kami</a>
+    </div>
+  </div>
+</header>
+
+<section class="section-prinsip">
   <div class="container">
     <span class="section-label">Pegangan</span>
     <h1 class="section-title">Prinsip Kami</h1>
@@ -14,47 +28,39 @@
   </div>
 </section>
 
-<section>
+<section id="subdivisi" class="section-subdivisi">
   <div class="container">
     <span class="section-label">Struktur</span>
     <h1 class="section-title">Subdivisi</h1>
     <p class="section-desc">
       PT. Umbra Jaya Angkasa terdiri dari tiga subdivisi utama yang saling melengkapi, masing-masing dengan fokus
-      dan keahlian unik. Untuk melihat portfolio, layanan, dan proyek kami secara lebih mendalam, silakan klik
-      pada masing-masing divisi di bawah ini.
+      dan keahlian unik. Silakan klik pada masing-masing kartu di bawah ini untuk melihat portofolio dan bidang keahlian kami secara mendalam.
     </p>
     <div class="divisions">
       <div class="division">
-        <a href="/UmbraCreativeSoftworks/">
+        <a href="/UmbraCreativeSoftworks">
           <article>
-            <img src="/static/softworks.jpg?v={{.ImgVer}}" alt="Umbra Creative Softworks" />
-            <h2>Umbra Creative Softworks</h2>
-            <p>Divisi pengembang perangkat lunak yang menjembatani teknologi dan ekspresi kreatif. Kami
-            merancang solusi digital kustom untuk perusahaan, individu, serta grup artis, baik untuk
-            efisiensi operasional, proyek personal, pameran seni, maupun kebutuhan panggung interaktif. Kami
-            berkomitmen mengubah ide abstrak Anda menjadi perangkat lunak yang inovatif dan fungsional.</p>
+            <img src="/static/softworks.jpg?v={{.ImgVer}}" alt="Umbra Creative Softworks" loading="lazy" />
+            <h2>Creative Softworks</h2>
+            <p>Divisi pengembang perangkat lunak yang menjembatani teknologi dan ekspresi kreatif. Kami merancang solusi digital kustom untuk perusahaan, individu, serta grup artis, baik untuk efisiensi operasional, proyek personal, pameran seni, maupun kebutuhan panggung interaktif. Kami berkomitmen mengubah ide abstrak Anda menjadi perangkat lunak yang inovatif dan fungsional.</p>
           </article>
         </a>
       </div>
       <div class="division">
-        <a href="/UmbraSuara/">
+        <a href="/UmbraSuara">
           <article>
-            <img src="/static/umbraSuara.png?v={{.ImgVer}}" alt="Umbra Suara" />
+            <img src="/static/umbraSuara.png?v={{.ImgVer}}" alt="Umbra Suara" loading="lazy" />
             <h2>Umbra Suara</h2>
-            <p>Divisi rekayasa suara dan solusi akustik presisi. Umbra Suara melayani kebutuhan audio dari hulu
-            ke hilir: mulai dari produksi musik dan penataan suara film (sound design &amp; foley), hingga
-            konsultasi teknis tingkat lanjut seperti perencanaan akustik ruangan, pemetaan pantulan suara,
-            serta desain sistem audio korporasi dan arsitektural.</p>
+            <p>Divisi rekayasa suara dan solusi akustik presisi. Umbra Suara melayani kebutuhan audio dari hulu ke hilir: mulai dari produksi musik dan penataan suara film (sound design &amp; foley), hingga konsultasi teknis tingkat lanjut seperti perencanaan akustik ruangan, pemetaan pantulan suara, serta desain sistem audio korporasi dan arsitektural.</p>
           </article>
         </a>
       </div>
       <div class="division">
-        <a href="/Penumbra/">
+        <a href="/Penumbra">
           <article>
-            <img src="/static/penumbra.jpg?v={{.ImgVer}}" alt="Penumbra" />
-            <h2>Penumbra</h2>
-            <p>Rumah Ilmu Penumbra adalah pusat riset, edukasi, dan inovasi lintas subdivisi (sains, teknologi, lingkungan, sosial) yang terinspirasi dari Baghdad
-            House of Wisdom. Sebagai sekolah yang menjunjung tinggi kebebasan sejati (free as in freedom), kami menyediakan ruang belajar gratis yang memerdekakan siapa saja, dengan dukungan sistem bayar seikhlasnya.</p>
+            <img src="/static/penumbra.jpg?v={{.ImgVer}}" alt="Penumbra" loading="lazy" />
+            <h2>Rumah Ilmu Penumbra</h2>
+            <p>Rumah Ilmu Penumbra adalah pusat riset, edukasi, dan inovasi lintas subdivisi (sains, teknologi, lingkungan, sosial) yang terinspirasi dari Baghdad House of Wisdom. Sebagai sekolah yang menjunjung tinggi kebebasan sejati (free as in freedom), kami menyediakan ruang belajar gratis yang memerdekakan siapa saja, dengan dukungan sistem bayar seikhlasnya.</p>
           </article>
         </a>
       </div>
@@ -64,7 +70,7 @@
 
 <div class="section-divider"><hr /></div>
 
-<section>
+<section class="section-tentang">
   <div class="container">
     <span class="section-label">Perusahaan</span>
     <h1 class="section-title">Tentang PT. Umbra Jaya Angkasa</h1>
@@ -78,7 +84,7 @@
   </div>
 </section>
 
-<section>
+<section class="section-filosofi">
   <div class="container">
     <span class="section-label">Filosofi</span>
     <h1 class="section-title">Mengapa Website Sederhana?</h1>
@@ -90,41 +96,34 @@
   </div>
 </section>
 
-<section>
+<section class="section-hubungi">
   <div class="container">
     <span class="section-label">Hubungi</span>
     <h1 class="section-title">Hubungi Kami</h1>
     <div class="contact-grid">
       <div class="contact-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6d6d6d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
           <circle cx="12" cy="10" r="3"/>
         </svg>
-        <div>
-          <strong>Alamat Kantor Pusat</strong>
-          <span>Jl. Raya Angkasa No. 42, Jakarta, Indonesia</span>
-        </div>
+        <strong>Alamat Kantor Pusat</strong>
+        <span>Jl. Raya Angkasa No. 42, Jakarta, Indonesia</span>
       </div>
       <div class="contact-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6d6d6d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
           <polyline points="22,6 12,13 2,6"/>
         </svg>
-        <div>
-          <strong>Korespondensi &amp; Kemitraan</strong>
-          <a href="mailto:work.erlanggaibr@gmail.com">work.erlanggaibr@gmail.com</a>
-        </div>
+        <strong>Korespondensi &amp; Kemitraan</strong>
+        <a href="mailto:kontak@umbrajayaangkasa.com">kontak@umbrajayaangkasa.com</a>
       </div>
       <div class="contact-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6d6d6d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/>
           <polyline points="12 6 12 12 16 14"/>
         </svg>
-        <div>
-          <strong>Jam Operasional</strong>
-          <span>Senin &ndash; Kamis | 08.00 &ndash; 19.00 WIB</span><br>
-          <span>Sabtu &ndash; Minggu | 08.00 &ndash; 19.00 WIB</span><br>
-        </div>
+        <strong>Jam Operasional</strong>
+        <span>Senin &ndash; Minggu | 08.00 &ndash; 19.00 WIB</span>
       </div>
     </div>
   </div>

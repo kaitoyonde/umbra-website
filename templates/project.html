@@ -4,18 +4,18 @@
 
 {{$img := imgByID .Project.ImageID}}
 <div class="banner">
-  <img src="{{.Project.ImageURL}}" alt="{{$img.Alt}}" loading="lazy" />
+  <img src="{{.Project.ImageURL}}" alt="{{if $img.Alt}}{{$img.Alt}}{{else}}{{.Project.Name}}{{end}}" loading="lazy" />
   <div class="banner-overlay"></div>
   <div class="banner-content">
-    <p style="font-size:0.75rem;font-weight:500;color:#8b5cf6;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;">{{.Project.Year}}</p>
+    <span class="banner-year">{{.Project.Year}}</span>
     <h2>{{.Project.Name}}</h2>
-    {{if .Project.Subtitle}}<p style="font-size:0.9rem;color:rgba(255,255,255,0.45);margin-top:0.25rem;">{{.Project.Subtitle}}</p>{{end}}
-    <p style="font-size:0.85rem;color:rgba(255,255,255,0.35);margin-top:0.5rem;">{{.Project.Client}}</p>
+    {{if .Project.Subtitle}}<p class="banner-subtitle">{{.Project.Subtitle}}</p>{{end}}
+    <span class="banner-client">{{.Project.Client}}</span>
   </div>
 </div>
 
 {{if .Project.DescriptionMD}}
-<section>
+<section class="section-project-desc">
   <div class="container">
     <span class="section-label">Deskripsi</span>
     <h1 class="section-title">Tentang Proyek</h1>
@@ -27,11 +27,11 @@
 {{end}}
 
 {{if or .Project.TechDescription .Project.TechTable}}
-<section>
+<section class="section-project-tech">
   <div class="container">
     <span class="section-label">Teknis</span>
     <h1 class="section-title">Detail Teknis</h1>
-    {{if .Project.TechDescription}}<p class="section-body" style="margin-bottom:1.5rem;">{{.Project.TechDescription}}</p>{{end}}
+    {{if .Project.TechDescription}}<p class="section-body tech-desc">{{.Project.TechDescription}}</p>{{end}}
     {{if .Project.TechTable}}
     <div class="tech-table">
       {{range .Project.TechTable}}
@@ -47,7 +47,7 @@
 {{end}}
 
 {{if .Project.Gallery}}
-<section>
+<section class="section-project-gallery">
   <div class="container">
     <span class="section-label">Galeri</span>
     <h1 class="section-title">Galeri Proyek</h1>
@@ -55,11 +55,11 @@
       {{range .Project.Gallery}}
       {{if eq .Type "video"}}
       <div class="gallery-item video">
-        <video src="{{.URL}}" controls preload="metadata" {{if .Alt}}title="{{.Alt}}"{{end}}></video>
+        <video src="{{.URL}}" controls preload="metadata" {{if .Alt}}title="{{.Alt}}"{{else}}title="Demo Video"{{end}}></video>
       </div>
       {{else}}
       <div class="gallery-item">
-        <img src="{{.URL}}" alt="{{.Alt}}" loading="lazy" />
+        <img src="{{.URL}}" alt="{{if .Alt}}{{.Alt}}{{else}}{$.Project.Name}} - Galeri{{end}}" loading="lazy" />
       </div>
       {{end}}
       {{end}}

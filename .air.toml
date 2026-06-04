@@ -1,0 +1,26 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  cmd = "go build -o ./tmp/main ."
+  bin = "./tmp/main"
+  include_ext = ["go", "json"]
+  exclude_dir = ["tmp", "static/uploads", ".git", ".agents"]
+  include_dir = ["."]
+  delay = 300
+  log = "build-errors.log"
+  stop_on_error = true
+  send_interrupt = true
+  kill_delay = 500
+
+[color]
+  main = "magenta"
+  watcher = "cyan"
+  build = "yellow"
+  runner = "green"
+
+[log]
+  main_only = false
+
+[misc]
+  clean_on_exit = true

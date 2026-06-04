@@ -2,7 +2,7 @@
 {{define "content"}}
 <section>
   <div class="container">
-    <a href="/admin/division/{{.DivisionSlug}}" style="font-size:0.8rem;color:#6d6d6d;">&larr; Kembali ke divisi</a>
+    <a href="/admin/division/{{.DivisionSlug}}" class="admin-back">&larr; Kembali ke divisi</a>
     <span class="section-label" style="margin-top:1rem;">Proyek</span>
     <h1 class="section-title">{{if .IsNew}}Tambah Proyek Baru{{else}}Edit Proyek{{end}}</h1>
   </div>
@@ -40,7 +40,7 @@
           {{end}}
           <label class="img-option{{if not .Project.ImageID}} selected{{end}}">
             <input type="radio" name="image_id" value=""{{if not .Project.ImageID}} checked{{end}} />
-            <span style="padding:0.5rem;font-size:0.75rem;color:#666;">Manual URL</span>
+            <span class="img-option-name">Manual URL</span>
           </label>
         </div>
         {{end}}

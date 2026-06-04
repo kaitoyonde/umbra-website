@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.08);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(139,92,246,0.02);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#grad1)"/>
+  
+  <!-- Geometric lines representing clarity and structure -->
+  <g opacity="0.04" stroke="rgba(255,255,255,0.5)" stroke-width="1">
+    <line x1="0" y1="0" x2="1200" y2="800" />
+    <line x1="1200" y1="0" x2="0" y2="800" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="600" y1="0" x2="600" y2="800" />
+  </g>
+  
+  <!-- Interconnected circles representing principles -->
+  <g opacity="0.05" fill="none" stroke="rgba(139,92,246,0.3)" stroke-width="2">
+    <circle cx="100" cy="150" r="40" />
+    <circle cx="300" cy="250" r="50" />
+    <circle cx="600" cy="200" r="35" />
+    <circle cx="900" cy="300" r="45" />
+    <circle cx="1100" cy="150" r="40" />
+    <circle cx="200" cy="600" r="55" />
+    <circle cx="700" cy="650" r="40" />
+    <circle cx="1000" cy="700" r="50" />
+  </g>
+  
+  <!-- Connecting paths -->
+  <g opacity="0.03" stroke="rgba(139,92,246,0.2)" stroke-width="1" fill="none">
+    <path d="M 100 150 L 300 250 L 600 200 L 900 300" />
+    <path d="M 300 250 L 200 600 L 700 650 L 1000 700" />
+  </g>
+</svg>

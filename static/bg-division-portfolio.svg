@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="gradDiv2" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.04);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(139,92,246,0.08);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(139,92,246,0.03);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base gradient -->
+  <rect width="1200" height="800" fill="url(#gradDiv2)"/>
+
+  <!-- Horizontal accent bars -->
+  <g opacity="0.04">
+    <rect x="0" y="100" width="1200" height="2" fill="rgba(139,92,246,0.3)" />
+    <rect x="0" y="400" width="1200" height="2" fill="rgba(139,92,246,0.25)" />
+    <rect x="0" y="700" width="1200" height="2" fill="rgba(139,92,246,0.2)" />
+  </g>
+
+  <!-- Vertical accent lines -->
+  <g opacity="0.03" stroke="rgba(139,92,246,0.2)" stroke-width="1.5">
+    <line x1="100" y1="0" x2="100" y2="800" stroke-dasharray="20,20" />
+    <line x1="600" y1="0" x2="600" y2="800" stroke-dasharray="20,20" />
+    <line x1="1100" y1="0" x2="1100" y2="800" stroke-dasharray="20,20" />
+  </g>
+
+  <!-- Corner flourishes -->
+  <g opacity="0.04" fill="none" stroke="rgba(139,92,246,0.25)" stroke-width="2">
+    <path d="M 20 20 L 120 20 L 120 120" />
+    <path d="M 1080 20 L 1180 20 L 1180 120" />
+    <path d="M 20 680 L 120 680 L 120 780" />
+    <path d="M 1080 680 L 1180 680 L 1180 780" />
+  </g>
+
+  <!-- Subtle circles -->
+  <g opacity="0.03" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1">
+    <circle cx="250" cy="250" r="100" />
+    <circle cx="950" cy="550" r="120" />
+  </g>
+</svg>
