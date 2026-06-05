@@ -20,6 +20,53 @@
   </div>
 </section>
 
+{{if eq .Division.Slug "softworks"}}
+<section class="section-sw-trusted">
+  <div class="container">
+    <span class="section-label">Klien</span>
+    <h1 class="section-title">Trusted By</h1>
+    <div class="sw-trusted-grid">
+      <img class="sw-trusted-item" src="/static/trustedby/logo_sampoerna.png" alt="Sampoerna" />
+      <img class="sw-trusted-item" src="/static/trustedby/pertamina-seeklogo.png" alt="Pertamina" />
+      <img class="sw-trusted-item" src="/static/trustedby/logo_danantara.png" alt="Danantara" />
+      <img class="sw-trusted-item" src="/static/trustedby/STREEMS_LOGO.png" alt="Streems" />
+      <img class="sw-trusted-item" src="/static/trustedby/Logo_Kisruh White.png" alt="Kisruh" />
+      <img class="sw-trusted-item" src="/static/trustedby/logo agak laen.png" alt="Agak Laen Team" />
+      <img class="sw-trusted-item" src="/static/trustedby/LOGO ROCKESROLL PUTIH.png" alt="Rockesroll" />
+      <img class="sw-trusted-item" src="/static/trustedby/logo rock in rain.png" alt="Rock in Rain" />
+      <img class="sw-trusted-item" src="/static/trustedby/LOGOGRAM_No 04 LOGO _ HASHTAG NEGATIVE.png" alt="Hashtag" />
+      <img class="sw-trusted-item" src="/static/trustedby/logo_vmf.png" alt="Vikri &amp; My Magic Friend" />
+      <img class="sw-trusted-item" src="/static/trustedby/logo_raddict.webp" alt="Raddict.id" />
+      <img class="sw-trusted-item" src="/static/trustedby/RRI.jpeg" alt="RRI" />
+    </div>
+    </div>
+  </div>
+</section>
+<section class="section-division-portfolio section-sw-portfolio">
+  <div class="container">
+    <span class="section-label">Portofolio</span>
+    <h1 class="section-title">Proyek Terpilih</h1>
+    <div class="sw-portfolio-grid">
+      {{range .Division.PortfolioColumns}}
+      {{range .Projects}}
+      <a href="/project/{{.ID}}" class="sw-portfolio-card">
+        {{$img := imgByID .ImageID}}
+        <div class="sw-portfolio-img-wrap">
+          <img class="sw-portfolio-img" src="{{.ImageURL}}" alt="{{if $img.Alt}}{{$img.Alt}}{{else}}{{.Name}}{{end}}" loading="lazy" />
+        </div>
+        <div class="sw-portfolio-body">
+          <div class="sw-portfolio-year">{{.Year}}</div>
+          <div class="sw-portfolio-name">{{.Name}}</div>
+          <div class="sw-portfolio-subtitle">{{.Subtitle}}</div>
+          <div class="sw-portfolio-client">{{.Client}}</div>
+        </div>
+      </a>
+      {{end}}
+      {{end}}
+    </div>
+  </div>
+</section>
+{{else}}
 <section class="section-division-portfolio">
   <div class="container">
     <span class="section-label">Portofolio</span>
@@ -46,6 +93,7 @@
     </div>
   </div>
 </section>
+{{end}}
 
 <section class="section-division-skills">
   <div class="container">
@@ -77,7 +125,7 @@
         <div class="calc-panel active" id="pathway-music">
           <div class="calc-panel-header">
             <h3>Produksi Musik &amp; Rekaman Studio</h3>
-            <span class="calc-panel-badge">B2C &mdash; Artis Indie &amp; Podcaster</span>
+
           </div>
 
           <div class="calc-field">
@@ -176,7 +224,7 @@
         <div class="calc-panel" id="pathway-b2b">
           <div class="calc-panel-header">
             <h3>Audio Komersial &amp; Sound Design B2B</h3>
-            <span class="calc-panel-badge">B2B &mdash; Brand, Film &amp; Biro Iklan</span>
+
           </div>
 
           <div class="calc-field">
@@ -784,6 +832,121 @@
     font-size: 1.5rem;
   }
 }
+
+/* Portfolio Grid for Softworks */
+.section-sw-portfolio .sw-portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-sw-portfolio .sw-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-sw-portfolio .sw-portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.section-sw-portfolio .sw-portfolio-card {
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.section-sw-portfolio .sw-portfolio-card:hover {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.15), 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.section-sw-portfolio .sw-portfolio-img-wrap {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #1e293b;
+}
+
+.section-sw-portfolio .sw-portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.section-sw-portfolio .sw-portfolio-card:hover .sw-portfolio-img {
+  transform: scale(1.05);
+}
+
+.section-sw-portfolio .sw-portfolio-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem;
+  flex: 1;
+}
+
+.section-sw-portfolio .sw-portfolio-year {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7c3aed;
+}
+
+.section-sw-portfolio .sw-portfolio-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.section-sw-portfolio .sw-portfolio-subtitle {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.section-sw-portfolio .sw-portfolio-client {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Trusted By Grid */
+.section-sw-trusted .sw-trusted-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.section-sw-trusted .sw-trusted-item {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .section-sw-trusted .sw-trusted-grid {
+    grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+    gap: 1rem;
+  }
+  .section-sw-trusted .sw-trusted-item {
+    height: 86px;
+  }
+}
 </style>
 
 <section class="section-calc-sw">
@@ -899,6 +1062,18 @@
               <span class="calc-sw-bk-label">Sistem Keandalan &amp; Penjaminan Mutu</span>
               <span class="calc-sw-bk-value" id="sw-risk-buffer">Rp 0</span>
             </div>
+            <div class="calc-sw-bk-row" id="sw-staffing-row">
+              <span class="calc-sw-bk-label">Kebutuhan Tim Tambahan (<span id="sw-staffing-count">0</span> Orang)</span>
+              <span class="calc-sw-bk-value" id="sw-staffing-total">Rp 0</span>
+            </div>
+            <div class="calc-sw-bk-row" id="sw-customization-row" style="display:none">
+              <span class="calc-sw-bk-label">Bespoke Creative Engineering</span>
+              <span class="calc-sw-bk-value" id="sw-customization-total">Rp 0</span>
+            </div>
+            <div class="calc-sw-bk-row" id="sw-scale-row" style="display:none">
+              <span class="calc-sw-bk-label">Event Korporat / Grand Launching</span>
+              <span class="calc-sw-bk-value" id="sw-scale-total">Rp 0</span>
+            </div>
             <div class="calc-sw-bk-row" id="sw-ai-row" style="display:none">
               <span class="calc-sw-bk-label">Lisensi &amp; Operasional Cloud AI</span>
               <span class="calc-sw-bk-value" id="sw-ai-total">Rp 0</span>
@@ -935,6 +1110,12 @@
   var setupCostEl = document.getElementById('sw-setup-cost');
   var liveCostEl = document.getElementById('sw-live-cost');
   var riskBufferEl = document.getElementById('sw-risk-buffer');
+  var staffingCountEl = document.getElementById('sw-staffing-count');
+  var staffingTotalEl = document.getElementById('sw-staffing-total');
+  var customizationRowEl = document.getElementById('sw-customization-row');
+  var customizationTotalEl = document.getElementById('sw-customization-total');
+  var scaleRowEl = document.getElementById('sw-scale-row');
+  var scaleTotalEl = document.getElementById('sw-scale-total');
   var hwRowEl = document.getElementById('sw-hardware-row');
   var hwTotalEl = document.getElementById('sw-hardware-total');
   var grandTotalEl = document.getElementById('sw-grand-total');
@@ -1013,25 +1194,49 @@
       hwField.classList.remove('calc-sw-visible');
     }
 
-    var estimatedDays = Math.ceil(eventHoursVal / 24) || 1;
+    var estimatedStandbyDays = Math.ceil(eventHoursVal / 24) || 1;
     var devCost = devDays * devDayRate;
     var setupCost = setupDays * setupDayRate;
-    var liveCost = (eventHoursVal * HOURLY_BASELINE) + (estimatedDays * FLAT_FEE);
-    var subtotalBase = devCost + setupCost + liveCost;
-    var laborTotal = subtotalBase * riskFactor;
-    var riskBuffer = laborTotal - subtotalBase;
+    var liveCost = (eventHoursVal * HOURLY_BASELINE) + (estimatedStandbyDays * FLAT_FEE);
+
+    var bespokePremium = customizationSelect.value === 'premium' ? 750000 : 0;
+    var corporatePremium = scaleSelect.value === 'corporate' ? 675000 : 0;
+
+    var totalWorkDays = devDays + setupDays + estimatedStandbyDays;
+    var extraStaffCount = Math.floor(totalWorkDays * 2);
+    var staffingSurcharge = extraStaffCount * 250000;
+
+    var subtotalLabor = devCost + setupCost + liveCost + bespokePremium + corporatePremium + staffingSurcharge;
+    var laborTotalWithRisk = subtotalLabor * riskFactor;
+    var riskBufferDisplay = laborTotalWithRisk - subtotalLabor;
 
     var hwClientCost = 0;
     if (sourceHardware && rawHwCost > 0) {
       hwClientCost = rawHwCost * 1.15;
     }
 
-    var grandTotal = laborTotal + hwClientCost + aiSurcharge;
+    var grandTotal = laborTotalWithRisk + hwClientCost + aiSurcharge;
 
     devCostEl.textContent = formatIDR(devCost);
     setupCostEl.textContent = formatIDR(setupCost);
     liveCostEl.textContent = formatIDR(liveCost);
-    riskBufferEl.textContent = formatIDR(riskBuffer);
+    riskBufferEl.textContent = formatIDR(riskBufferDisplay);
+    staffingCountEl.textContent = extraStaffCount;
+    staffingTotalEl.textContent = formatIDR(staffingSurcharge);
+
+    if (bespokePremium > 0) {
+      customizationRowEl.style.display = 'flex';
+      customizationTotalEl.textContent = formatIDR(bespokePremium);
+    } else {
+      customizationRowEl.style.display = 'none';
+    }
+
+    if (corporatePremium > 0) {
+      scaleRowEl.style.display = 'flex';
+      scaleTotalEl.textContent = formatIDR(corporatePremium);
+    } else {
+      scaleRowEl.style.display = 'none';
+    }
 
     if (sourceHardware && rawHwCost > 0) {
       hwRowEl.style.display = 'flex';

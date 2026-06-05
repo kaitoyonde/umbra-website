@@ -11,242 +11,168 @@
       "description": "Perangkat lunak untuk konteks yang tidak bisa dipenuhi dari rak eceran. Tur galeri virtual 360\u00b0, sistem kendali proyeksi mapping multi-proyektor, platform AR try-on untuk fashion \u2014 seluruh proyek lahir dari kebutuhan spesifik klien, dikerjakan dengan takaran yang sama antara logika rekayasa dan naluri artistik.",
       "portfolio_columns": [
         {
-          "title": "Software",
+          "title": "Interactive Art Systems",
           "projects": [
             {
               "id": "sw1",
-              "year": "2024 – 2025",
-              "name": "Immersive Gallery Platform",
-              "subtitle": "Aplikasi galeri imersif berbasis web untuk pengalaman pameran digital.",
-              "client": "Galeri Nasional Indonesia",
+              "year": "2024",
+              "name": "KemCerKuy Part 1",
+              "subtitle": "Interactive Binaural Audio & Projection Mapping",
+              "client": "Vikri & My Magic Friend",
               "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
               "image_id": "",
-              "description_md": "**Immersive Gallery Platform** adalah aplikasi web yang dirancang untuk Galeri Nasional Indonesia guna menyajikan pengalaman pameran seni secara digital. Platform ini mendukung navigasi ruang 3D ringan, integrasi multimedia, dan tampilan kuratorial yang adaptif.\n\nFitur utama meliputi tur virtual 360°, informasi karya interaktif, dan sistem kurasi dinamis yang memudahkan kurator menata ulang pameran tanpa campur tangan teknis.",
-              "tech_description": "Dibangun dengan pendekatan JAMstack untuk performa tinggi dan kemudahan deployment.",
-              "tech_table": [
-                {
-                  "label": "Frontend",
-                  "value": "React, Three.js, Tailwind CSS"
-                },
-                {
-                  "label": "Backend",
-                  "value": "Go, GraphQL"
-                },
-                {
-                  "label": "Database",
-                  "value": "PostgreSQL, Redis"
-                },
-                {
-                  "label": "Deployment",
-                  "value": "Docker, Vercel"
-                },
-                {
-                  "label": "Integrasi",
-                  "value": "REST API untuk museum partner"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1560930950-5cc20e80e3e9?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Tampilan utama galeri virtual"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1531913764164-f85c3e08c38b?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Mode tur interaktif"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1614032686060-f39d2c1e1589?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Dashboard kurator"
-                }
-              ]
+              "description_md": "**KemCerKuy Part 1** adalah instalasi interaktif yang menggabungkan binaural audio dan projection mapping, dipersembahkan untuk pertunjukan Vikri & My Magic Friend.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
             },
             {
               "id": "sw2",
-              "year": "2023 – 2024",
-              "name": "Real-Time Motion Capture Pipeline",
-              "subtitle": "Sistem motion capture real-time untuk produksi film dan konten digital.",
-              "client": "LIMA Production House",
-              "image_url": "https://images.unsplash.com/photo-1624969862644-791f3dc98927?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "year": "2024",
+              "name": "Sunset Dikebun Cibodas",
+              "subtitle": "Interactive Wide Beam Binaural Audio Mapping",
+              "client": "Vikri & My Magic Friend",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
               "image_id": "",
-              "description_md": "**Real-Time Motion Capture Pipeline** adalah solusi end-to-end untuk menangkap, memproses, dan menerjemahkan data gerakan manusia ke dalam aset digital secara real-time. Dikembangkan untuk LIMA Production House guna mempercepat alur kerja produksi konten animasi dan VFX.\n\nPipeline ini mendukung berbagai konfigurasi kamera, koreksi latensi otomatis, dan ekspor langsung ke engine 3D populer seperti Unreal Engine dan Blender.",
-              "tech_description": "Menggunakan komputer visi dan sensor fusion untuk akurasi tinggi tanpa marker fisik.",
-              "tech_table": [
-                {
-                  "label": "Teknologi",
-                  "value": "Computer Vision, Sensor Fusion"
-                },
-                {
-                  "label": "Bahasa",
-                  "value": "C++, Python, CUDA"
-                },
-                {
-                  "label": "Framework",
-                  "value": "OpenCV, TensorFlow, MediaPipe"
-                },
-                {
-                  "label": "Ekspor",
-                  "value": "FBX, BVH, Unreal Engine Live Link"
-                },
-                {
-                  "label": "Latensi",
-                  "value": "\u003c 30ms end-to-end"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1563207153-f403bf289096?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Setup motion capture"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Real-time skeleton tracking"
-                }
-              ]
+              "description_md": "**Sunset Dikebun Cibodas** adalah instalasi interaktif yang memanfaatkan wide beam binaural audio mapping untuk menciptakan pengalaman imersif bagi penonton.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
             },
             {
               "id": "sw3",
-              "year": "2022 – 2023",
-              "name": "Interactive AR Try-On System",
-              "subtitle": "Sistem augmented reality untuk try-on produk fashion secara virtual.",
-              "client": "Buttonscarves Retail",
-              "image_url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "year": "2025",
+              "name": "Sunset Dikebun Kebun Raya",
+              "subtitle": "Interactive Binaural Audio Mapping",
+              "client": "Vikri & My Magic Friend",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
               "image_id": "",
-              "description_md": "**Interactive AR Try-On System** memungkinkan pelanggan Buttonscarves mencoba berbagai produk fashion secara virtual melalui perangkat seluler mereka. Menggunakan teknologi AR berbasis browser (WebAR), sistem ini mendukung deteksi wajah dan tubuh untuk mencoba hijab, aksesori, dan pakaian. Tanpa perlu mengunduh aplikasi terpisah.",
-              "tech_description": "WebAR dengan TensorFlow.js untuk deteksi wajah dan mesh 3D real-time.",
-              "tech_table": [
-                {
-                  "label": "Platform",
-                  "value": "WebAR (WebGL, WebRTC)"
-                },
-                {
-                  "label": "ML Engine",
-                  "value": "TensorFlow.js, MediaPipe"
-                },
-                {
-                  "label": "3D Rendering",
-                  "value": "Three.js, GLTF/GLB"
-                },
-                {
-                  "label": "Integrasi",
-                  "value": "Shopify API, Midtrans"
-                },
-                {
-                  "label": "Dukungan Device",
-                  "value": "iOS 15+, Android 10+"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "AR try-on hijab"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1617195738786-7bba7de4b15b?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Deteksi wajah real-time"
-                }
-              ]
+              "description_md": "**Sunset Dikebun Kebun Raya** adalah kelanjutan dari eksplorasi binaural audio mapping dalam setting kebun raya, diproduksi untuk Vikri & My Magic Friend pada 2025.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
             },
             {
               "id": "sw4",
-              "year": "2021 – 2022",
-              "name": "Generative Visuals Engine",
-              "subtitle": "Engine visual generatif untuk pertunjukan live dan proyeksi panggung.",
-              "client": "Java Jazz Festival",
-              "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "year": "2024",
+              "name": "Cipete Creative District",
+              "subtitle": "Live Edge-Generation AI Imagery",
+              "client": "Vikri & My Magic Friend",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
               "image_id": "",
-              "description_md": "**Generative Visuals Engine** adalah platform real-time yang menghasilkan visual proyeksi berdasarkan input audio dan data sensor. Digunakan oleh Java Jazz Festival untuk menciptakan pengalaman visual yang sinkron dengan pertunjukan musik. Engine ini mendukung berbagai sumber audio, MIDI, dan kontrol DMX untuk integrasi pencahayaan panggung.",
-              "tech_description": "Real-time audio-reactive visualization dengan pipeline GPU-accelerated.",
-              "tech_table": [
-                {
-                  "label": "Engine",
-                  "value": "Custom OpenGL, GLSL Shaders"
-                },
-                {
-                  "label": "Audio Analysis",
-                  "value": "FFT, Onset Detection, Beat Tracking"
-                },
-                {
-                  "label": "Output",
-                  "value": "HDMI 4K, NDI, Syphon/Spout"
-                },
-                {
-                  "label": "Kontrol",
-                  "value": "MIDI, OSC, DMX512"
-                },
-                {
-                  "label": "Performa",
-                  "value": "60 FPS pada 4K output"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Proyeksi visual di panggung"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Audio-reactive visualization"
-                },
-                {
-                  "type": "video",
-                  "url": "https://www.w3schools.com/html/mov_bbb.mp4",
-                  "alt": "Demo real-time engine"
-                }
-              ]
-            },
+              "description_md": "**Cipete Creative District** adalah instalasi live edge-generation AI imagery yang menciptakan visual real-time berbasis kecerdasan buatan untuk pengalaman seni yang dinamis.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            }
+          ]
+        },
+        {
+          "title": "Software & Interactive Installations",
+          "projects": [
             {
               "id": "sw5",
-              "year": "2020 – 2021",
-              "name": "Projection Mapping Controller",
-              "subtitle": "Sistem kontrol proyeksi mapping untuk instalasi seni berskala besar.",
-              "client": "Art Jakarta",
-              "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "year": "2023",
+              "name": "StreemsRadio",
+              "subtitle": "Public Interactive Chat System for Radio Station",
+              "client": "Streems",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
               "image_id": "",
-              "description_md": "**Projection Mapping Controller** adalah solusi perangkat lunak untuk mengelola proyeksi mapping multi-proyektor pada permukaan 3D kompleks. Digunakan oleh Art Jakarta untuk instalasi seni interaktif berskala besar. Mendukung kalibrasi otomatis, blending multi-proyektor, dan pemutaran konten tersinkronisasi.",
-              "tech_description": "Multi-projector calibration dengan computer vision-based automatic alignment.",
-              "tech_table": [
-                {
-                  "label": "Teknologi",
-                  "value": "Computer Vision, Projector-Camera System"
-                },
-                {
-                  "label": "Kalibrasi",
-                  "value": "Structured Light, Feature Matching"
-                },
-                {
-                  "label": "Blending",
-                  "value": "Edge Blending Otomatis, Gamma Correction"
-                },
-                {
-                  "label": "Media Server",
-                  "value": "Custom, support HAP/HAPQ/DXV"
-                },
-                {
-                  "label": "Resolusi Maks",
-                  "value": "8K per proyektor, total 32K"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Instalasi projection mapping"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Kalibrasi multi-proyektor"
-                }
-              ]
+              "description_md": "**StreemsRadio** adalah sistem chat interaktif publik untuk stasiun radio yang memungkinkan pendengar berpartisipasi langsung dalam siaran.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            },
+            {
+              "id": "sw6",
+              "year": "2023",
+              "name": "Organic Chemistry Class",
+              "subtitle": "Sub Atomic Nuclear Interactive Education System",
+              "client": "Certain University",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Organic Chemistry Class** adalah sistem edukasi interaktif yang memvisualisasikan konsep kimia sub-atomik dan nuklir untuk pembelajaran yang imersif.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            },
+            {
+              "id": "sw7",
+              "year": "2023",
+              "name": "Bilateral Business Meeting",
+              "subtitle": "AI Live Transcription Engine",
+              "client": "Certain International Institution",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Bilateral Business Meeting** adalah mesin transkripsi langsung berbasis AI yang digunakan untuk pertemuan bisnis bilateral internasional.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            },
+            {
+              "id": "sw8",
+              "year": "2023",
+              "name": "Ngumpul Skena-nya",
+              "subtitle": "Interactive Guest Driven Art Installation",
+              "client": "Raddict.id",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Ngumpul Skena-nya** adalah instalasi seni interaktif yang digerakkan oleh partisipasi tamu, menciptakan pengalaman kolektif yang terus berevolusi.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            },
+            {
+              "id": "sw9",
+              "year": "2024",
+              "name": "Selatan Di Kota Hujan",
+              "subtitle": "Interactive Ticket-Synced Generative Stage Canvas",
+              "client": "Ruang Rampai",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Selatan Di Kota Hujan** adalah panggung generatif yang tersinkronisasi dengan tiket, menciptakan kanvas visual unik yang dipersonalisasi untuk setiap penonton.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            },
+            {
+              "id": "sw10",
+              "year": "2024",
+              "name": "\"Agak Laen\" Promotion Event",
+              "subtitle": "Live Guest-Message Stage LED Screen",
+              "client": "Agak Laen Team, Raddict.id",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**\"Agak Laen\" Promotion Event** adalah layar LED panggung yang menampilkan pesan tamu secara langsung, menciptakan interaksi real-time antara pengunjung dan acara.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            },
+            {
+              "id": "sw11",
+              "year": "2024",
+              "name": "Bersoekaria Rest Area",
+              "subtitle": "Live Guest-Greeting LED Screen",
+              "client": "Sampoerna, Raddict.id",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Bersoekaria Rest Area** adalah layar LED interaktif yang menyapa tamu secara langsung di area istirahat, menciptakan pengalaman personal bagi setiap pengunjung.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
+            },
+            {
+              "id": "sw12",
+              "year": "2024",
+              "name": "Hajatan Warga Lokal",
+              "subtitle": "Interactive Games Installation",
+              "client": "Raddict.id",
+              "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "image_id": "",
+              "description_md": "**Hajatan Warga Lokal** adalah instalasi permainan interaktif yang dirancang untuk meramaikan acara komunitas dengan pengalaman bermain yang engaging.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
             }
           ]
         }
@@ -828,257 +754,33 @@
       "description": "Rumah Ilmu Penumbra lahir dari tradisi Baitul Hikmah di Baghdad \u2014 pusat intelektual yang melahirkan Aljabar dan algoritma pertama. Kami menyediakan ruang belajar lintas disiplin: sains, teknologi, lingkungan, dan sosial. Tanpa syarat finansial. Tanpa paywall. Tanpa diskriminasi. Didanai oleh sistem bayar seikhlasnya yang memungkinkan siapa pun untuk belajar dan mengajar dalam kebebasan penuh.",
       "portfolio_columns": [
         {
-          "title": "Research \u0026 Education",
+          "title": "Programs \u0026 Events",
           "projects": [
             {
               "id": "pe1",
-              "year": "2024 – 2025",
-              "name": "AI Literacy for Creative Practitioners",
-              "subtitle": "Program literasi AI untuk praktisi seni dan kreatif.",
-              "client": "Institut Kesenian Jakarta",
-              "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a46f?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "year": "2023",
+              "name": "MendarArt di Bhumi",
+              "subtitle": "Multi-disciplinary Art Exhibition",
+              "client": "Streems, Made By People, Various",
+              "image_url": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
               "image_id": "",
-              "description_md": "**AI Literacy for Creative Practitioners** adalah program edukasi yang dirancang untuk memperkenalkan konsep dan alat kecerdasan buatan kepada praktisi seni dan kreatif di Institut Kesenian Jakarta. Program ini mencakup workshop, kuliah tamu, dan proyek praktikum yang mengintegrasikan AI ke dalam alur kerja kreatif.\n\nTopik meliputi generative art, computer vision untuk seni, natural language processing untuk penulisan kreatif, dan etika AI dalam seni.",
-              "tech_description": "Program interdisipliner yang menjembatani seni dan teknologi AI.",
-              "tech_table": [
-                {
-                  "label": "Mitra",
-                  "value": "Institut Kesenian Jakarta"
-                },
-                {
-                  "label": "Durasi",
-                  "value": "6 bulan (2 semester)"
-                },
-                {
-                  "label": "Peserta",
-                  "value": "60 mahasiswa S1/S2"
-                },
-                {
-                  "label": "Tools",
-                  "value": "Stable Diffusion, ChatGPT, TensorFlow"
-                },
-                {
-                  "label": "Output",
-                  "value": "Pameran karya AI, publikasi jurnal"
-                },
-                {
-                  "label": "Fasilitator",
-                  "value": "3 pengajar + 2 asisten riset"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a46f?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Workshop AI untuk seniman"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Sesi praktikum"
-                }
-              ]
+              "description_md": "**MendarArt di Bhumi** adalah pameran seni multi-disiplin yang mempertemukan berbagai praktik kreatif dalam satu ruang. Penumbra berkolaborasi dengan Streems, Made By People, dan berbagai pihak untuk menghadirkan pengalaman seni yang inklusif.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
             },
             {
               "id": "pe2",
-              "year": "2023 – 2024",
-              "name": "Environmental Soundscape Mapping",
-              "subtitle": "Pemetaan lanskap suara lingkungan untuk riset akustik ekologis.",
-              "client": "Riset Kolaborasi — ITB",
-              "image_url": "https://images.unsplash.com/photo-1470071459604-7b8ec44ffd0b?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
+              "year": "2024",
+              "name": "Needle Punch Workshop",
+              "subtitle": "Needle Punch Educational Workshop",
+              "client": "CraftZilla",
+              "image_url": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
               "image_id": "",
-              "description_md": "**Environmental Soundscape Mapping** adalah proyek riset kolaborasi antara Umbra Jaya Angkasa dan Institut Teknologi Bandung. Proyek ini memetakan lanskap suara (soundscape) di berbagai lokasi lingkungan di Indonesia untuk memahami dampak aktivitas manusia terhadap ekosistem akustik.\n\nData dikumpulkan menggunakan sensor suara otonom yang ditempatkan di hutan, pesisir, dan perkotaan, kemudian dianalisis menggunakan machine learning untuk mengidentifikasi pola dan anomali.",
-              "tech_description": "Riset akustik ekologis dengan sensor network dan ML analytics.",
-              "tech_table": [
-                {
-                  "label": "Mitra",
-                  "value": "ITB, Riset Kolaborasi"
-                },
-                {
-                  "label": "Lokasi",
-                  "value": "3 provinsi (Jabar, Jateng, Bali)"
-                },
-                {
-                  "label": "Sensor",
-                  "value": "Omnidirectional MEMS mic array"
-                },
-                {
-                  "label": "Data",
-                  "value": "1.200 jam rekaman lapangan"
-                },
-                {
-                  "label": "Analisis",
-                  "value": "CNN, Spektral Clustering"
-                },
-                {
-                  "label": "Durasi",
-                  "value": "18 bulan"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1470071459604-7b8ec44ffd0b?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Pemasangan sensor suara"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Lokasi riset hutan tropis"
-                }
-              ]
-            },
-            {
-              "id": "pe3",
-              "year": "2022 – 2023",
-              "name": "Open Source Audio Toolkit",
-              "subtitle": "Toolkit audio open source untuk komunitas seni audio.",
-              "client": "Komunitas Seni Audio",
-              "image_url": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
-              "image_id": "",
-              "description_md": "**Open Source Audio Toolkit** adalah inisiatif pengembangan perangkat lunak audio sumber terbuka yang ditujukan untuk komunitas seni audio di Indonesia. Toolkit ini mencakup plugin audio, alat bantu produksi, dan dokumentasi teknis dalam Bahasa Indonesia.\n\nTujuan proyek ini adalah menurunkan hambatan akses terhadap teknologi audio berkualitas bagi praktisi seni audio di Indonesia.",
-              "tech_description": "Open source development untuk ekosistem audio Indonesia.",
-              "tech_table": [
-                {
-                  "label": "Jenis",
-                  "value": "Open Source Software"
-                },
-                {
-                  "label": "Platform",
-                  "value": "VST3, AU, LV2, Standalone"
-                },
-                {
-                  "label": "Bahasa",
-                  "value": "C++, JUCE Framework"
-                },
-                {
-                  "label": "Lisensi",
-                  "value": "GPLv3"
-                },
-                {
-                  "label": "Modul",
-                  "value": "10 plugin (EQ, Compressor, Reverb, dll)"
-                },
-                {
-                  "label": "Kontributor",
-                  "value": "12 developer dari 5 kota"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "UI prototype plugin"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Developer workshop"
-                }
-              ]
-            },
-            {
-              "id": "pe4",
-              "year": "2021 – 2022",
-              "name": "Digital Heritage Archive Platform",
-              "subtitle": "Platform digital untuk preservasi warisan budaya Indonesia.",
-              "client": "Museum Nasional",
-              "image_url": "https://images.unsplash.com/photo-1568667256549-094345857637?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
-              "image_id": "",
-              "description_md": "**Digital Heritage Archive Platform** adalah sistem arsip digital yang dibangun untuk Museum Nasional Indonesia dalam rangka melestarikan dan mendokumentasikan warisan budaya Indonesia. Platform ini mendukung berbagai format media (gambar resolusi tinggi, audio, video 3D, dokumen) dan dilengkapi dengan sistem metadata berbasis standar internasional.\n\nFitur utama meliputi katalogisasi otomatis, pencarian semantic, dan akses publik terbatas untuk riset.",
-              "tech_description": "Digital preservation platform dengan metadata standar internasional.",
-              "tech_table": [
-                {
-                  "label": "Mitra",
-                  "value": "Museum Nasional"
-                },
-                {
-                  "label": "Koleksi",
-                  "value": "15.000+ artefak terdokumentasi"
-                },
-                {
-                  "label": "Format",
-                  "value": "IIIF, TEI, METS/MODS"
-                },
-                {
-                  "label": "Storage",
-                  "value": "Distributed, 50TB capacity"
-                },
-                {
-                  "label": "Search",
-                  "value": "Elasticsearch, semantic search"
-                },
-                {
-                  "label": "Akses",
-                  "value": "Public read, restricted write"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1568667256549-094345857637?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Tampilan platform arsip"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Proses digitalisasi artefak"
-                }
-              ]
-            },
-            {
-              "id": "pe5",
-              "year": "2020 – 2021",
-              "name": "STEM Workshop Series",
-              "subtitle": "Program workshop STEM untuk siswa SMA.",
-              "client": "SMA Negeri 8 Jakarta",
-              "image_url": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=160\u0026h=160\u0026fit=crop\u0026auto=format",
-              "image_id": "",
-              "description_md": "**STEM Workshop Series** adalah program pengabdian masyarakat yang diselenggarakan oleh Rumah Ilmu Penumbra bekerja sama dengan SMA Negeri 8 Jakarta. Program ini memberikan pengenalan praktis tentang sains, teknologi, teknik, dan matematika melalui proyek-proyek langsung yang menyenangkan.\n\nMateri workshop meliputi pengenalan elektronika dasar, pemrograman mikrocontroller, robotika sederhana, dan sensor lingkungan. Setiap sesi dirancang untuk mendorong pemikiran kritis dan kreativitas.",
-              "tech_description": "Program edukasi STEM praktis untuk siswa menengah.",
-              "tech_table": [
-                {
-                  "label": "Mitra",
-                  "value": "SMA Negeri 8 Jakarta"
-                },
-                {
-                  "label": "Peserta",
-                  "value": "120 siswa (4 kelas)"
-                },
-                {
-                  "label": "Durasi",
-                  "value": "8 sesi @ 3 jam"
-                },
-                {
-                  "label": "Tools",
-                  "value": "Arduino, Raspberry Pi, Sensor Kit"
-                },
-                {
-                  "label": "Materi",
-                  "value": "Elektronika, Coding, Robotika"
-                },
-                {
-                  "label": "Output",
-                  "value": "15 proyek final, pameran sekolah"
-                }
-              ],
-              "gallery": [
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Workshop Arduino"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Siswa merakit robot"
-                },
-                {
-                  "type": "image",
-                  "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600\u0026h=400\u0026fit=crop",
-                  "alt": "Pameran proyek final"
-                }
-              ]
+              "description_md": "**Needle Punch Workshop** adalah workshop edukatif yang diselenggarakan bersama CraftZilla, memperkenalkan teknik needle punch kepada peserta dari berbagai latar belakang.",
+              "tech_description": "",
+              "tech_table": [],
+              "gallery": []
             }
           ]
         }
