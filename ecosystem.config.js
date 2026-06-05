@@ -2,7 +2,7 @@ module.exports = {
     apps: [
       {
         name: "go-air-app",
-        script: "air",            // PM2 executes the 'air' tool
+        script: "~/go/bin/air",            // PM2 executes the 'air' tool
         interpreter: "none",      // Tells PM2 it's a binary executible, not a JS file
         merge_logs: true,         // Aggregates standard logs
         env: {
