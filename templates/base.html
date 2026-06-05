@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{block "title" .}}PT. Umbra Jaya Angkasa{{end}}</title>
+  <title>{{block "title" .}}Umbra{{end}}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,12 +13,14 @@
 
   <nav>
     <div class="nav-container">
-      <div class="nav-left">
-        <a href="/"><img src="/static/LOGO.svg?v={{.ImgVer}}" alt="Umbra Jaya Angkasa" class="nav-logo" /></a>
-        <a href="/" class="brand-name">PT. Umbra Jaya Angkasa</a>
-      </div>
+      <a href="/" class="nav-brand">
+        <img src="/static/LOGO.svg?v={{.ImgVer}}" alt="Umbra Jaya Angkasa" class="nav-logo" />
+      </a>
       <ul class="nav-links">
-        <li><a href="/register" class="nav-btn">Inquiry</a></li>
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/UmbraCreativeSoftworks">Creative Softworks</a></li>
+        <li><a href="/UmbraSuara">Umbra Suara</a></li>
+        <li><a href="/Penumbra">Penumbra</a></li>
       </ul>
     </div>
   </nav>
@@ -32,10 +34,10 @@
         <li><a href="/UmbraCreativeSoftworks">Creative Softworks</a></li>
         <li><a href="/UmbraSuara">Umbra Suara</a></li>
         <li><a href="/Penumbra">Rumah Ilmu Penumbra</a></li>
-        <li><a href="/register">Inquiry</a></li>
+        <li><a href="/register">Ajukan Inquiry</a></li>
       </ul>
       <p>Korespondensi: <a href="mailto:kontak@umbrajayaangkasa.com">kontak@umbrajayaangkasa.com</a></p>
-      <p>&copy; 2026 PT. Umbra Jaya Angkasa. Hak Cipta Dilindungi.</p>
+      <p>&copy; 2026 Umbra. Hak Cipta Dilindungi.</p>
     </div>
   </footer>
 
