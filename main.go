@@ -696,6 +696,6 @@ func main() {
 		http.FileServer(http.Dir("static")).ServeHTTP(w, r)
 	})))
 
-	log.Println("Listening on :8080")
-	log.Fatal(http.ListenAndServe(":8080", mux))
+	log.Println("Listening on :8085")
+	log.Fatal(http.ListenAndServe(":8085", mux))
 }
