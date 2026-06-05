@@ -614,6 +614,79 @@
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }
 
+.section-calc-sw .calc-sw-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.section-calc-sw .calc-sw-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  flex-grow: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: #1e293b;
+  outline: none;
+  margin: 0;
+}
+
+.section-calc-sw .calc-sw-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #7c3aed;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.section-calc-sw .calc-sw-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.section-calc-sw .calc-sw-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #7c3aed;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.section-calc-sw .calc-sw-slider::-moz-range-thumb:hover {
+  transform: scale(1.15);
+}
+
+.section-calc-sw .calc-sw-slider-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.section-calc-sw .calc-sw-number-input {
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  color: #f8fafc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 75px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-calc-sw .calc-sw-number-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.15);
+}
+
 .calc-sw-results-card {
   padding: 2rem;
   background: #0f172a;
@@ -756,6 +829,21 @@
         </div>
 
         <div class="calc-sw-field">
+          <div class="calc-sw-field-header">
+            <span class="calc-sw-field-label">4. Durasi Acara (Jam): <strong id="sw-event-duration-display">16 Jam (0.7 Hari)</strong></span>
+          </div>
+          <div class="calc-sw-slider-container">
+            <input type="range" class="calc-sw-slider" id="sw-event-duration" min="1" max="72" value="16" step="1" />
+            <input type="text" class="calc-sw-number-input" id="sw-event-duration-input" value="16" />
+          </div>
+          <div class="calc-sw-slider-range">
+            <span>1 Jam</span>
+            <span>72 Jam (3 Hari)</span>
+          </div>
+          <p class="calc-sw-field-desc">Tentukan total durasi operasional acara. Anda dapat mengetikkan jam secara manual di kotak sebelah kanan.</p>
+        </div>
+
+        <div class="calc-sw-field">
           <label class="calc-sw-field-label" for="sw-ai">5. Integrasi Fitur AI (Opsional)</label>
           <div class="calc-sw-select-wrap">
             <select class="calc-sw-select" id="sw-ai">
@@ -833,6 +921,9 @@
   var conceptSelect = document.getElementById('sw-concept');
   var customizationSelect = document.getElementById('sw-customization');
   var scaleSelect = document.getElementById('sw-scale');
+  var durationSlider = document.getElementById('sw-event-duration');
+  var durationInput = document.getElementById('sw-event-duration-input');
+  var durationDisplay = document.getElementById('sw-event-duration-display');
   var hwToggle = document.getElementById('sw-hardware-toggle');
   var hwField = document.getElementById('sw-hardware-field');
   var hwCost = document.getElementById('sw-hardware-cost');
@@ -898,14 +989,18 @@
 
     devDays = devDays + aiDevDays;
 
-    var eventHours = 4;
-    var riskFactor = 1.10;
+    var eventHoursVal = parseInt(durationInput.value) || 1;
 
+    var daysEquiv = (eventHoursVal / 24).toFixed(1);
+    if (daysEquiv.endsWith('.0')) {
+      daysEquiv = Math.round(eventHoursVal / 24);
+    }
+    durationDisplay.textContent = eventHoursVal + ' Jam (' + daysEquiv + ' Hari)';
+
+    var riskFactor = 1.10;
     if (scaleSelect.value === 'private') {
-      eventHours = 4;
       riskFactor = 1.10;
     } else if (scaleSelect.value === 'corporate') {
-      eventHours = 16;
       riskFactor = 1.15;
     }
 
@@ -918,10 +1013,10 @@
       hwField.classList.remove('calc-sw-visible');
     }
 
-    var eventDayRate = (eventHours * HOURLY_BASELINE) + FLAT_FEE;
+    var estimatedDays = Math.ceil(eventHoursVal / 24) || 1;
     var devCost = devDays * devDayRate;
     var setupCost = setupDays * setupDayRate;
-    var liveCost = eventDayRate;
+    var liveCost = (eventHoursVal * HOURLY_BASELINE) + (estimatedDays * FLAT_FEE);
     var subtotalBase = devCost + setupCost + liveCost;
     var laborTotal = subtotalBase * riskFactor;
     var riskBuffer = laborTotal - subtotalBase;
@@ -957,12 +1052,14 @@
     var conceptVal = encodeURIComponent(conceptSelect.value);
     var customizationVal = encodeURIComponent(customizationSelect.value);
     var scaleVal = encodeURIComponent(scaleSelect.value);
+    var hoursVal = encodeURIComponent(eventHoursVal);
     var aiVal = encodeURIComponent(aiSelect.value);
     var totalVal = Math.round(grandTotal);
 
     ctaEl.href = "/register?concept=" + conceptVal +
                  "&customization=" + customizationVal +
                  "&scale=" + scaleVal +
+                 "&hours=" + hoursVal +
                  "&ai=" + aiVal +
                  "&total=" + totalVal;
   }
@@ -980,6 +1077,34 @@
   hwToggle.addEventListener('change', function() {
     if (!this.checked) {
       hwCost.value = '0';
+    }
+    update();
+  });
+
+  durationSlider.addEventListener('input', function() {
+    durationInput.value = this.value;
+    update();
+  });
+
+  durationInput.addEventListener('input', function() {
+    var cleanVal = this.value.replace(/\D/g, '');
+    this.value = cleanVal;
+    var numericVal = parseInt(cleanVal) || 1;
+    if (numericVal > 72) {
+      durationSlider.value = 72;
+    } else {
+      durationSlider.value = numericVal;
+    }
+    update();
+  });
+
+  durationInput.addEventListener('blur', function() {
+    var val = parseInt(this.value) || 16;
+    this.value = val;
+    if (val > 72) {
+      durationSlider.value = 72;
+    } else {
+      durationSlider.value = val;
     }
     update();
   });
