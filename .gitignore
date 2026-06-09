@@ -1,0 +1,23 @@
+# Compiled binary
+tmp/
+.opencode/
+thoughts/
+
+# Uploaded files (user-generated content)
+static/uploads/
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# Build artifacts
+build-errors.log

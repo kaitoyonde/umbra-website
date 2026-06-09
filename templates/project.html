@@ -59,7 +59,7 @@
       </div>
       {{else}}
       <div class="gallery-item">
-        <img src="{{.URL}}" alt="{{if .Alt}}{{.Alt}}{{else}}{$.Project.Name}} - Galeri{{end}}" loading="lazy" />
+        <img src="{{.URL}}" alt="{{if .Alt}}{{.Alt}}{{else}}{{$.Project.Name}} - Galeri{{end}}" loading="lazy" />
       </div>
       {{end}}
       {{end}}

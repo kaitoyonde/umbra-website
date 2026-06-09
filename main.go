@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/rand"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"html/template"
@@ -18,11 +20,13 @@ import (
 var imgVer = fmt.Sprint(time.Now().Unix())
 
 type pageData struct {
-	ImgVer string
+	ImgVer       string
+	WAPhone      string
+	WAPhoneSuara string
 }
 
 func pageDataAll() pageData {
-	return pageData{ImgVer: imgVer}
+	return pageData{ImgVer: imgVer, WAPhone: waPhone, WAPhoneSuara: waPhoneSuara}
 }
 
 func render(w http.ResponseWriter, page string, data interface{}) {
@@ -142,6 +146,12 @@ var (
 	siteData   *SiteData
 	dataMu     sync.RWMutex
 	dataPath   string
+
+	adminPass     string
+	waPhone       string
+	waPhoneSuara  string
+	sessions      = make(map[string]time.Time)
+	sessionsMu    sync.Mutex
 )
 
 func loadData() error {
@@ -266,13 +276,20 @@ func renderMarkdown(md string) template.HTML {
 	})
 	// Unordered lists
 	reUL := regexp.MustCompile(`(?m)^\s*[-*]\s+(.+)$`)
-	text = reUL.ReplaceAllString(text, "<li>$1</li>")
+	text = reUL.ReplaceAllString(text, "<!--ULITEM-->$1")
+	reWrapUL := regexp.MustCompile(`(?:<!--ULITEM-->[^\n]*\n?)+`)
+	text = reWrapUL.ReplaceAllStringFunc(text, func(m string) string {
+		items := strings.TrimSpace(strings.ReplaceAll(m, "<!--ULITEM-->", ""))
+		return "<ul><li>" + strings.ReplaceAll(items, "\n", "</li><li>") + "</li></ul>"
+	})
 	// Ordered lists
 	reOL := regexp.MustCompile(`(?m)^\s*\d+\.\s+(.+)$`)
-	text = reOL.ReplaceAllString(text, "<li>$1</li>")
-	text = strings.ReplaceAll(text, "<li>", "</ul><ul><li>") + "</ul>"
-	text = strings.Replace(text, "</ul><ul><li>", "<li>", 1)
-	text = strings.TrimSuffix(text, "</ul>")
+	text = reOL.ReplaceAllString(text, "<!--OLITEM-->$1")
+	reWrapOL := regexp.MustCompile(`(?:<!--OLITEM-->[^\n]*\n?)+`)
+	text = reWrapOL.ReplaceAllStringFunc(text, func(m string) string {
+		items := strings.TrimSpace(strings.ReplaceAll(m, "<!--OLITEM-->", ""))
+		return "<ol><li>" + strings.ReplaceAll(items, "\n", "</li><li>") + "</li></ol>"
+	})
 	// Bold
 	reBold := regexp.MustCompile(`\*\*(.+?)\*\*`)
 	text = reBold.ReplaceAllString(text, "<strong>$1</strong>")
@@ -287,7 +304,7 @@ func renderMarkdown(md string) template.HTML {
 	text = reLink.ReplaceAllString(text, `<a href="$2">$1</a>`)
 	// Paragraphs
 	text = strings.TrimSpace(text)
-	if !strings.HasPrefix(text, "<h") && !strings.HasPrefix(text, "<ul") && !strings.HasPrefix(text, "<pre") && !strings.HasPrefix(text, "<li") {
+	if !strings.HasPrefix(text, "<h") && !strings.HasPrefix(text, "<ul") && !strings.HasPrefix(text, "<ol") && !strings.HasPrefix(text, "<pre") && !strings.HasPrefix(text, "<li") {
 		para := strings.Split(text, "\n\n")
 		for i := range para {
 			p := strings.TrimSpace(para[i])
@@ -335,12 +352,63 @@ func adminSession(r *http.Request) (string, bool) {
 	if err != nil || c.Value == "" {
 		return "", false
 	}
+	sessionsMu.Lock()
+	expiry, ok := sessions[c.Value]
+	if !ok || time.Now().After(expiry) {
+		delete(sessions, c.Value)
+		sessionsMu.Unlock()
+		return "", false
+	}
+	sessionsMu.Unlock()
 	return c.Value, true
+}
+
+// --- ENV LOADER ---
+
+func loadEnv(path string) {
+	b, err := os.ReadFile(path)
+	if err != nil {
+		return // .env file is optional
+	}
+	for _, line := range strings.Split(string(b), "\n") {
+		line = strings.TrimSpace(line)
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+		eq := strings.IndexByte(line, '=')
+		if eq < 0 {
+			continue
+		}
+		key := strings.TrimSpace(line[:eq])
+		val := strings.TrimSpace(line[eq+1:])
+		if len(val) >= 2 && (val[0] == '"' && val[len(val)-1] == '"' || val[0] == '\'' && val[len(val)-1] == '\'') {
+			val = val[1 : len(val)-1]
+		}
+		if key != "" {
+			os.Setenv(key, val)
+		}
+	}
 }
 
 // --- ROUTES ---
 
 func main() {
+	loadEnv(".env")
+	adminPass = os.Getenv("ADMIN_PASSWORD")
+	if adminPass == "" {
+		log.Fatal("ADMIN_PASSWORD environment variable is required")
+	}
+	waPhone = os.Getenv("WA_PHONE_NUMBER")
+	if waPhone == "" {
+		waPhone = "6281234567890"
+		log.Println("WA_PHONE_NUMBER not set, using placeholder 6281234567890")
+	}
+	waPhoneSuara = os.Getenv("WA_PHONE_SUARA")
+	if waPhoneSuara == "" {
+		waPhoneSuara = waPhone
+		log.Println("WA_PHONE_SUARA not set, falling back to WA_PHONE_NUMBER")
+	}
+
 	if err := loadData(); err != nil {
 		log.Fatalf("Failed to load data: %v", err)
 	}
@@ -355,19 +423,11 @@ func main() {
 	})
 
 	mux.HandleFunc("/register", func(w http.ResponseWriter, r *http.Request) {
-		success := r.URL.Query().Get("success") == "true"
-		render(w, "register.html", struct {
-			pageData
-			Success bool
-		}{pageDataAll(), success})
+		render(w, "register.html", pageDataAll())
 	})
 
 	mux.HandleFunc("/do_inquiry", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != "POST" {
-			http.Redirect(w, r, "/register", http.StatusSeeOther)
-			return
-		}
-		http.Redirect(w, r, "/register?success=true", http.StatusSeeOther)
+		http.Redirect(w, r, "/register", http.StatusSeeOther)
 	})
 
 	// Division pages
@@ -408,10 +468,19 @@ func main() {
 	// Admin routes
 	mux.HandleFunc("/admin", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == "POST" {
-			r.ParseForm()
-			if r.FormValue("password") == "umbra2024" {
+			if err := r.ParseForm(); err != nil {
+				renderAdmin(w, "login.html", struct{ Error string }{"Gagal membaca form."})
+				return
+			}
+			if r.FormValue("password") == adminPass {
+				b := make([]byte, 16)
+				rand.Read(b)
+				sessionID := hex.EncodeToString(b)
+				sessionsMu.Lock()
+				sessions[sessionID] = time.Now().Add(24 * time.Hour)
+				sessionsMu.Unlock()
 				http.SetCookie(w, &http.Cookie{
-					Name: "admin", Value: "authenticated", Path: "/",
+					Name: "admin", Value: sessionID, Path: "/",
 					HttpOnly: true, SameSite: http.SameSiteLaxMode, MaxAge: 86400,
 				})
 				http.Redirect(w, r, "/admin/dashboard", http.StatusSeeOther)
@@ -444,7 +513,10 @@ func main() {
 		if slug == "" { http.NotFound(w, r); return }
 
 		if r.Method == "POST" {
-			r.ParseForm()
+			if err := r.ParseForm(); err != nil {
+				http.Error(w, "Bad request", http.StatusBadRequest)
+				return
+			}
 			dataMu.Lock()
 			div := getDivisionLocked(slug)
 			if div != nil {
@@ -503,7 +575,10 @@ func main() {
 		slug, colIndex := parts[0], parts[1]
 
 		if r.Method == "POST" {
-			r.ParseForm()
+			if err := r.ParseForm(); err != nil {
+				http.Error(w, "Bad request", http.StatusBadRequest)
+				return
+			}
 			dataMu.Lock()
 			div := getDivisionLocked(slug)
 			ci := 0
@@ -556,7 +631,10 @@ func main() {
 		if id == "" { http.NotFound(w, r); return }
 
 		if r.Method == "POST" {
-			r.ParseForm()
+			if err := r.ParseForm(); err != nil {
+				http.Error(w, "Bad request", http.StatusBadRequest)
+				return
+			}
 			dataMu.Lock()
 			di, ci, pi := getProjectLocked(id)
 			if di >= 0 {
@@ -646,7 +724,13 @@ func main() {
 				return
 			}
 			defer dst.Close()
-			io.Copy(dst, file)
+			if _, err := io.Copy(dst, file); err != nil {
+				renderAdmin(w, "images.html", struct {
+					Images []ImageData
+					Error  string
+				}{getAllImages(), "Gagal menyimpan file: " + err.Error()})
+				return
+			}
 
 			dataMu.Lock()
 			siteData.nextID++
@@ -696,6 +780,10 @@ func main() {
 		http.FileServer(http.Dir("static")).ServeHTTP(w, r)
 	})))
 
-	log.Println("Listening on :8085")
-	log.Fatal(http.ListenAndServe(":8085", mux))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	log.Printf("Listening on :%s", port)
+	log.Fatal(http.ListenAndServe(":"+port, mux))
 }

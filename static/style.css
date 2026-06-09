@@ -1972,16 +1972,17 @@ footer a:hover {
 }
 
 .calc-panel-badge {
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.65rem;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-accent-hover);
   background: var(--color-accent-glow);
-  padding: 0.25rem 0.7rem;
+  padding: 0.2rem 0.65rem;
   border-radius: 9999px;
   border: 1px solid var(--border-accent);
   white-space: nowrap;
+  line-height: 1.4;
 }
 
 /* Slider field */
@@ -2039,6 +2040,11 @@ footer a:hover {
   transform: scale(1.15);
 }
 
+.calc-slider:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .calc-slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
@@ -2088,6 +2094,16 @@ footer a:hover {
   cursor: pointer;
   flex-shrink: 0;
   margin-top: 0.15rem;
+}
+
+.calc-checkbox-item input[type="checkbox"]:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.calc-checkbox-item:has(input[type="checkbox"]:disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .calc-checkbox-body {
@@ -2273,6 +2289,187 @@ footer a:hover {
   padding: 1.1rem 2.5rem;
   font-size: 1.05rem;
   max-width: 320px;
+}
+
+/* === Umbra Suara — 2-Column Calculator Layout === */
+.calc-panel-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.calc-panel-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (max-width: 860px) {
+  .calc-panel-body {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* === Umbra Suara — Tier Buttons (radio as button-like cards) === */
+.calc-tier-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.calc-tier-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.75rem 0.5rem 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  user-select: none;
+}
+
+.calc-tier-option:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+  background: rgba(139, 92, 246, 0.03);
+}
+
+.calc-tier-option:has(input:checked) {
+  border-color: var(--color-accent);
+  background: var(--color-accent-glow);
+  box-shadow: 0 0 0 1px var(--color-accent), 0 4px 20px rgba(139, 92, 246, 0.25);
+  z-index: 1;
+}
+
+.calc-tier-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.calc-tier-option .calc-tier-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  letter-spacing: 0.02em;
+}
+
+.calc-tier-option .calc-tier-desc {
+  font-size: 0.68rem;
+  color: var(--color-dim);
+  line-height: 1.3;
+  margin-top: 0.1rem;
+}
+
+.calc-tier-option:has(input:checked) .calc-tier-label {
+  color: var(--color-accent-hover);
+}
+
+/* === Umbra Suara — Shift Manual Input === */
+.calc-shift-manual {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.calc-shift-manual-label {
+  font-size: 0.8rem;
+  color: var(--color-dim);
+}
+
+.calc-shift-input {
+  width: 80px;
+  padding: 0.45rem 0.7rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--color-heading);
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.calc-shift-input:focus {
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+/* === Umbra Suara — Pre-Project Fee Badge === */
+.calc-preproject-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.5rem;
+  background: rgba(251, 191, 36, 0.04);
+  border: 1px solid rgba(251, 191, 36, 0.12);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+.calc-preproject-badge svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: #f59e0b;
+  opacity: 0.7;
+}
+
+.calc-preproject-badge strong {
+  color: var(--color-accent-hover);
+  font-weight: 600;
+}
+
+/* === Umbra Suara — Detail Informasi (Price Details Column) === */
+.calc-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.calc-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+.calc-detail-item--warn {
+  color: #f59e0b;
+}
+
+.calc-detail-key {
+  font-weight: 500;
+}
+
+.calc-detail-val {
+  color: var(--color-dim);
+  text-align: right;
+}
+
+.calc-detail-item--warn .calc-detail-val {
+  color: #f59e0b;
+  font-weight: 600;
 }
 
 

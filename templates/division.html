@@ -121,101 +121,116 @@
       </div>
 
       <div class="calc-body">
-        <!-- PATHWAY 1: Music Production & Studio Recording (B2C) -->
+        <!-- PATHWAY 1: Music Production & Studio Recording (Shift-based) -->
         <div class="calc-panel active" id="pathway-music">
           <div class="calc-panel-header">
             <h3>Produksi Musik &amp; Rekaman Studio</h3>
-
           </div>
+          <div class="calc-panel-body">
+            <div class="calc-panel-col">
 
-          <div class="calc-field">
-            <label class="calc-field-label">Durasi Rekaman Studio: <strong id="studio-hours-display">0 Jam</strong></label>
-            <input type="range" class="calc-slider" id="studio-hours" min="0" max="20" value="0" step="1" />
-            <div class="calc-slider-range">
-              <span>0 Jam</span>
-              <span>20 Jam</span>
-            </div>
-            <div class="calc-note" id="studio-min-note">Minimal pemesanan 2 jam.</div>
-          </div>
-
-          <div class="calc-field">
-            <label class="calc-field-label">Jumlah Lagu untuk Mix &amp; Master: <strong id="song-count-display">0 Lagu</strong></label>
-            <input type="range" class="calc-slider" id="song-count" min="0" max="14" value="0" step="1" />
-            <div class="calc-slider-range">
-              <span>0 Lagu</span>
-              <span>14 Lagu</span>
-            </div>
-            <div class="calc-note" id="song-service-note" style="display:none">Setiap lagu: Mix &amp; Master + 2 revisi gratis</div>
-          </div>
-
-          <div id="music-main-area">
-            <div class="calc-checkbox-list">
-              <label class="calc-checkbox-item">
-                <input type="checkbox" id="stems-cb" />
-                <span class="calc-checkbox-body">
-                  <span class="calc-checkbox-name">Serahkan Multi-track Stems</span>
-                  <span class="calc-checkbox-desc">Stem track terpisah untuk remix atau pentas langsung</span>
-                  <span class="calc-checkbox-price">+Rp 300.000 / lagu</span>
-                </span>
+              <!-- Tier Selection -->
+              <div class="calc-field">
+                <label class="calc-field-label">Pilih Paket Harga per Jam</label>
+                <div class="calc-tier-group" id="tier-group">
+              <label class="calc-tier-option" data-tier="student">
+                <input type="radio" name="tier" value="70000" checked />
+                <span class="calc-tier-label">Student</span>
+                <span class="calc-tier-desc">Pelajar &amp; mahasiswa</span>
               </label>
-              <label class="calc-checkbox-item">
-                <input type="checkbox" id="express-cb" />
-                <span class="calc-checkbox-body">
-                  <span class="calc-checkbox-name">Layanan Express (Selesai 48 Jam)</span>
-                  <span class="calc-checkbox-desc">Butuh mix Anda kembali dalam 48 jam?</span>
-                  <span class="calc-checkbox-price">+Rp 500.000</span>
-                </span>
+              <label class="calc-tier-option" data-tier="indie">
+                <input type="radio" name="tier" value="120000" />
+                <span class="calc-tier-label">Indie</span>
+                <span class="calc-tier-desc">Musisi independen</span>
               </label>
+              <label class="calc-tier-option" data-tier="professional">
+                <input type="radio" name="tier" value="150000" />
+                <span class="calc-tier-label">Professional</span>
+                <span class="calc-tier-desc">Proyek berskala profesional</span>
+              </label>
+                </div>
+              </div>
+
+              <!-- Recording Shifts -->
+              <div class="calc-field">
+                <label class="calc-field-label">Durasi Rekaman Studio: <strong id="shifts-display">0 Shift</strong></label>
+                <input type="range" class="calc-slider" id="shifts-slider" min="0" max="5" value="0" step="1" />
+                <div class="calc-slider-range">
+                  <span>0 Shift</span>
+                  <span>5+ Shift</span>
+                </div>
+                <div class="calc-shift-manual">
+                  <span class="calc-shift-manual-label">Atau masukkan jumlah shift:</span>
+                  <input type="number" id="shifts-input" min="0" max="100" value="0" class="calc-shift-input" />
+                </div>
+              </div>
+
+              <!-- Mix & Master Songs -->
+              <div class="calc-field">
+                <label class="calc-field-label">Jumlah Lagu untuk Mix &amp; Master: <strong id="songs-display">0 Lagu</strong></label>
+                <input type="range" class="calc-slider" id="songs-slider" min="0" max="20" value="0" step="1" />
+                <div class="calc-slider-range">
+                  <span>0 Lagu</span>
+                  <span>20 Lagu</span>
+                </div>
+              </div>
+
+              <!-- Extra Revisions -->
+              <div class="calc-field">
+                <label class="calc-field-label">Revisi Tambahan: <strong id="extra-revisions-display">0</strong></label>
+                <input type="range" class="calc-slider" id="extra-revisions-slider" min="0" max="10" value="0" step="1" />
+                <div class="calc-slider-range">
+                  <span>0</span>
+                  <span>10</span>
+                </div>
+              </div>
+
             </div>
+            <div class="calc-panel-col">
 
-            <div class="calc-field">
-              <label class="calc-field-label">Tambah Revisi: <strong id="revisions-display">0</strong></label>
-              <input type="range" class="calc-slider" id="revisions-count" min="0" max="5" value="0" step="1" />
-              <div class="calc-slider-range">
-                <span>0</span>
-                <span>5</span>
+              <!-- Addons -->
+              <div class="calc-checkbox-list">
+                <label class="calc-checkbox-item">
+                  <input type="checkbox" id="express-cb-music" />
+                  <span class="calc-checkbox-body">
+                    <span class="calc-checkbox-name">Layanan Express — Selesai 48 Jam</span>
+                    <span class="calc-checkbox-desc">Master akhir dikirim dalam 48 jam setelah mixing selesai</span>
+                    <span class="calc-checkbox-price">+Rp 500.000/lagu</span>
+                  </span>
+                </label>
               </div>
-            </div>
 
-            <div class="calc-breakdown" id="music-breakdown">
-              <div class="calc-breakdown-row">
-                <span>Rekaman Studio</span>
-                <span id="music-recording-line">Rp 0</span>
+              <!-- Breakdown -->
+              <div class="calc-breakdown" id="music-breakdown">
+                <div class="calc-breakdown-row" id="music-preproject-row" style="display:none">
+                  <span>Pre-Project</span>
+                  <span id="music-preproject-line">Rp 0</span>
+                </div>
+                <div class="calc-breakdown-row" id="music-recording-row" style="display:none">
+                  <span id="music-recording-label">Rekaman Studio</span>
+                  <span id="music-recording-line">Rp 0</span>
+                </div>
+                <div class="calc-breakdown-row" id="music-mix-row" style="display:none">
+                  <span>Mix &amp; Master</span>
+                  <span id="music-mix-line">Rp 0</span>
+                </div>
+                <div class="calc-breakdown-row" id="music-extra-revisions-row" style="display:none">
+                  <span>Revisi <span class="calc-included">2 gratis/lagu</span></span>
+                  <span id="music-extra-revisions-line">Rp 0</span>
+                </div>
+                <div class="calc-breakdown-row" id="music-express-row" style="display:none">
+                  <span>Layanan Express</span>
+                  <span id="music-express-line">Rp 500.000</span>
+                </div>
               </div>
-              <div class="calc-breakdown-row">
-                <span>Mix &amp; Master <span class="calc-included">2 revisi gratis</span></span>
-                <span id="music-mix-line">Rp 0</span>
-              </div>
-              <div class="calc-breakdown-row" id="music-stems-row" style="display:none">
-                <span>Multi-track Stems</span>
-                <span id="music-stems-line">Rp 0</span>
-              </div>
-              <div class="calc-breakdown-row" id="music-express-row" style="display:none">
-                <span>Layanan Express</span>
-                <span id="music-express-line">Rp 0</span>
-              </div>
-              <div class="calc-breakdown-row" id="music-revisions-row" style="display:none">
-                <span>Revisi Tambahan</span>
-                <span id="music-revisions-line">Rp 0</span>
-              </div>
-            </div>
 
-            <div class="calc-result-row">
-              <span class="calc-result-label">Total Estimasi</span>
-              <span class="calc-result-price" id="music-total">Rp 0</span>
-            </div>
-
-            <a href="/register" class="calc-cta">Pesan Sesi Studio</a>
-          </div>
-
-          <div id="music-special-area" style="display:none">
-            <div class="calc-special-card">
-              <div class="calc-special-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <div class="calc-result-row">
+                <span class="calc-result-label">Total Estimasi</span>
+                <span class="calc-result-price" id="music-total">Rp 0</span>
               </div>
-              <h3 class="calc-special-title">Proyek Lebih dari 13 Lagu?</h3>
-              <p class="calc-special-desc">Kami menangani album penuh, koleksi lagu, dan proyek berskala besar. Setiap proyek memiliki kebutuhan unik — tim kami siap mendiskusikan detail teknis, jadwal, dan harga terbaik untuk Anda.</p>
-              <a href="/register" class="calc-cta calc-cta--large">Hubungi Tim Kami</a>
+
+              <a href="https://wa.me/{{$.WAPhoneSuara}}" class="calc-cta" id="music-cta">Pesan via WhatsApp</a>
+
             </div>
           </div>
         </div>
@@ -224,71 +239,93 @@
         <div class="calc-panel" id="pathway-b2b">
           <div class="calc-panel-header">
             <h3>Audio Komersial &amp; Sound Design B2B</h3>
-
           </div>
+          <div class="calc-panel-body">
+            <div class="calc-panel-col">
 
-          <div class="calc-field">
-            <label class="calc-field-label" for="b2b-project-type">Tipe Proyek</label>
-            <select class="calc-select" id="b2b-project-type">
-              <option value="3500000">Audio Bumper / Iklan Pendek Kustom (&lt;1 Menit) &mdash; Rp 3.500.000</option>
-              <option value="5000000">Jingle Komersial Standar (30-45 Detik) &mdash; Rp 5.000.000</option>
-              <option value="10000000">Sound Design &amp; Skor Video Korporat (2-3 Menit) &mdash; Rp 10.000.000</option>
-            </select>
-          </div>
+              <div class="calc-field">
+                <label class="calc-field-label" for="b2b-project-type">Tipe Proyek</label>
+                <select class="calc-select" id="b2b-project-type">
+                  <option value="3500000">Audio Bumper / Iklan Pendek Kustom (&lt;1 Menit) &mdash; Rp 3.500.000</option>
+                  <option value="5000000">Jingle Komersial Standar (30-45 Detik) &mdash; Rp 5.000.000</option>
+                  <option value="10000000">Sound Design &amp; Skor Video Korporat (2-3 Menit) &mdash; Rp 10.000.000</option>
+                </select>
+              </div>
 
-          <div class="calc-field">
-            <label class="calc-field-label" for="b2b-licensing">Lisensi &amp; Cakupan Penggunaan</label>
-            <select class="calc-select" id="b2b-licensing">
-              <option value="1.0">Media Digital Saja (YouTube, Instagram, Website) &mdash; 1.0x</option>
-              <option value="1.5">Siaran Nasional (TV, Radio, Bioskop Nasional) &mdash; 1.5x</option>
-              <option value="2.0">Siaran Global / Pembelian Penuh &mdash; 2.0x</option>
-            </select>
-          </div>
+              <div class="calc-field">
+                <label class="calc-field-label" for="b2b-licensing">Lisensi &amp; Cakupan Penggunaan</label>
+                <select class="calc-select" id="b2b-licensing">
+                  <option value="1.0">Media Digital Saja (YouTube, Instagram, Website) &mdash; 1.0x</option>
+                  <option value="1.5">Siaran Nasional (TV, Radio, Bioskop Nasional) &mdash; 1.5x</option>
+                  <option value="2.0">Siaran Global / Pembelian Penuh &mdash; 2.0x</option>
+                </select>
+              </div>
 
-          <div class="calc-checkbox-list">
-            <label class="calc-checkbox-item">
-              <input type="checkbox" id="vo-cb" />
-              <span class="calc-checkbox-body">
-                <span class="calc-checkbox-name">Casting &amp; Rekaman Voice-Over</span>
-                <span class="calc-checkbox-desc">Casting, rekam, dan edit Voice-Over Artist profesional</span>
-                <span class="calc-checkbox-price">+Rp 1.500.000</span>
-              </span>
-            </label>
-            <label class="calc-checkbox-item">
-              <input type="checkbox" id="fasttrack-cb" />
-              <span class="calc-checkbox-body">
-                <span class="calc-checkbox-name">Layanan Cepat (Selesai 72 Jam)</span>
-                <span class="calc-checkbox-desc">Butuh pengerjaan kilat?</span>
-                <span class="calc-checkbox-price">+Biaya tambahan 30%</span>
-              </span>
-            </label>
-          </div>
+              <!-- Revisi -->
+              <div class="calc-field">
+                <label class="calc-field-label">Jumlah Revisi: <strong id="b2b-revisions-display">0</strong></label>
+                <input type="range" class="calc-slider" id="b2b-revisions-slider" min="0" max="10" value="0" step="1" />
+                <div class="calc-slider-range">
+                  <span>0</span>
+                  <span>10</span>
+                </div>
+                <div class="calc-note" style="display:block;color:var(--color-muted);">Rp350.000/revisi — Rp450.000/revisi jika Layanan Cepat aktif</div>
+              </div>
 
-          <div class="calc-breakdown" id="b2b-breakdown">
-            <div class="calc-breakdown-row">
-              <span>Harga Dasar</span>
-              <span id="b2b-base-line">Rp 3.500.000</span>
             </div>
-            <div class="calc-breakdown-row" id="b2b-surcharge-row" style="display:none">
-              <span>Biaya Cepat (30%)</span>
-              <span id="b2b-surcharge-line">Rp 0</span>
-            </div>
-            <div class="calc-breakdown-row" id="b2b-vo-row" style="display:none">
-              <span>Biaya Voice-Over</span>
-              <span id="b2b-vo-line">Rp 0</span>
-            </div>
-            <div class="calc-breakdown-row">
-              <span>Pengali Lisensi</span>
-              <span id="b2b-multiplier-line">1.0x</span>
+            <div class="calc-panel-col">
+
+              <div class="calc-checkbox-list">
+                <label class="calc-checkbox-item">
+                  <input type="checkbox" id="vo-cb" />
+                  <span class="calc-checkbox-body">
+                    <span class="calc-checkbox-name">Casting &amp; Rekaman Voice-Over</span>
+                    <span class="calc-checkbox-desc">Casting, rekam, dan edit Voice-Over Artist profesional</span>
+                    <span class="calc-checkbox-price">+Rp 1.500.000</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-item">
+                  <input type="checkbox" id="fasttrack-cb" />
+                  <span class="calc-checkbox-body">
+                    <span class="calc-checkbox-name">Layanan Cepat (Selesai 72 Jam)</span>
+                    <span class="calc-checkbox-desc">Prioritas pengerjaan kilat</span>
+                    <span class="calc-checkbox-price">+30% + Rp250.000 flat</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="calc-breakdown" id="b2b-breakdown">
+                <div class="calc-breakdown-row" id="b2b-base-row">
+                  <span>Harga Dasar</span>
+                  <span id="b2b-base-line">Rp 3.500.000</span>
+                </div>
+                <div class="calc-breakdown-row" id="b2b-surcharge-row" style="display:none">
+                  <span>Layanan Cepat <span class="calc-included">30% + Rp250rb</span></span>
+                  <span id="b2b-surcharge-line">Rp 0</span>
+                </div>
+                <div class="calc-breakdown-row" id="b2b-vo-row" style="display:none">
+                  <span>Biaya Voice-Over</span>
+                  <span id="b2b-vo-line">Rp 0</span>
+                </div>
+                <div class="calc-breakdown-row" id="b2b-revisions-row" style="display:none">
+                  <span id="b2b-revisions-label">Biaya Revisi</span>
+                  <span id="b2b-revisions-line">Rp 0</span>
+                </div>
+                <div class="calc-breakdown-row">
+                  <span>Pengali Lisensi</span>
+                  <span id="b2b-multiplier-line">1.0x</span>
+                </div>
+              </div>
+
+              <div class="calc-result-row">
+                <span class="calc-result-label">Total Estimasi</span>
+                <span class="calc-result-price" id="b2b-total">Rp 3.500.000</span>
+              </div>
+
+              <a href="https://wa.me/{{$.WAPhoneSuara}}" class="calc-cta" id="b2b-cta">Ajukan Invoice / Proposal Resmi</a>
+
             </div>
           </div>
-
-          <div class="calc-result-row">
-            <span class="calc-result-label">Total Estimasi</span>
-            <span class="calc-result-price" id="b2b-total">Rp 3.500.000</span>
-          </div>
-
-          <a href="/register" class="calc-cta">Ajukan Invoice / Proposal Resmi</a>
         </div>
       </div>
     </div>
@@ -297,6 +334,7 @@
 
 <script>
 (function() {
+  var WA_PHONE = '{{$.WAPhoneSuara}}';
   // Tab switching
   var pathBtns = document.querySelectorAll('.calc-path-btn');
   var musicPanel = document.getElementById('pathway-music');
@@ -314,140 +352,235 @@
     });
   });
 
-  // ========== MUSIC PATHWAY (B2C) ==========
-  var studioSlider = document.getElementById('studio-hours');
-  var studioDisplay = document.getElementById('studio-hours-display');
-  var studioNote = document.getElementById('studio-min-note');
-  var songSlider = document.getElementById('song-count');
-  var songDisplay = document.getElementById('song-count-display');
-  var songServiceNote = document.getElementById('song-service-note');
-  var musicMainArea = document.getElementById('music-main-area');
-  var musicSpecialArea = document.getElementById('music-special-area');
-  var revisionsSlider = document.getElementById('revisions-count');
-  var revisionsDisplay = document.getElementById('revisions-display');
-  var stemsCb = document.getElementById('stems-cb');
-  var expressCb = document.getElementById('express-cb');
+  // ========== MUSIC PATHWAY (Shift-based) ==========
+  var tierRadios = document.querySelectorAll('input[name="tier"]');
+  var shiftsSlider = document.getElementById('shifts-slider');
+  var shiftsInput = document.getElementById('shifts-input');
+  var shiftsDisplay = document.getElementById('shifts-display');
+  var songsSlider = document.getElementById('songs-slider');
+  var songsDisplay = document.getElementById('songs-display');
+  var extraRevisionsSlider = document.getElementById('extra-revisions-slider');
+  var extraRevisionsDisplay = document.getElementById('extra-revisions-display');
+  var expressCbMusic = document.getElementById('express-cb-music');
 
+  var musicPreprojectLine = document.getElementById('music-preproject-line');
   var musicRecordingLine = document.getElementById('music-recording-line');
   var musicMixLine = document.getElementById('music-mix-line');
-  var musicStemsRow = document.getElementById('music-stems-row');
-  var musicStemsLine = document.getElementById('music-stems-line');
+  var musicExtraRevisionsRow = document.getElementById('music-extra-revisions-row');
+  var musicExtraRevisionsLine = document.getElementById('music-extra-revisions-line');
   var musicExpressRow = document.getElementById('music-express-row');
   var musicExpressLine = document.getElementById('music-express-line');
-  var musicRevisionsRow = document.getElementById('music-revisions-row');
-  var musicRevisionsLine = document.getElementById('music-revisions-line');
   var musicTotal = document.getElementById('music-total');
 
-  var STUDIO_HOURLY_RATE = 200000;
-  var MIX_MASTER_RATE_PER_SONG = 1800000;
-  var STEMS_FEE_PER_SONG = 300000;
+  var PRE_PROJECT_FEE = 150000;
+  var SHIFT_HOURS = 8;
+  var MIX_HOURS_PER_SONG = 4;
+  var BASE_SHIFT_COUNT = 5;
+  var EXTRA_SHIFT_HOURLY = 200000;
+  var EXTRA_REVISION_RATE = 100000;
   var EXPRESS_FEE = 500000;
-  var EXTRA_REVISION_RATE = 150000;
+
+  function formatRp(amount) {
+    return 'Rp ' + amount.toLocaleString('id-ID');
+  }
 
   function updateMusic() {
-    var studioHours = parseInt(studioSlider.value);
-    var songCount = parseInt(songSlider.value);
-    var wantStems = stemsCb.checked;
-    var wantExpress = expressCb.checked;
-    var extraRevisions = parseInt(revisionsSlider.value);
+    // Get tier rate
+    var hourlyRate = 70000;
+    var tierLabel = 'Student';
+    tierRadios.forEach(function(r) {
+      if (r.checked) {
+        hourlyRate = parseInt(r.value);
+        tierLabel = r.parentElement.querySelector('.calc-tier-label').textContent;
+      }
+    });
 
-    var effectiveHours = studioHours;
-    if (studioHours === 1) {
-      effectiveHours = 2;
-      studioNote.style.display = 'block';
+    // Effective shifts: use manual input if > 5, else slider
+    var sliderVal = parseInt(shiftsSlider.value);
+    var manualVal = parseInt(shiftsInput.value) || 0;
+    var shifts, extraHours;
+    if (manualVal > BASE_SHIFT_COUNT) {
+      shifts = manualVal;
+      shiftsSlider.value = BASE_SHIFT_COUNT;
+      extraHours = (manualVal - BASE_SHIFT_COUNT) * SHIFT_HOURS;
     } else {
-      studioNote.style.display = 'none';
+      shifts = sliderVal;
+      shiftsInput.value = sliderVal;
+      extraHours = 0;
     }
 
-    studioDisplay.textContent = effectiveHours + ' Jam';
+    shiftsDisplay.textContent = shifts + ' Shift (' + (shifts * SHIFT_HOURS) + ' Jam)';
+
+    var songCount = parseInt(songsSlider.value);
     var songLabel = songCount + ' Lagu';
-    if (songCount === 1) songLabel += ' (Single)';
-    else if (songCount >= 2 && songCount <= 7) songLabel += ' (EP)';
-    else if (songCount >= 8) songLabel += ' (LP)';
-    songDisplay.textContent = songLabel;
-    songServiceNote.style.display = songCount > 0 ? 'block' : 'none';
-    revisionsDisplay.textContent = extraRevisions;
+    if (songCount === 1) songLabel = '1 Lagu (Single)';
+    else if (songCount >= 2 && songCount <= 7) songLabel = songCount + ' Lagu (EP)';
+    else if (songCount >= 8) songLabel = songCount + ' Lagu (Album)';
+    songsDisplay.textContent = songLabel;
 
-    var isSpecial = songCount >= 14;
-    musicMainArea.style.display = isSpecial ? 'none' : 'block';
-    musicSpecialArea.style.display = isSpecial ? 'block' : 'none';
-    if (isSpecial) return;
+    var extraRevisions = parseInt(extraRevisionsSlider.value);
+    extraRevisionsDisplay.textContent = extraRevisions;
 
-    var recordingTotal = effectiveHours * STUDIO_HOURLY_RATE;
-    var postProductionTotal = songCount * MIX_MASTER_RATE_PER_SONG;
+    var wantExpress = expressCbMusic.checked;
 
-    var stemsTotal = 0;
-    if (wantStems && songCount > 0) {
-      stemsTotal = songCount * STEMS_FEE_PER_SONG;
-    }
+    // Recording: base shifts at tier rate + extra hours at penalty rate
+    var baseShiftHours = (shifts - (extraHours > 0 ? (shifts - BASE_SHIFT_COUNT) : 0)) * SHIFT_HOURS;
+    // Simpler: the base shifts paid at tier rate are min(shifts, 5)
+    var paidBaseShifts = Math.min(shifts, BASE_SHIFT_COUNT);
+    var baseRecordingHours = paidBaseShifts * SHIFT_HOURS;
+    var recordingBase = baseRecordingHours * hourlyRate;
+    var extraShiftCost = extraHours * EXTRA_SHIFT_HOURLY;
+    var recordingTotal = recordingBase + extraShiftCost;
 
-    var expressTotal = 0;
-    if (wantExpress && songCount > 0) {
-      expressTotal = EXPRESS_FEE;
-    }
+    // Mix & Master: 4 hours/song at tier rate
+    var mixTotal = songCount * MIX_HOURS_PER_SONG * hourlyRate;
 
-    var revisionsTotal = extraRevisions * EXTRA_REVISION_RATE;
-
-    var grandTotal = recordingTotal + postProductionTotal + stemsTotal + expressTotal + revisionsTotal;
-
-    musicRecordingLine.textContent = 'Rp ' + recordingTotal.toLocaleString('id-ID');
-    musicMixLine.textContent = 'Rp ' + postProductionTotal.toLocaleString('id-ID');
-
-    if (wantStems && songCount > 0) {
-      musicStemsRow.style.display = 'flex';
-      musicStemsLine.textContent = 'Rp ' + stemsTotal.toLocaleString('id-ID');
+    // Extra revisions — only when there are songs
+    if (songCount === 0) {
+      extraRevisionsSlider.value = 0;
+      extraRevisionsSlider.disabled = true;
+      extraRevisions = 0;
+      extraRevisionsDisplay.textContent = '0';
     } else {
-      musicStemsRow.style.display = 'none';
+      extraRevisionsSlider.disabled = false;
     }
+    var revisionsTotal = extraRevisions * EXTRA_REVISION_RATE * songCount;
 
-    if (wantExpress && songCount > 0) {
+    // Express — per song, only available when there are songs
+    if (songCount === 0) {
+      expressCbMusic.checked = false;
+      expressCbMusic.disabled = true;
+    } else {
+      expressCbMusic.disabled = false;
+    }
+    var expressTotal = wantExpress && songCount > 0 ? songCount * EXPRESS_FEE : 0;
+
+    // Pre-project fee: only applies when there's actual work (recording or songs)
+    var hasWork = shifts > 0 || songCount > 0;
+    var effectivePreProject = hasWork ? PRE_PROJECT_FEE : 0;
+
+    // Grand total
+    var grandTotal = effectivePreProject + recordingTotal + mixTotal + revisionsTotal + expressTotal;
+
+    // Update breakdown
+    var musicPreprojectRow = document.getElementById('music-preproject-row');
+    if (effectivePreProject > 0) {
+      musicPreprojectRow.style.display = 'flex';
+    } else {
+      musicPreprojectRow.style.display = 'none';
+    }
+    musicPreprojectLine.textContent = formatRp(effectivePreProject);
+    var musicRecordingRow = document.getElementById('music-recording-row');
+    var recordingLabel = document.getElementById('music-recording-label');
+    if (shifts > 0) {
+      musicRecordingRow.style.display = 'flex';
+      recordingLabel.textContent = 'Rekaman Studio (' + shifts + ' Shift / ' + (shifts * SHIFT_HOURS) + ' Jam)';
+    } else {
+      musicRecordingRow.style.display = 'none';
+    }
+    musicRecordingLine.textContent = formatRp(recordingTotal);
+    var musicMixRow = document.getElementById('music-mix-row');
+    if (songCount > 0) {
+      musicMixRow.style.display = 'flex';
+    } else {
+      musicMixRow.style.display = 'none';
+    }
+    musicMixLine.textContent = formatRp(mixTotal);
+
+    var musicExtraRevisionsRow = document.getElementById('music-extra-revisions-row');
+    if (extraRevisions > 0) {
+      musicExtraRevisionsRow.style.display = 'flex';
+    } else {
+      musicExtraRevisionsRow.style.display = 'none';
+    }
+    musicExtraRevisionsLine.textContent = formatRp(revisionsTotal);
+
+    if (wantExpress) {
       musicExpressRow.style.display = 'flex';
-      musicExpressLine.textContent = 'Rp ' + expressTotal.toLocaleString('id-ID');
+      musicExpressLine.textContent = formatRp(expressTotal);
     } else {
       musicExpressRow.style.display = 'none';
     }
 
-    if (extraRevisions > 0) {
-      musicRevisionsRow.style.display = 'flex';
-      musicRevisionsLine.textContent = 'Rp ' + revisionsTotal.toLocaleString('id-ID');
-    } else {
-      musicRevisionsRow.style.display = 'none';
-    }
+    musicTotal.textContent = formatRp(grandTotal);
 
-    musicTotal.textContent = 'Rp ' + grandTotal.toLocaleString('id-ID');
+    // WhatsApp pre-filled message
+    var musicMsgLines = [
+      'Halo Umbra Suara, saya ingin memesan produksi musik:',
+      '',
+      hasWork ? '• Biaya Pre-Project: ' + formatRp(effectivePreProject) : null,
+      '• Paket: ' + tierLabel + ' (' + formatRp(hourlyRate) + '/jam)',
+      '• Durasi Rekaman: ' + shifts + ' Shift (' + (shifts * SHIFT_HOURS) + ' Jam)',
+      extraHours > 0 ? '• Kelebihan Shift: ' + extraHours + ' Jam (' + formatRp(extraShiftCost) + ')' : null,
+      '• Jumlah Lagu Mix & Master: ' + songCount + ' Lagu',
+      extraRevisions > 0 ? '• Revisi Tambahan: ' + extraRevisions + 'x x ' + songCount + ' lagu = ' + formatRp(revisionsTotal) : null,
+      wantExpress ? '• Express 48 Jam: ' + songCount + ' lagu x Rp500.000 = ' + formatRp(expressTotal) : null,
+      '',
+      'Total Estimasi: ' + formatRp(grandTotal)
+    ];
+    var msgStr = musicMsgLines.filter(function(l) { return l !== null; }).join('\n');
+    var musicWA = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(msgStr);
+    document.getElementById('music-cta').href = musicWA;
   }
 
-  studioSlider.addEventListener('input', updateMusic);
-  songSlider.addEventListener('input', updateMusic);
-  revisionsSlider.addEventListener('input', updateMusic);
-  stemsCb.addEventListener('change', updateMusic);
-  expressCb.addEventListener('change', updateMusic);
+  // Event listeners
+  tierRadios.forEach(function(r) { r.addEventListener('change', updateMusic); });
+  shiftsSlider.addEventListener('input', function() {
+    shiftsInput.value = this.value;
+    updateMusic();
+  });
+  shiftsInput.addEventListener('input', function() {
+    var val = parseInt(this.value);
+    if (isNaN(val) || val < 0) { val = 0; this.value = 0; }
+    if (val <= BASE_SHIFT_COUNT) {
+      shiftsSlider.value = val;
+    } else {
+      shiftsSlider.value = BASE_SHIFT_COUNT;
+    }
+    updateMusic();
+  });
+  songsSlider.addEventListener('input', updateMusic);
+  extraRevisionsSlider.addEventListener('input', updateMusic);
+  expressCbMusic.addEventListener('change', updateMusic);
+
+  // Init
+  updateMusic();
 
   // ========== B2B PATHWAY ==========
   var b2bProjectType = document.getElementById('b2b-project-type');
   var b2bLicensing = document.getElementById('b2b-licensing');
   var voCb = document.getElementById('vo-cb');
   var fasttrackCb = document.getElementById('fasttrack-cb');
+  var b2bRevisionsSlider = document.getElementById('b2b-revisions-slider');
+  var b2bRevisionsDisplay = document.getElementById('b2b-revisions-display');
 
   var b2bBaseLine = document.getElementById('b2b-base-line');
   var b2bSurchargeRow = document.getElementById('b2b-surcharge-row');
   var b2bSurchargeLine = document.getElementById('b2b-surcharge-line');
   var b2bVoRow = document.getElementById('b2b-vo-row');
   var b2bVoLine = document.getElementById('b2b-vo-line');
+  var b2bRevisionsRow = document.getElementById('b2b-revisions-row');
+  var b2bRevisionsLine = document.getElementById('b2b-revisions-line');
   var b2bMultiplierLine = document.getElementById('b2b-multiplier-line');
   var b2bTotal = document.getElementById('b2b-total');
 
   var VO_FLAT_FEE = 1500000;
+  var B2B_REVISION_RATE = 350000;
+  var B2B_REVISION_RATE_FAST = 450000;
 
   function updateB2B() {
     var baseProjectPrice = parseInt(b2bProjectType.value);
     var licensingMultiplier = parseFloat(b2bLicensing.value);
     var wantVoiceOver = voCb.checked;
     var wantFastTrack = fasttrackCb.checked;
+    var b2bRevisions = parseInt(b2bRevisionsSlider.value);
 
+    b2bRevisionsDisplay.textContent = b2bRevisions;
+
+    var FASTTRACK_FLAT = 250000;
     var surcharge = 0;
     if (wantFastTrack) {
-      surcharge = baseProjectPrice * 0.30;
+      surcharge = baseProjectPrice * 0.30 + FASTTRACK_FLAT;
     }
 
     var productionSubtotal = baseProjectPrice + surcharge;
@@ -456,7 +589,10 @@
       productionSubtotal += VO_FLAT_FEE;
     }
 
-    var grandTotal = Math.round(productionSubtotal * licensingMultiplier);
+    var revisionRate = wantFastTrack ? B2B_REVISION_RATE_FAST : B2B_REVISION_RATE;
+    var revisionsTotal = b2bRevisions * revisionRate;
+
+    var grandTotal = Math.round(productionSubtotal * licensingMultiplier) + revisionsTotal;
 
     b2bBaseLine.textContent = 'Rp ' + baseProjectPrice.toLocaleString('id-ID');
 
@@ -474,14 +610,41 @@
       b2bVoRow.style.display = 'none';
     }
 
+    if (b2bRevisions > 0) {
+      b2bRevisionsRow.style.display = 'flex';
+      document.getElementById('b2b-revisions-label').textContent = 'Biaya Revisi (@Rp ' + Number(revisionRate).toLocaleString('id-ID') + ')';
+      b2bRevisionsLine.textContent = 'Rp ' + revisionsTotal.toLocaleString('id-ID');
+    } else {
+      b2bRevisionsRow.style.display = 'none';
+    }
+
     b2bMultiplierLine.textContent = licensingMultiplier.toFixed(1) + 'x';
     b2bTotal.textContent = 'Rp ' + grandTotal.toLocaleString('id-ID');
+
+    // WhatsApp pre-filled message
+    var projectLabel = b2bProjectType.options[b2bProjectType.selectedIndex].text;
+    var licenseLabel = b2bLicensing.options[b2bLicensing.selectedIndex].text;
+    var b2bMsgLines = [
+      'Halo Umbra, saya tertarik dengan layanan audio komersial:',
+      '',
+      '• Tipe Proyek: ' + projectLabel,
+      '• Lisensi: ' + licenseLabel,
+      '• Voice-Over: ' + (wantVoiceOver ? 'Ya' : 'Tidak'),
+      wantFastTrack ? '• Fast Track 72 Jam: Rp ' + Math.round(surcharge).toLocaleString('id-ID') + ' (30% + Rp250rb)' : null,
+      b2bRevisions > 0 ? '• Revisi: ' + b2bRevisions + 'x @ Rp ' + Number(revisionRate).toLocaleString('id-ID') + ' = Rp ' + revisionsTotal.toLocaleString('id-ID') : null,
+      '',
+      'Total Estimasi: Rp ' + grandTotal.toLocaleString('id-ID')
+    ];
+    var msgStr = b2bMsgLines.filter(function(l) { return l !== null; }).join('\n');
+    var b2bWA = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(msgStr);
+    document.getElementById('b2b-cta').href = b2bWA;
   }
 
   b2bProjectType.addEventListener('change', updateB2B);
   b2bLicensing.addEventListener('change', updateB2B);
   voCb.addEventListener('change', updateB2B);
   fasttrackCb.addEventListener('change', updateB2B);
+  b2bRevisionsSlider.addEventListener('input', updateB2B);
 
   // Init both
   updateMusic();
@@ -1084,7 +1247,7 @@
             </div>
           </div>
 
-          <a href="/register" id="sw-cta" class="calc-sw-cta">Diskusikan Konfigurasi Ini dengan Umbra</a>
+          <a href="https://wa.me/{{$.WAPhone}}" id="sw-cta" class="calc-sw-cta">Diskusikan Konfigurasi Ini dengan Umbra</a>
         </div>
       </div>
     </div>
@@ -1093,6 +1256,7 @@
 
 <script>
 (function() {
+  var WA_PHONE = '{{$.WAPhone}}';
   var conceptSelect = document.getElementById('sw-concept');
   var customizationSelect = document.getElementById('sw-customization');
   var scaleSelect = document.getElementById('sw-scale');
@@ -1254,19 +1418,26 @@
 
     grandTotalEl.textContent = formatIDR(grandTotal);
 
-    var conceptVal = encodeURIComponent(conceptSelect.value);
-    var customizationVal = encodeURIComponent(customizationSelect.value);
-    var scaleVal = encodeURIComponent(scaleSelect.value);
-    var hoursVal = encodeURIComponent(eventHoursVal);
-    var aiVal = encodeURIComponent(aiSelect.value);
-    var totalVal = Math.round(grandTotal);
+    // WhatsApp pre-filled message
+    var conceptLabel = conceptSelect.options[conceptSelect.selectedIndex].text;
+    var customLabel = customizationSelect.options[customizationSelect.selectedIndex].text;
+    var scaleLabel = scaleSelect.options[scaleSelect.selectedIndex].text;
+    var aiLabel = aiSelect.options[aiSelect.selectedIndex].text;
+    var hwLabel = sourceHardware && rawHwCost > 0 ? 'Ya (Rp ' + rawHwCost.toLocaleString('id-ID') + ')' : 'Tidak';
 
-    ctaEl.href = "/register?concept=" + conceptVal +
-                 "&customization=" + customizationVal +
-                 "&scale=" + scaleVal +
-                 "&hours=" + hoursVal +
-                 "&ai=" + aiVal +
-                 "&total=" + totalVal;
+    var swMsgLines = [
+      'Halo Umbra, saya ingin mendiskusikan instalasi interaktif:',
+      '',
+      '• Tipe Interaksi: ' + conceptLabel,
+      '• Kompleksitas Visual: ' + customLabel,
+      '• Skala Acara: ' + scaleLabel,
+      '• Durasi Acara: ' + eventHoursVal + ' Jam',
+      '• Fitur AI: ' + aiLabel,
+      '• Sewa Hardware: ' + hwLabel,
+      '',
+      'Total Estimasi: Rp ' + Math.round(grandTotal).toLocaleString('id-ID')
+    ];
+    ctaEl.href = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(swMsgLines.join('\n'));
   }
 
   hwCost.addEventListener('input', function() {
