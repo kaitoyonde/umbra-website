@@ -1,0 +1,224 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: U
+      - generic [ref=e5]: CMS Umbra
+    - navigation [ref=e6]:
+      - link "📊 Dashboard" [ref=e7] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - generic [ref=e8]: 📊
+        - generic [ref=e9]: Dashboard
+      - link "🖼 Media" [ref=e10] [cursor=pointer]:
+        - /url: /admin/images
+        - generic [ref=e11]: 🖼
+        - generic [ref=e12]: Media
+      - generic [ref=e13]: Divisi
+      - link "› Umbra Creative Softworks" [ref=e14] [cursor=pointer]:
+        - /url: /admin/division/softworks
+        - generic [ref=e15]: ›
+        - generic [ref=e16]: Umbra Creative Softworks
+      - link "› Umbra Suara" [ref=e17] [cursor=pointer]:
+        - /url: /admin/division/suara
+        - generic [ref=e18]: ›
+        - generic [ref=e19]: Umbra Suara
+      - link "› Penumbra" [ref=e20] [cursor=pointer]:
+        - /url: /admin/division/penumbra
+        - generic [ref=e21]: ›
+        - generic [ref=e22]: Penumbra
+    - generic [ref=e23]:
+      - link "↗ Lihat Situs" [ref=e24] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e25]: ↗
+        - generic [ref=e26]: Lihat Situs
+      - button "◀" [ref=e27] [cursor=pointer]
+  - banner [ref=e28]:
+    - generic [ref=e29]:
+      - link "Beranda" [ref=e30] [cursor=pointer]:
+        - /url: /admin/dashboard
+      - generic [ref=e31]: /
+      - link "Dashboard" [ref=e32] [cursor=pointer]:
+        - /url: /admin/dashboard
+      - generic [ref=e33]: /
+      - generic [ref=e34]: Umbra Suara
+    - link "Keluar" [ref=e36] [cursor=pointer]:
+      - /url: /admin/logout
+  - main [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - heading "Umbra Suara" [level=1] [ref=e40]
+        - link "Lihat Halaman" [ref=e41] [cursor=pointer]:
+          - /url: /UmbraSuara
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - generic [ref=e45]: Deskripsi
+            - textbox "Deskripsi" [ref=e46]: Suara bukan sekadar gelombang. Ia adalah dimensi yang harus dihitung, dipetakan, dan dibentuk berdasarkan karakter unik setiap ruang. Dari produksi musik yang menangkap emosi mentah, foley untuk film yang tidak bisa diambil dari library mana pun, hingga konsultasi akustik untuk ruang monumental seperti masjid dan gedung konser — kami menangani suara dari hulu ke hilir dengan toleransi yang tidak bisa ditawar.
+          - generic [ref=e47]:
+            - generic [ref=e48]: Banner
+            - generic [ref=e49]:
+              - generic [ref=e50]: Judul
+              - textbox "Judul" [ref=e51]: Rekayasa Suara & Solusi Akustik
+            - generic [ref=e52]:
+              - generic [ref=e53]: Subjudul
+              - textbox "Subjudul" [ref=e54]: Dari produksi musik dan foley hingga konsultasi akustik arsitektural — setiap desibel melalui perhitungan, bukan perkiraan.
+            - generic [ref=e56]:
+              - generic [ref=e57]: Banner saat ini
+              - generic [ref=e58]:
+                - button "Pilih dari Pustaka" [ref=e59] [cursor=pointer]
+                - button "Hapus" [ref=e60] [cursor=pointer]
+            - textbox "atau URL manual" [ref=e61]: https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200&h=675&fit=crop&auto=format
+          - generic [ref=e62]:
+            - generic [ref=e63]: Kolom Portofolio
+            - generic [ref=e64]:
+              - generic [ref=e65]:
+                - generic [ref=e66]: Judul Kolom
+                - textbox "Judul Kolom" [ref=e67]: Songs / Audio
+              - generic [ref=e68]:
+                - generic [ref=e69]: Proyek (7)
+                - generic [ref=e70]:
+                  - generic [ref=e71]:
+                    - generic [ref=e72]:
+                      - generic [ref=e73]: 2025 — Paribastone — "Grave of Future" (Single)
+                      - generic [ref=e74]: Music Producing · Stoner Rock/Metal · Bogor
+                    - generic [ref=e75]:
+                      - link "Edit" [ref=e76] [cursor=pointer]:
+                        - /url: /admin/project/edit/su1
+                      - link "Hapus" [ref=e77] [cursor=pointer]:
+                        - /url: /admin/project/delete/su1
+                  - generic [ref=e78]:
+                    - generic [ref=e79]:
+                      - generic [ref=e80]: 2024 — Tono Prance — "Juru Selamat" (Single)
+                      - generic [ref=e81]: Music Producing · Rock Band · Jakarta
+                    - generic [ref=e82]:
+                      - link "Edit" [ref=e83] [cursor=pointer]:
+                        - /url: /admin/project/edit/su2
+                      - link "Hapus" [ref=e84] [cursor=pointer]:
+                        - /url: /admin/project/delete/su2
+                  - generic [ref=e85]:
+                    - generic [ref=e86]:
+                      - generic [ref=e87]: 2024 — Shroom Eater — "Gods of The Gaps" (Album)
+                      - generic [ref=e88]: Music Producing · Stoner Rock · Bogor
+                    - generic [ref=e89]:
+                      - link "Edit" [ref=e90] [cursor=pointer]:
+                        - /url: /admin/project/edit/su3
+                      - link "Hapus" [ref=e91] [cursor=pointer]:
+                        - /url: /admin/project/delete/su3
+                  - generic [ref=e92]:
+                    - generic [ref=e93]:
+                      - generic [ref=e94]: 2024 — Deadnun — "24" (Single)
+                      - generic [ref=e95]: Music Producing · Instrumental Loud Doom · Bandung
+                    - generic [ref=e96]:
+                      - link "Edit" [ref=e97] [cursor=pointer]:
+                        - /url: /admin/project/edit/su4
+                      - link "Hapus" [ref=e98] [cursor=pointer]:
+                        - /url: /admin/project/delete/su4
+                  - generic [ref=e99]:
+                    - generic [ref=e100]:
+                      - generic [ref=e101]: 2024 — Halfless — "11" (Single)
+                      - generic [ref=e102]: Music Producing · Ignorant Indie · Bogor
+                    - generic [ref=e103]:
+                      - link "Edit" [ref=e104] [cursor=pointer]:
+                        - /url: /admin/project/edit/su5
+                      - link "Hapus" [ref=e105] [cursor=pointer]:
+                        - /url: /admin/project/delete/su5
+                  - generic [ref=e106]:
+                    - generic [ref=e107]:
+                      - generic [ref=e108]: 2023 — Iluasi — "Sampai" (Album)
+                      - generic [ref=e109]: Music Producing · Alternative Pop · Bogor
+                    - generic [ref=e110]:
+                      - link "Edit" [ref=e111] [cursor=pointer]:
+                        - /url: /admin/project/edit/su6
+                      - link "Hapus" [ref=e112] [cursor=pointer]:
+                        - /url: /admin/project/delete/su6
+                  - generic [ref=e113]:
+                    - generic [ref=e114]:
+                      - generic [ref=e115]: 2023 — Radio Bean — "It's True" (Single)
+                      - generic [ref=e116]: Music Producing · RNB/Funk · Bogor
+                    - generic [ref=e117]:
+                      - link "Edit" [ref=e118] [cursor=pointer]:
+                        - /url: /admin/project/edit/su7
+                      - link "Hapus" [ref=e119] [cursor=pointer]:
+                        - /url: /admin/project/delete/su7
+                - link "+ Tambah Proyek" [ref=e120] [cursor=pointer]:
+                  - /url: /admin/project/add/suara/0
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - generic [ref=e123]: Judul Kolom
+                - textbox "Judul Kolom" [ref=e124]: Live Production
+              - generic [ref=e125]:
+                - generic [ref=e126]: Proyek (3)
+                - generic [ref=e127]:
+                  - generic [ref=e128]:
+                    - generic [ref=e129]:
+                      - generic [ref=e130]: 2023 — Streems Radio — Katapel
+                      - generic [ref=e131]: Radio Show
+                    - generic [ref=e132]:
+                      - link "Edit" [ref=e133] [cursor=pointer]:
+                        - /url: /admin/project/edit/su8
+                      - link "Hapus" [ref=e134] [cursor=pointer]:
+                        - /url: /admin/project/delete/su8
+                  - generic [ref=e135]:
+                    - generic [ref=e136]:
+                      - generic [ref=e137]: 2023 — Vikri & Magic Friends
+                      - generic [ref=e138]: Live Session
+                    - generic [ref=e139]:
+                      - link "Edit" [ref=e140] [cursor=pointer]:
+                        - /url: /admin/project/edit/su9
+                      - link "Hapus" [ref=e141] [cursor=pointer]:
+                        - /url: /admin/project/delete/su9
+                  - generic [ref=e142]:
+                    - generic [ref=e143]:
+                      - generic [ref=e144]: 2022 — On Deck — Sousade & Noise Clvb
+                      - generic [ref=e145]: Event Creator
+                    - generic [ref=e146]:
+                      - link "Edit" [ref=e147] [cursor=pointer]:
+                        - /url: /admin/project/edit/su10
+                      - link "Hapus" [ref=e148] [cursor=pointer]:
+                        - /url: /admin/project/delete/su10
+                - link "+ Tambah Proyek" [ref=e149] [cursor=pointer]:
+                  - /url: /admin/project/add/suara/1
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - generic [ref=e152]: Judul Kolom
+                - textbox "Judul Kolom" [ref=e153]: Event Collaboration
+              - generic [ref=e154]:
+                - generic [ref=e155]: Proyek (2)
+                - generic [ref=e156]:
+                  - generic [ref=e157]:
+                    - generic [ref=e158]:
+                      - generic [ref=e159]: 2024 — "The Fish That Lives in Water" — Feature Film
+                      - generic [ref=e160]: Equipment Vendor
+                    - generic [ref=e161]:
+                      - link "Edit" [ref=e162] [cursor=pointer]:
+                        - /url: /admin/project/edit/su11
+                      - link "Hapus" [ref=e163] [cursor=pointer]:
+                        - /url: /admin/project/delete/su11
+                  - generic [ref=e164]:
+                    - generic [ref=e165]:
+                      - generic [ref=e166]: 2023 — Umbra Suara × Janari Rekords — Every Picture Tells a Story
+                      - generic [ref=e167]: Kolaborasi
+                    - generic [ref=e168]:
+                      - link "Edit" [ref=e169] [cursor=pointer]:
+                        - /url: /admin/project/edit/su12
+                      - link "Hapus" [ref=e170] [cursor=pointer]:
+                        - /url: /admin/project/delete/su12
+                - link "+ Tambah Proyek" [ref=e171] [cursor=pointer]:
+                  - /url: /admin/project/add/suara/2
+          - generic [ref=e172]:
+            - generic [ref=e173]: Bidang Keahlian
+            - paragraph [ref=e174]: Satu per baris
+            - textbox "Bidang Keahlian" [ref=e175]: Sound Design Music Production Acoustic Consulting Spatial Audio Foley & ADR System Integration Room Calibration Live Sound Engineering
+          - generic [ref=e176]:
+            - button "Simpan Perubahan" [ref=e177] [cursor=pointer]
+            - link "Batal" [ref=e178] [cursor=pointer]:
+              - /url: /admin/dashboard
+        - generic [ref=e181]:
+          - generic [ref=e182]: Preview Halaman
+          - generic [ref=e183]: Rekayasa Suara & Solusi Akustik
+          - generic [ref=e184]: Dari produksi musik dan foley hingga konsultasi akustik arsitektural — setiap desibel melalui perhitungan, bukan perkiraan.
+          - generic [ref=e185]:
+            - strong [ref=e186]: 3 Kolom
+            - text: ·
+            - strong [ref=e187]: 12 Proyek
+            - text: ·
+            - strong [ref=e188]: 8 Keahlian

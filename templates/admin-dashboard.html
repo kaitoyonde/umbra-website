@@ -1,35 +1,96 @@
 {{define "title"}}Dashboard &mdash; CMS Umbra{{end}}
+{{define "breadcrumbs"}}<span class="separator">/</span><span class="current">Dashboard</span>{{end}}
 {{define "content"}}
 <section>
-  <div class="container">
-    <span class="section-label">CMS</span>
-    <h1 class="section-title">Dashboard</h1>
+  <div class="admin-section-header">
+    <h1 class="admin-section-title">Dashboard</h1>
   </div>
-</section>
 
-{{range .Site.Divisions}}
-<section>
-  <div class="container">
-    <div class="admin-dashboard-header">
-      <h2>{{.Name}}</h2>
-      <a href="/admin/division/{{.Slug}}" class="nav-btn">Edit</a>
+  {{/* Stats */}}
+  {{$totalDivisions := len .Site.Divisions}}
+  {{$totalProjects := 0}}
+  {{$totalImages := len .Site.Images}}
+  {{range .Site.Divisions}}
+    {{range .PortfolioColumns}}
+      {{$totalProjects = add $totalProjects (len .Projects)}}
+    {{end}}
+  {{end}}
+
+  <div class="admin-stats">
+    <div class="admin-stat-card">
+      <div class="admin-stat-icon divisions">⊞</div>
+      <div class="admin-stat-body">
+        <div class="admin-stat-number">{{$totalDivisions}}</div>
+        <div class="admin-stat-label">Divisi</div>
+      </div>
     </div>
-    <div class="admin-dashboard-cols">
-      {{range .PortfolioColumns}}
-      <div>
-        <h3 style="font-size:0.9rem;font-weight:600;color:var(--color-muted);margin-bottom:0.5rem;padding-bottom:0.3rem;border-bottom:1px solid rgba(139,92,246,0.2);">{{.Title}} <span style="font-weight:300;color:var(--color-dim);">({{len .Projects}})</span></h3>
-        <div style="display:flex;flex-direction:column;gap:0.25rem;">
-          {{range .Projects}}
-          <div style="padding:0.4rem 0;">
-            <div style="font-size:0.7rem;color:var(--color-accent-hover);">{{.Year}}</div>
-            <div style="font-size:0.8rem;color:var(--color-muted);">{{.Name}}</div>
-          </div>
-          {{end}}
+    <div class="admin-stat-card">
+      <div class="admin-stat-icon projects">◇</div>
+      <div class="admin-stat-body">
+        <div class="admin-stat-number">{{len .Site.Images}}</div>
+        <div class="admin-stat-label">Gambar</div>
+      </div>
+    </div>
+    <div class="admin-stat-card">
+      <div class="admin-stat-icon projects">◆</div>
+      <div class="admin-stat-body">
+        <div class="admin-stat-number">{{$totalProjects}}</div>
+        <div class="admin-stat-label">Proyek</div>
+      </div>
+    </div>
+  </div>
+
+  {{/* Division Cards */}}
+  <div class="admin-section-header" style="margin-top:8px;">
+    <h2 class="admin-section-title">Divisi</h2>
+  </div>
+
+  <div class="admin-division-cards">
+    {{range .Site.Divisions}}
+    <div class="admin-division-card">
+      <div class="admin-division-card-header">
+        <div class="admin-division-card-name">
+          <span class="admin-division-card-dot"></span>
+          {{.Name}}
+        </div>
+        <div class="admin-division-card-actions">
+          <a href="/admin/division/{{.Slug}}" class="btn btn-primary btn-sm">Edit</a>
+          <a href="{{.Route}}" class="btn btn-ghost btn-sm" target="_blank">Lihat</a>
+        </div>
+      </div>
+      <div class="admin-division-card-meta">
+        {{$projCount := 0}}{{range .PortfolioColumns}}{{$projCount = add $projCount (len .Projects)}}{{end}}
+        {{len .PortfolioColumns}} kolom · {{$projCount}} proyek · {{len .Skills}} keahlian
+      </div>
+    </div>
+    {{end}}
+  </div>
+
+  {{/* Recent Activity */}}
+  {{if .Site.Images}}
+  <div class="admin-section-header" style="margin-top:8px;">
+    <h2 class="admin-section-title">Aktivitas Terbaru</h2>
+  </div>
+  <div class="admin-activity">
+    {{range $i, $img := .Site.Images}}
+      {{if lt $i 5}}
+      <div class="admin-activity-item">
+        <div class="admin-activity-icon">🖼</div>
+        <div class="admin-activity-body">
+          <div class="admin-activity-text">Gambar <strong>{{$img.Name}}</strong> diupload</div>
+          <div class="admin-activity-time">{{$img.UploadedAt}}</div>
         </div>
       </div>
       {{end}}
+    {{end}}
+    {{if gt (len .Site.Images) 5}}
+    <div class="admin-activity-item">
+      <div class="admin-activity-body" style="text-align:center;">
+        <a href="/admin/images" class="btn btn-ghost btn-sm">Lihat semua gambar ({{len .Site.Images}})</a>
+      </div>
     </div>
+    {{end}}
   </div>
+  {{end}}
 </section>
-{{end}}
 {{end}}

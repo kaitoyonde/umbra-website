@@ -1,0 +1,76 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: U
+      - generic: CMS Umbra
+    - navigation [ref=e5]:
+      - link "📊 Dashboard" [ref=e6] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - generic [ref=e7]: 📊
+        - generic: Dashboard
+      - link "🖼 Media" [ref=e8] [cursor=pointer]:
+        - /url: /admin/images
+        - generic [ref=e9]: 🖼
+        - generic: Media
+      - generic [ref=e10]: Divisi
+      - link "› Umbra Creative Softworks" [ref=e11] [cursor=pointer]:
+        - /url: /admin/division/softworks
+        - generic [ref=e12]: ›
+        - generic: Umbra Creative Softworks
+      - link "› Umbra Suara" [ref=e13] [cursor=pointer]:
+        - /url: /admin/division/suara
+        - generic [ref=e14]: ›
+        - generic: Umbra Suara
+      - link "› Penumbra" [ref=e15] [cursor=pointer]:
+        - /url: /admin/division/penumbra
+        - generic [ref=e16]: ›
+        - generic: Penumbra
+    - generic [ref=e17]:
+      - link "↗ Lihat Situs" [ref=e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e19]: ↗
+        - generic: Lihat Situs
+      - button "◀" [ref=e20] [cursor=pointer]
+  - banner [ref=e21]:
+    - generic [ref=e22]:
+      - link "Beranda" [ref=e23] [cursor=pointer]:
+        - /url: /admin/dashboard
+      - generic [ref=e24]: /
+      - generic [ref=e25]: Media
+    - link "Keluar" [ref=e27] [cursor=pointer]:
+      - /url: /admin/logout
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - heading "Media" [level=1] [ref=e31]
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: 🔍
+            - textbox "Cari gambar..." [ref=e36]
+          - generic [ref=e37]:
+            - button "Semua" [ref=e38] [cursor=pointer]
+            - button "Terbaru" [ref=e39] [cursor=pointer]
+        - button "+ Upload" [ref=e41] [cursor=pointer]
+      - generic [ref=e42]:
+        - heading "Upload Gambar Baru" [level=2] [ref=e43]
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]: Nama Gambar
+              - textbox "Nama Gambar" [ref=e48]
+            - generic [ref=e49]:
+              - generic [ref=e50]: Alt Text
+              - textbox "Alt Text" [ref=e51]
+          - generic [ref=e52]:
+            - generic [ref=e53]: Deskripsi
+            - textbox "Deskripsi" [ref=e54]
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: 📁
+            - generic [ref=e57]: Seret gambar ke sini atau klik untuk memilih
+            - generic [ref=e58]: PNG, JPG, WebP — maks 10 MB
+          - button "Upload" [ref=e59] [cursor=pointer]
+      - heading "Semua Gambar (0)" [level=2] [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e63]: 🖼
+        - generic [ref=e64]: Belum ada gambar
+        - generic [ref=e65]: Upload gambar pertama Anda di atas

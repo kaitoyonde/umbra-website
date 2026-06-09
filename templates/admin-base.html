@@ -7,22 +7,66 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/admin.css" />
   <link rel="icon" type="image/x-icon" href="/static/favico/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favico/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/static/favico/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/static/favico/apple-touch-icon.png" />
   <link rel="manifest" href="/static/favico/site.webmanifest" />
-  <link rel="stylesheet" href="/static/style.css" />
 </head>
-<body class="admin-layout">
-  <nav class="admin-nav">
-    <div><a href="/admin/dashboard" class="admin-brand">CMS Umbra</a></div>
-    <div class="admin-nav-links">
-      <a href="/admin/images" class="nav-btn">Images</a>
-      <a href="/admin/dashboard" class="nav-btn">Dashboard</a>
-      <a href="/admin/logout" class="nav-btn">Logout</a>
-    </div>
+<body class="admin-layout{{block "body-class" .}}{{end}}">
+
+{{block "main" .}}
+<aside class="admin-sidebar">
+  <div class="admin-sidebar-header">
+    <div class="admin-sidebar-logo">U</div>
+    <span class="admin-sidebar-title">CMS Umbra</span>
+  </div>
+
+  <nav class="admin-sidebar-nav">
+    <a href="/admin/dashboard" class="admin-nav-item">
+      <span class="nav-icon">📊</span>
+      <span class="nav-label">Dashboard</span>
+    </a>
+    <a href="/admin/images" class="admin-nav-item">
+      <span class="nav-icon">🖼</span>
+      <span class="nav-label">Media</span>
+    </a>
+
+    <div style="padding:16px 12px 4px;font-size:0.65rem;font-weight:600;color:var(--admin-text-muted);text-transform:uppercase;letter-spacing:0.08em;">Divisi</div>
+
+    {{range .Site.Divisions}}
+    <a href="/admin/division/{{.Slug}}" class="admin-nav-item">
+      <span class="nav-icon">›</span>
+      <span class="nav-label">{{.Name}}</span>
+    </a>
+    {{end}}
   </nav>
-  {{block "content" .}}{{end}}
+
+  <div class="admin-sidebar-footer">
+    <a href="/" class="admin-nav-item" style="padding:6px 12px;" target="_blank">
+      <span class="nav-icon">↗</span>
+      <span class="nav-label">Lihat Situs</span>
+    </a>
+    <button class="admin-sidebar-toggle" title="Toggle sidebar">◀</button>
+  </div>
+</aside>
+
+<header class="admin-topbar">
+  <div class="admin-breadcrumbs">
+    <a href="/admin/dashboard">Beranda</a>
+    {{block "breadcrumbs" .}}{{end}}
+  </div>
+  <div class="admin-topbar-right">
+    <a href="/admin/logout" class="btn btn-ghost btn-sm">Keluar</a>
+  </div>
+</header>
+
+<main class="admin-content">
+  {{template "content" .}}
+</main>
+{{end}}{{/* end main block */}}
+
+<script src="/static/js/admin.js"></script>
 </body>
 </html>

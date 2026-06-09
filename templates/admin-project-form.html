@@ -1,71 +1,143 @@
 {{define "title"}}{{if .IsNew}}Tambah Proyek{{else}}Edit Proyek{{end}} &mdash; CMS Umbra{{end}}
+{{define "breadcrumbs"}}<span class="separator">/</span><a href="/admin/dashboard">Dashboard</a><span class="separator">/</span><a href="/admin/division/{{.DivisionSlug}}">Divisi</a><span class="separator">/</span><span class="current">{{if .IsNew}}Tambah Proyek{{else}}{{.Project.Name}}{{end}}</span>{{end}}
 {{define "content"}}
 <section>
-  <div class="container">
-    <a href="/admin/division/{{.DivisionSlug}}" class="admin-back">&larr; Kembali ke divisi</a>
-    <span class="section-label" style="margin-top:1rem;">Proyek</span>
-    <h1 class="section-title">{{if .IsNew}}Tambah Proyek Baru{{else}}Edit Proyek{{end}}</h1>
+  <div class="admin-section-header">
+    <h1 class="admin-section-title">{{if .IsNew}}Tambah Proyek Baru{{else}}Edit Proyek{{end}}</h1>
+    <a href="/admin/division/{{.DivisionSlug}}" class="btn btn-ghost btn-sm">← Kembali</a>
   </div>
-</section>
 
-<section>
-  <div class="container">
-    <form action="{{if .IsNew}}/admin/project/add/{{.DivisionSlug}}/{{.ColIndex}}{{else}}/admin/project/edit/{{.Project.ID}}{{end}}" method="post" class="cms-form">
-      <div class="field">
-        <label for="year">Tahun</label>
-        <input type="text" id="year" name="year" value="{{.Project.Year}}" required />
-      </div>
-      <div class="field">
-        <label for="name">Nama Proyek</label>
-        <input type="text" id="name" name="name" value="{{.Project.Name}}" required />
-      </div>
-      <div class="field">
-        <label for="subtitle">Subjudul</label>
-        <input type="text" id="subtitle" name="subtitle" value="{{.Project.Subtitle}}" />
-      </div>
-      <div class="field">
-        <label for="client">Klien / Organisasi</label>
-        <input type="text" id="client" name="client" value="{{.Project.Client}}" required />
-      </div>
-      <div class="field">
-        <label>Gambar Proyek</label>
-        {{if .Images}}
-        <div class="img-selector">
-          {{range .Images}}
-          <label class="img-option{{if eq $.Project.ImageID .ID}} selected{{end}}">
-            <input type="radio" name="image_id" value="{{.ID}}"{{if eq $.Project.ImageID .ID}} checked{{end}} />
-            <img src="{{.URL}}" alt="" loading="lazy" />
-            <span class="img-option-name">{{.Name}}</span>
-          </label>
-          {{end}}
-          <label class="img-option{{if not .Project.ImageID}} selected{{end}}">
-            <input type="radio" name="image_id" value=""{{if not .Project.ImageID}} checked{{end}} />
-            <span class="img-option-name">Manual URL</span>
-          </label>
+  {{$action := ""}}
+  {{if .IsNew}}
+    {{$action = print "/admin/project/add/" .DivisionSlug "/" .ColIndex}}
+  {{else}}
+    {{$action = print "/admin/project/edit/" .Project.ID}}
+  {{end}}
+
+  <form action="{{$action}}" method="post" class="admin-form-two-col">
+    {{/* LEFT COLUMN — Fields */}}
+    <div class="admin-form-left">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="admin-form-row">
+          <label class="admin-form-label" for="year">Tahun</label>
+          <input class="admin-form-input" type="text" id="year" name="year" value="{{.Project.Year}}" required />
         </div>
+        <div class="admin-form-row">
+          <label class="admin-form-label" for="client">Klien / Organisasi</label>
+          <input class="admin-form-input" type="text" id="client" name="client" value="{{.Project.Client}}" required />
+        </div>
+      </div>
+
+      <div class="admin-form-row">
+        <label class="admin-form-label" for="name">Nama Proyek</label>
+        <input class="admin-form-input" type="text" id="name" name="name" value="{{.Project.Name}}" required />
+      </div>
+
+      <div class="admin-form-row">
+        <label class="admin-form-label" for="subtitle">Subjudul</label>
+        <input class="admin-form-input" type="text" id="subtitle" name="subtitle" value="{{.Project.Subtitle}}" />
+      </div>
+
+      <div class="admin-form-row">
+        <label class="admin-form-label" for="description_md">Deskripsi <span style="font-weight:400;color:var(--admin-text-dim);">(Markdown)</span></label>
+        <textarea class="admin-form-textarea" id="description_md" name="description_md" rows="10">{{.Project.DescriptionMD}}</textarea>
+      </div>
+
+      <div class="admin-form-row">
+        <label class="admin-form-label" for="tech_description">Deskripsi Teknis</label>
+        <textarea class="admin-form-textarea" id="tech_description" name="tech_description" rows="3" style="min-height:80px;font-family:inherit;">{{.Project.TechDescription}}</textarea>
+      </div>
+
+      {{/* Tech Table */}}
+      <div class="admin-form-row">
+        <label class="admin-form-label">Tabel Teknis</label>
+        <p class="admin-form-desc">Satu baris: <code>Label: Value</code></p>
+        <textarea class="admin-form-textarea" id="tech_table" name="tech_table" rows="5" style="min-height:120px;">{{range .Project.TechTable}}{{.Label}}: {{.Value}}
+{{end}}</textarea>
+      </div>
+
+      {{/* Gallery */}}
+      <div class="admin-form-row">
+        <label class="admin-form-label">Galeri</label>
+        <p class="admin-form-desc">Format: <code>image|URL|alt</code> atau <code>video|URL|judul</code>, satu per baris</p>
+        <textarea class="admin-form-textarea" id="gallery" name="gallery" rows="5" style="min-height:120px;">{{range .Project.Gallery}}{{.Type}}|{{.URL}}|{{.Alt}}
+{{end}}</textarea>
+      </div>
+
+      <div style="display:flex;gap:12px;">
+        <button type="submit" class="btn btn-primary">{{if .IsNew}}Tambah Proyek{{else}}Simpan Perubahan{{end}}</button>
+        <a href="/admin/division/{{.DivisionSlug}}" class="btn btn-ghost">Batal</a>
+      </div>
+    </div>
+
+    {{/* RIGHT COLUMN — Image Picker + Preview */}}
+    <div class="admin-form-right">
+      {{/* Image Selector */}}
+      <div class="admin-form-row" style="margin-bottom:20px;">
+        <label class="admin-form-label">Gambar Proyek</label>
+        <div class="admin-image-field {{if not .Project.ImageURL}}empty{{end}}" id="project-image-field">
+          {{if .Project.ImageURL}}
+          <img class="admin-image-field-thumb" src="{{.Project.ImageURL}}" alt="" id="project-image-preview" />
+          <div class="admin-image-field-info">
+            <div class="admin-image-field-name" id="project-image-name">Gambar saat ini</div>
+            <div class="admin-image-field-actions">
+              <button type="button" class="btn btn-ghost btn-sm" onclick="Admin.ImagePicker.open({
+                images: {{.Images | json}},
+                selectedId: '{{.Project.ImageID}}',
+                onSelect: function(img, refresh) {
+                  if (refresh) { location.reload(); return; }
+                  if (img) {
+                    document.getElementById('image_id').value = img.id;
+                    document.getElementById('image_url').value = '';
+                    document.getElementById('project-image-preview').src = img.url;
+                    document.getElementById('project-image-name').textContent = img.name;
+                    document.getElementById('project-image-field').classList.remove('empty');
+                  }
+                }
+              })">Pilih</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('image_id').value='';document.getElementById('image_url').value='';document.getElementById('project-image-field').classList.add('empty');">Hapus</button>
+            </div>
+          </div>
+          {{else}}
+          <div class="admin-image-field-placeholder">
+            <button type="button" class="btn btn-primary btn-sm" onclick="Admin.ImagePicker.open({
+              images: {{.Images | json}},
+              selectedId: '',
+              onSelect: function(img, refresh) {
+                if (refresh) { location.reload(); return; }
+                if (img) {
+                  document.getElementById('image_id').value = img.id;
+                  document.getElementById('image_url').value = '';
+                  document.getElementById('project-image-preview').src = img.url;
+                  document.getElementById('project-image-name').textContent = img.name;
+                  document.getElementById('project-image-field').classList.remove('empty');
+                }
+              }
+            })">Pilih Gambar</button>
+          </div>
+          {{end}}
+        </div>
+        <input type="hidden" id="image_id" name="image_id" value="{{.Project.ImageID}}" />
+        <input type="text" class="admin-form-input" id="image_url" name="image_url" value="{{.Project.ImageURL}}" placeholder="atau URL manual" style="margin-top:8px;" />
+      </div>
+
+      {{/* Preview Card */}}
+      <div class="admin-preview-card">
+        {{if .Project.ImageURL}}
+        <img class="admin-preview-card-img" src="{{.Project.ImageURL}}" alt="" />
+        {{else}}
+        <div class="admin-preview-card-placeholder">◆</div>
         {{end}}
-        <input type="text" id="image_url" name="image_url" value="{{.Project.ImageURL}}" placeholder="atau masukkan URL manual" style="margin-top:0.5rem;" />
+        <div class="admin-preview-card-body">
+          <div class="admin-preview-card-year">{{if .Project.Year}}{{.Project.Year}}{{else}}Tahun{{end}}</div>
+          <div class="admin-preview-card-name">{{if .Project.Name}}{{.Project.Name}}{{else}}Nama Proyek{{end}}</div>
+          <div class="admin-preview-card-client">{{if .Project.Client}}{{.Project.Client}}{{else}}Klien{{end}}</div>
+          <div class="admin-preview-card-desc">
+            {{if .Project.Subtitle}}{{.Project.Subtitle}}{{else}}<span style="color:var(--admin-text-muted);">Belum ada subjudul</span>{{end}}
+          </div>
+        </div>
       </div>
-      <div class="field">
-        <label for="description_md">Deskripsi (Markdown)</label>
-        <textarea id="description_md" name="description_md" rows="10" style="font-family:monospace;font-size:0.85rem;">{{.Project.DescriptionMD}}</textarea>
-      </div>
-      <div class="field">
-        <label for="tech_description">Deskripsi Teknis</label>
-        <textarea id="tech_description" name="tech_description" rows="3">{{.Project.TechDescription}}</textarea>
-      </div>
-      <div class="field">
-        <label for="tech_table">Tabel Teknis (satu baris: <code>Label: Value</code>)</label>
-        <textarea id="tech_table" name="tech_table" rows="6" style="font-family:monospace;font-size:0.85rem;">{{range .Project.TechTable}}{{.Label}}: {{.Value}}
-{{end}}</textarea>
-      </div>
-      <div class="field">
-        <label for="gallery">Galeri (satu baris: <code>image|URL|alt</code> atau <code>video|URL|judul</code>)</label>
-        <textarea id="gallery" name="gallery" rows="6" style="font-family:monospace;font-size:0.85rem;">{{range .Project.Gallery}}{{.Type}}|{{.URL}}|{{.Alt}}
-{{end}}</textarea>
-      </div>
-      <input type="submit" value="{{if .IsNew}}Tambah{{else}}Simpan{{end}}" />
-    </form>
-  </div>
+    </div>
+  </form>
 </section>
 {{end}}

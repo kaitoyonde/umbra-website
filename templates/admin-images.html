@@ -1,66 +1,137 @@
-{{define "title"}}Image Manager &mdash; CMS Umbra{{end}}
+{{define "title"}}Media &mdash; CMS Umbra{{end}}
+{{define "breadcrumbs"}}<span class="separator">/</span><span class="current">Media</span>{{end}}
 {{define "content"}}
 <section>
-  <div class="container">
-    <span class="section-label">CMS</span>
-    <h1 class="section-title">Image Manager</h1>
+  <div class="admin-section-header">
+    <h1 class="admin-section-title">Media</h1>
   </div>
-</section>
 
-<section>
-  <div class="container">
-    <div class="cms-form">
-      <h2>Upload Gambar Baru</h2>
-      {{if .Error}}<p style="color:#ef4444;margin-bottom:1rem;">{{.Error}}</p>{{end}}
-      <form action="/admin/images" method="post" enctype="multipart/form-data">
-        <div class="field">
-          <label for="name">Nama Gambar</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="field">
-          <label for="alt">Alt Text</label>
-          <input type="text" id="alt" name="alt" required />
-        </div>
-        <div class="field">
-          <label for="description">Deskripsi</label>
-          <textarea id="description" name="description" rows="2"></textarea>
-        </div>
-        <div class="field">
-          <label for="file">File Gambar</label>
-          <input type="file" id="file" name="file" accept="image/*" required style="color:var(--color-muted);font-family:inherit;font-size:0.85rem;" />
-        </div>
-        <input type="submit" value="Upload" />
-      </form>
+  {{/* Error */}}
+  {{if .Error}}
+  <div style="display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--admin-danger-subtle);border:1px solid rgba(239,68,68,0.2);border-radius:var(--admin-radius);color:var(--admin-danger);font-size:0.85rem;margin-bottom:20px;">
+    <span>✕</span>
+    <span>{{.Error}}</span>
+  </div>
+  {{end}}
+
+  {{/* Toolbar */}}
+  <div class="admin-image-toolbar">
+    <div class="admin-image-toolbar-left">
+      <div class="admin-search-bar" style="margin-bottom:0;width:280px;">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Cari gambar..." id="media-search" />
+      </div>
+      <div class="admin-image-filters">
+        <button class="admin-image-filter-btn active" data-filter="all">Semua</button>
+        <button class="admin-image-filter-btn" data-filter="recent">Terbaru</button>
+      </div>
+    </div>
+    <div class="admin-image-toolbar-right">
+      <button class="btn btn-primary btn-sm" onclick="document.getElementById('upload-section').scrollIntoView({behavior:'smooth'});">+ Upload</button>
     </div>
   </div>
-</section>
 
-<section>
-  <div class="container">
-    <h2 class="admin-section-title">Gambar Tersimpan ({{len .Images}})</h2>
-    {{if .Images}}
-    <div class="admin-image-grid">
-      {{range .Images}}
-      <div class="admin-image-card">
-        <a href="{{.URL}}" target="_blank">
-          <img src="{{.URL}}" alt="{{.Alt}}" loading="lazy" />
-        </a>
-        <div class="admin-image-body">
-          <div class="admin-image-name">{{.Name}}</div>
-          <div class="admin-image-meta"><strong>Alt:</strong> {{.Alt}}</div>
-          {{if .Description}}<div class="admin-image-desc">{{.Description}}</div>{{end}}
-          <div class="admin-image-date">{{.UploadedAt}}</div>
-          <div class="admin-image-actions">
-            <code class="admin-image-url">{{.URL}}</code>
-            <a href="/admin/images/delete/{{.ID}}" class="nav-btn admin-btn-danger" onclick="return confirm('Hapus gambar {{.Name}}?')">Hapus</a>
+  {{/* Upload Section */}}
+  <div id="upload-section" style="background:var(--admin-surface);border:1px solid var(--admin-border);border-radius:var(--admin-radius-lg);padding:24px;margin-bottom:32px;">
+    <h2 style="font-size:1rem;font-weight:700;margin:0 0 16px;">Upload Gambar Baru</h2>
+    <form action="/admin/images" method="post" enctype="multipart/form-data" id="upload-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div class="admin-form-row">
+          <label class="admin-form-label" for="name">Nama Gambar</label>
+          <input class="admin-form-input" type="text" id="name" name="name" required />
+        </div>
+        <div class="admin-form-row">
+          <label class="admin-form-label" for="alt">Alt Text</label>
+          <input class="admin-form-input" type="text" id="alt" name="alt" required />
+        </div>
+      </div>
+      <div class="admin-form-row" style="margin-bottom:16px;">
+        <label class="admin-form-label" for="description">Deskripsi</label>
+        <textarea class="admin-form-textarea" id="description" name="description" rows="2" style="min-height:60px;font-family:inherit;"></textarea>
+      </div>
+      <div class="upload-dropzone" id="upload-dropzone" style="margin-bottom:16px;">
+        <div class="upload-dropzone-icon">📁</div>
+        <div class="upload-dropzone-text">Seret gambar ke sini atau klik untuk memilih</div>
+        <div class="upload-dropzone-hint">PNG, JPG, WebP — maks 10 MB</div>
+        <div class="upload-dropzone-error" id="upload-error"></div>
+      </div>
+      <input type="file" id="file-input" name="file" accept="image/*" style="display:none" required />
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </div>
+
+  {{/* Image Grid */}}
+  <div class="admin-section-header">
+    <h2 class="admin-section-title">Semua Gambar ({{len .Images}})</h2>
+  </div>
+
+  {{if .Images}}
+  <div class="admin-image-grid" id="media-grid">
+    {{range .Images}}
+    <div class="admin-image-card" data-name="{{.Name}}" data-alt="{{.Alt}}">
+      <img src="{{.URL}}" alt="{{.Alt}}" loading="lazy" data-lightbox />
+      <div class="admin-image-card-body">
+        <div class="admin-image-card-name">{{.Name}}</div>
+        <div class="admin-image-card-meta">
+          <span>{{.UploadedAt}}</span>
+        </div>
+        <div class="admin-image-card-actions">
+          <code class="admin-image-url" style="font-size:0.65rem;color:var(--admin-text-muted);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:6px;cursor:pointer;" onclick="navigator.clipboard.writeText(this.textContent).then(()=>{this.textContent='Disalin!';setTimeout(()=>{this.textContent='{{.URL}}'},1500)})">{{.URL}}</code>
+          <div style="display:flex;gap:4px;">
+            <button class="btn btn-ghost btn-sm" onclick="Admin.Lightbox.open('{{.URL}}','{{.Alt}}')">Lihat</button>
+            <a href="/admin/images/delete/{{.ID}}" class="btn btn-danger btn-sm" data-confirm="Hapus gambar {{.Name}}?">Hapus</a>
           </div>
         </div>
       </div>
-      {{end}}
     </div>
-    {{else}}
-    <p class="admin-empty">Belum ada gambar. Upload gambar pertama Anda di atas.</p>
     {{end}}
   </div>
+
+  <script>
+    // Media search filter
+    document.getElementById('media-search')?.addEventListener('input', function() {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('#media-grid .admin-image-card').forEach(card => {
+        const name = card.dataset.name?.toLowerCase() || '';
+        const alt = card.dataset.alt?.toLowerCase() || '';
+        card.style.display = name.includes(q) || alt.includes(q) ? '' : 'none';
+      });
+    });
+
+    // Filter buttons
+    document.querySelectorAll('.admin-image-filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.admin-image-filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Upload dropzone
+    const dropzone = document.getElementById('upload-dropzone');
+    const fileInput = document.getElementById('file-input');
+    if (dropzone) {
+      dropzone.addEventListener('click', () => fileInput.click());
+      dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
+      dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+      dropzone.addEventListener('drop', e => {
+        e.preventDefault();
+        dropzone.classList.remove('dragover');
+        if (e.dataTransfer.files.length) {
+          fileInput.files = e.dataTransfer.files;
+          // Show selected file name
+          document.getElementById('upload-error').textContent = 'File: ' + e.dataTransfer.files[0].name;
+          document.getElementById('upload-error').style.display = 'block';
+          document.getElementById('upload-error').style.color = 'var(--admin-success)';
+        }
+      });
+    }
+  </script>
+  {{else}}
+  <div class="admin-empty">
+    <div class="admin-empty-icon">🖼</div>
+    <div class="admin-empty-text">Belum ada gambar</div>
+    <div class="admin-empty-hint">Upload gambar pertama Anda di atas</div>
+  </div>
+  {{end}}
 </section>
 {{end}}

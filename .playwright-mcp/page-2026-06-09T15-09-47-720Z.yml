@@ -1,0 +1,215 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: U
+      - generic: CMS Umbra
+    - navigation [ref=e5]:
+      - link "📊 Dashboard" [ref=e6] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - generic [ref=e7]: 📊
+        - generic: Dashboard
+      - link "🖼 Media" [ref=e8] [cursor=pointer]:
+        - /url: /admin/images
+        - generic [ref=e9]: 🖼
+        - generic: Media
+      - generic [ref=e10]: Divisi
+      - link "› Umbra Creative Softworks" [ref=e11] [cursor=pointer]:
+        - /url: /admin/division/softworks
+        - generic [ref=e12]: ›
+        - generic: Umbra Creative Softworks
+      - link "› Umbra Suara" [ref=e13] [cursor=pointer]:
+        - /url: /admin/division/suara
+        - generic [ref=e14]: ›
+        - generic: Umbra Suara
+      - link "› Penumbra" [ref=e15] [cursor=pointer]:
+        - /url: /admin/division/penumbra
+        - generic [ref=e16]: ›
+        - generic: Penumbra
+    - generic [ref=e17]:
+      - link "↗ Lihat Situs" [ref=e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e19]: ↗
+        - generic: Lihat Situs
+      - button "◀" [ref=e20] [cursor=pointer]
+  - banner [ref=e21]:
+    - generic [ref=e22]:
+      - link "Beranda" [ref=e23] [cursor=pointer]:
+        - /url: /admin/dashboard
+      - generic [ref=e24]: /
+      - link "Dashboard" [ref=e25] [cursor=pointer]:
+        - /url: /admin/dashboard
+      - generic [ref=e26]: /
+      - generic [ref=e27]: Umbra Creative Softworks
+    - link "Keluar" [ref=e29] [cursor=pointer]:
+      - /url: /admin/logout
+  - main [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - heading "Umbra Creative Softworks" [level=1] [ref=e33]
+        - link "Lihat Halaman" [ref=e34] [cursor=pointer]:
+          - /url: /UmbraCreativeSoftworks
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: Deskripsi
+            - textbox "Deskripsi" [ref=e39]: Perangkat lunak untuk konteks yang tidak bisa dipenuhi dari rak eceran. Tur galeri virtual 360°, sistem kendali proyeksi mapping multi-proyektor, platform AR try-on untuk fashion — seluruh proyek lahir dari kebutuhan spesifik klien, dikerjakan dengan takaran yang sama antara logika rekayasa dan naluri artistik.
+          - generic [ref=e40]:
+            - generic [ref=e41]: Banner
+            - generic [ref=e42]:
+              - generic [ref=e43]: Judul
+              - textbox "Judul" [ref=e44]: Custom Software & Creative Technology
+            - generic [ref=e45]:
+              - generic [ref=e46]: Subjudul
+              - textbox "Subjudul" [ref=e47]: Platform digital kustom untuk konteks yang tidak bisa dipenuhi dari rak — pameran, panggung interaktif, dan instalasi yang menuntut solusi bentukan khusus.
+            - generic [ref=e49]:
+              - generic [ref=e50]: Banner saat ini
+              - generic [ref=e51]:
+                - button "Pilih dari Pustaka" [ref=e52] [cursor=pointer]
+                - button "Hapus" [ref=e53] [cursor=pointer]
+            - textbox "atau URL manual" [ref=e54]: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=675&fit=crop&auto=format
+          - generic [ref=e55]:
+            - generic [ref=e56]: Kolom Portofolio
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]: Judul Kolom
+                - textbox "Judul Kolom" [ref=e60]: Interactive Art Systems
+              - generic [ref=e61]:
+                - generic [ref=e62]: Proyek (4)
+                - generic [ref=e63]:
+                  - generic [ref=e64]:
+                    - generic [ref=e65]:
+                      - generic [ref=e66]: 2024 — KemCerKuy Part 1
+                      - generic [ref=e67]: Vikri & My Magic Friend
+                    - generic [ref=e68]:
+                      - link "Edit" [ref=e69] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw1
+                      - link "Hapus" [ref=e70] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw1
+                  - generic [ref=e71]:
+                    - generic [ref=e72]:
+                      - generic [ref=e73]: 2024 — Sunset Dikebun Cibodas
+                      - generic [ref=e74]: Vikri & My Magic Friend
+                    - generic [ref=e75]:
+                      - link "Edit" [ref=e76] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw2
+                      - link "Hapus" [ref=e77] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw2
+                  - generic [ref=e78]:
+                    - generic [ref=e79]:
+                      - generic [ref=e80]: 2025 — Sunset Dikebun Kebun Raya
+                      - generic [ref=e81]: Vikri & My Magic Friend
+                    - generic [ref=e82]:
+                      - link "Edit" [ref=e83] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw3
+                      - link "Hapus" [ref=e84] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw3
+                  - generic [ref=e85]:
+                    - generic [ref=e86]:
+                      - generic [ref=e87]: 2024 — Cipete Creative District
+                      - generic [ref=e88]: Vikri & My Magic Friend
+                    - generic [ref=e89]:
+                      - link "Edit" [ref=e90] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw4
+                      - link "Hapus" [ref=e91] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw4
+                - link "+ Tambah Proyek" [ref=e92] [cursor=pointer]:
+                  - /url: /admin/project/add/softworks/0
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - generic [ref=e95]: Judul Kolom
+                - textbox "Judul Kolom" [ref=e96]: Software & Interactive Installations
+              - generic [ref=e97]:
+                - generic [ref=e98]: Proyek (8)
+                - generic [ref=e99]:
+                  - generic [ref=e100]:
+                    - generic [ref=e101]:
+                      - generic [ref=e102]: 2023 — StreemsRadio
+                      - generic [ref=e103]: Streems
+                    - generic [ref=e104]:
+                      - link "Edit" [ref=e105] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw5
+                      - link "Hapus" [ref=e106] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw5
+                  - generic [ref=e107]:
+                    - generic [ref=e108]:
+                      - generic [ref=e109]: 2023 — Organic Chemistry Class
+                      - generic [ref=e110]: Certain University
+                    - generic [ref=e111]:
+                      - link "Edit" [ref=e112] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw6
+                      - link "Hapus" [ref=e113] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw6
+                  - generic [ref=e114]:
+                    - generic [ref=e115]:
+                      - generic [ref=e116]: 2023 — Bilateral Business Meeting
+                      - generic [ref=e117]: Certain International Institution
+                    - generic [ref=e118]:
+                      - link "Edit" [ref=e119] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw7
+                      - link "Hapus" [ref=e120] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw7
+                  - generic [ref=e121]:
+                    - generic [ref=e122]:
+                      - generic [ref=e123]: 2023 — Ngumpul Skena-nya
+                      - generic [ref=e124]: Raddict.id
+                    - generic [ref=e125]:
+                      - link "Edit" [ref=e126] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw8
+                      - link "Hapus" [ref=e127] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw8
+                  - generic [ref=e128]:
+                    - generic [ref=e129]:
+                      - generic [ref=e130]: 2024 — Selatan Di Kota Hujan
+                      - generic [ref=e131]: Ruang Rampai
+                    - generic [ref=e132]:
+                      - link "Edit" [ref=e133] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw9
+                      - link "Hapus" [ref=e134] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw9
+                  - generic [ref=e135]:
+                    - generic [ref=e136]:
+                      - generic [ref=e137]: 2024 — "Agak Laen" Promotion Event
+                      - generic [ref=e138]: Agak Laen Team, Raddict.id
+                    - generic [ref=e139]:
+                      - link "Edit" [ref=e140] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw10
+                      - link "Hapus" [ref=e141] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw10
+                  - generic [ref=e142]:
+                    - generic [ref=e143]:
+                      - generic [ref=e144]: 2024 — Bersoekaria Rest Area
+                      - generic [ref=e145]: Sampoerna, Raddict.id
+                    - generic [ref=e146]:
+                      - link "Edit" [ref=e147] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw11
+                      - link "Hapus" [ref=e148] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw11
+                  - generic [ref=e149]:
+                    - generic [ref=e150]:
+                      - generic [ref=e151]: 2024 — Hajatan Warga Lokal
+                      - generic [ref=e152]: Raddict.id
+                    - generic [ref=e153]:
+                      - link "Edit" [ref=e154] [cursor=pointer]:
+                        - /url: /admin/project/edit/sw12
+                      - link "Hapus" [ref=e155] [cursor=pointer]:
+                        - /url: /admin/project/delete/sw12
+                - link "+ Tambah Proyek" [ref=e156] [cursor=pointer]:
+                  - /url: /admin/project/add/softworks/1
+          - generic [ref=e157]:
+            - generic [ref=e158]: Bidang Keahlian
+            - paragraph [ref=e159]: Satu per baris
+            - textbox "Bidang Keahlian" [ref=e160]: Creative Coding Computer Vision Augmented Reality Generative Art Interactive Installation Real-Time Graphics Machine Learning Web & Mobile Apps
+          - generic [ref=e161]:
+            - button "Simpan Perubahan" [ref=e162] [cursor=pointer]
+            - link "Batal" [ref=e163] [cursor=pointer]:
+              - /url: /admin/dashboard
+        - generic [ref=e166]:
+          - generic [ref=e167]: Preview Halaman
+          - generic [ref=e168]: Custom Software & Creative Technology
+          - generic [ref=e169]: Platform digital kustom untuk konteks yang tidak bisa dipenuhi dari rak — pameran, panggung interaktif, dan instalasi yang menuntut solusi bentukan khusus.
+          - generic [ref=e170]:
+            - strong [ref=e171]: 2 Kolom
+            - text: ·
+            - strong [ref=e172]: 12 Proyek
+            - text: ·
+            - strong [ref=e173]: 8 Keahlian

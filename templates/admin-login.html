@@ -1,16 +1,32 @@
 {{define "title"}}Admin Login &mdash; Umbra{{end}}
-{{define "content"}}
-<section class="form-section">
-  <div class="form-card">
-    <h1>Admin Login</h1>
-    {{if .Error}}<p class="form-desc" style="color:#ef4444;">{{.Error}}</p>{{end}}
-    <form action="/admin" method="post">
-      <div class="field">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required />
-      </div>
-      <input type="submit" value="Masuk" />
-    </form>
+{{define "body-class"}} admin-login-page{{end}}
+{{define "main"}}
+<div class="admin-login-card">
+  <div class="admin-login-logo">
+    <div class="admin-login-logo-text">CMS Umbra</div>
+    <div class="admin-login-logo-sub">Masuk ke panel administrasi</div>
   </div>
-</section>
+
+  <div class="admin-login-error{{if .Error}} show{{end}}{{if .Error}} shake{{end}}">
+    <span>✕</span>
+    <span>{{if .Error}}{{.Error}}{{else}}Password yang Anda masukkan salah.{{end}}</span>
+  </div>
+
+  <form action="/admin" method="post">
+    <div class="admin-login-field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required autofocus{{if .Error}} class="error"{{end}} />
+    </div>
+    <button type="submit" class="admin-login-submit" id="login-btn">
+      <span class="btn-text">Masuk</span>
+      <span class="spinner"></span>
+    </button>
+  </form>
+</div>
+
+<script>
+document.getElementById('login-btn')?.addEventListener('click', function() {
+  this.classList.add('loading');
+});
+</script>
 {{end}}

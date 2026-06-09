@@ -1,0 +1,107 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: U
+      - generic [ref=e5]: CMS Umbra
+    - navigation [ref=e6]:
+      - link "📊 Dashboard" [ref=e7] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - generic [ref=e8]: 📊
+        - generic [ref=e9]: Dashboard
+      - link "🖼 Media" [ref=e10] [cursor=pointer]:
+        - /url: /admin/images
+        - generic [ref=e11]: 🖼
+        - generic [ref=e12]: Media
+      - generic [ref=e13]: Divisi
+      - link "› Umbra Creative Softworks" [ref=e14] [cursor=pointer]:
+        - /url: /admin/division/softworks
+        - generic [ref=e15]: ›
+        - generic [ref=e16]: Umbra Creative Softworks
+      - link "› Umbra Suara" [ref=e17] [cursor=pointer]:
+        - /url: /admin/division/suara
+        - generic [ref=e18]: ›
+        - generic [ref=e19]: Umbra Suara
+      - link "› Penumbra" [ref=e20] [cursor=pointer]:
+        - /url: /admin/division/penumbra
+        - generic [ref=e21]: ›
+        - generic [ref=e22]: Penumbra
+    - generic [ref=e23]:
+      - link "↗ Lihat Situs" [ref=e24] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e25]: ↗
+        - generic [ref=e26]: Lihat Situs
+      - button "◀" [ref=e27] [cursor=pointer]
+  - banner [ref=e28]:
+    - generic [ref=e29]:
+      - link "Beranda" [ref=e30] [cursor=pointer]:
+        - /url: /admin/dashboard
+      - generic [ref=e31]: /
+      - link "Dashboard" [ref=e32] [cursor=pointer]:
+        - /url: /admin/dashboard
+      - generic [ref=e33]: /
+      - link "Divisi" [ref=e34] [cursor=pointer]:
+        - /url: /admin/division/softworks
+      - generic [ref=e35]: /
+      - generic [ref=e36]: KemCerKuy Part 1
+    - link "Keluar" [ref=e38] [cursor=pointer]:
+      - /url: /admin/logout
+  - main [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - heading "Edit Proyek" [level=1] [ref=e42]
+        - link "← Kembali" [ref=e43] [cursor=pointer]:
+          - /url: /admin/division/softworks
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: Tahun
+              - textbox "Tahun" [ref=e49]: "2024"
+            - generic [ref=e50]:
+              - generic [ref=e51]: Klien / Organisasi
+              - textbox "Klien / Organisasi" [ref=e52]: Vikri & My Magic Friend
+          - generic [ref=e53]:
+            - generic [ref=e54]: Nama Proyek
+            - textbox "Nama Proyek" [ref=e55]: KemCerKuy Part 1
+          - generic [ref=e56]:
+            - generic [ref=e57]: Subjudul
+            - textbox "Subjudul" [ref=e58]: Interactive Binaural Audio & Projection Mapping
+          - generic [ref=e59]:
+            - generic [ref=e60]: Deskripsi (Markdown)
+            - textbox "Deskripsi (Markdown)" [ref=e61]: "**KemCerKuy Part 1** adalah instalasi interaktif yang menggabungkan binaural audio dan projection mapping, dipersembahkan untuk pertunjukan Vikri & My Magic Friend."
+          - generic [ref=e62]:
+            - generic [ref=e63]: Deskripsi Teknis
+            - textbox "Deskripsi Teknis" [ref=e64]
+          - generic [ref=e65]:
+            - generic [ref=e66]: Tabel Teknis
+            - paragraph [ref=e67]:
+              - text: "Satu baris:"
+              - code [ref=e68]: "Label: Value"
+            - textbox [ref=e69]
+          - generic [ref=e70]:
+            - generic [ref=e71]: Galeri
+            - paragraph [ref=e72]:
+              - text: "Format:"
+              - code [ref=e73]: image|URL|alt
+              - text: atau
+              - code [ref=e74]: video|URL|judul
+              - text: ", satu per baris"
+            - textbox [ref=e75]
+          - generic [ref=e76]:
+            - button "Simpan Perubahan" [ref=e77] [cursor=pointer]
+            - link "Batal" [ref=e78] [cursor=pointer]:
+              - /url: /admin/division/softworks
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - generic [ref=e81]: Gambar Proyek
+            - generic [ref=e83]:
+              - generic [ref=e84]: Gambar saat ini
+              - generic [ref=e85]:
+                - button "Pilih" [ref=e86] [cursor=pointer]
+                - button "Hapus" [ref=e87] [cursor=pointer]
+            - textbox "atau URL manual" [ref=e88]: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=160&h=160&fit=crop&auto=format
+          - generic [ref=e90]:
+            - generic [ref=e91]: "2024"
+            - generic [ref=e92]: KemCerKuy Part 1
+            - generic [ref=e93]: Vikri & My Magic Friend
+            - generic [ref=e94]: Interactive Binaural Audio & Projection Mapping

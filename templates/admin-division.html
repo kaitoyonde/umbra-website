@@ -1,74 +1,131 @@
 {{define "title"}}Edit {{.Division.Name}} &mdash; CMS Umbra{{end}}
+{{define "breadcrumbs"}}<span class="separator">/</span><a href="/admin/dashboard">Dashboard</a><span class="separator">/</span><span class="current">{{.Division.Name}}</span>{{end}}
 {{define "content"}}
 <section>
-  <div class="container">
-    <a href="/admin/dashboard" class="admin-back">&larr; Dashboard</a>
-    <span class="section-label" style="margin-top:1rem;">Edit Divisi</span>
-    <h1 class="section-title">{{.Division.Name}}</h1>
+  <div class="admin-section-header">
+    <h1 class="admin-section-title">{{.Division.Name}}</h1>
+    <a href="{{.Division.Route}}" class="btn btn-ghost btn-sm" target="_blank">Lihat Halaman</a>
   </div>
-</section>
 
-<section>
-  <div class="container">
-    <form action="/admin/division/{{.Division.Slug}}" method="post" class="cms-form">
-      <div class="field">
-        <label for="description">Deskripsi</label>
-        <textarea id="description" name="description" rows="4">{{.Division.Description}}</textarea>
+  <form action="/admin/division/{{.Division.Slug}}" method="post" class="admin-form-two-col">
+    {{/* LEFT COLUMN — Fields */}}
+    <div class="admin-form-left">
+      {{/* Description */}}
+      <div class="admin-form-row">
+        <label class="admin-form-label" for="description">Deskripsi</label>
+        <textarea class="admin-form-textarea" id="description" name="description" rows="3">{{.Division.Description}}</textarea>
       </div>
-      <div class="field">
-        <label for="banner_title">Judul Banner</label>
-        <input type="text" id="banner_title" name="banner_title" value="{{.Division.BannerTitle}}" />
-      </div>
-      <div class="field">
-        <label for="banner_subtitle">Subjudul Banner</label>
-        <input type="text" id="banner_subtitle" name="banner_subtitle" value="{{.Division.BannerSubtitle}}" />
-      </div>
-      <div class="field">
-        <label for="banner_image">Gambar Banner</label>
-        {{if .Images}}
-        <div class="img-selector">
-          {{range .Images}}
-          <label class="img-option{{if eq $.Division.BannerImageID .ID}} selected{{end}}">
-            <input type="radio" name="banner_image_id" value="{{.ID}}"{{if eq $.Division.BannerImageID .ID}} checked{{end}} />
-            <img src="{{.URL}}" alt="" loading="lazy" />
-            <span class="img-option-name">{{.Name}}</span>
-          </label>
-          {{end}}
-          <label class="img-option{{if not .Division.BannerImageID}} selected{{end}}">
-            <input type="radio" name="banner_image_id" value=""{{if not .Division.BannerImageID}} checked{{end}} />
-            <span class="img-option-name">Manual URL</span>
-          </label>
+
+      {{/* Banner */}}
+      <div class="admin-form-row">
+        <label class="admin-form-label">Banner</label>
+        <div class="admin-form-row" style="gap:4px;">
+          <label class="admin-form-label" for="banner_title" style="font-size:0.75rem;color:var(--admin-text-dim);">Judul</label>
+          <input class="admin-form-input" type="text" id="banner_title" name="banner_title" value="{{.Division.BannerTitle}}" />
         </div>
-        {{end}}
-        <input type="text" id="banner_image" name="banner_image" value="{{.Division.BannerImage}}" placeholder="atau masukkan URL manual" style="margin-top:0.5rem;" />
+        <div class="admin-form-row" style="gap:4px;margin-top:8px;">
+          <label class="admin-form-label" for="banner_subtitle" style="font-size:0.75rem;color:var(--admin-text-dim);">Subjudul</label>
+          <input class="admin-form-input" type="text" id="banner_subtitle" name="banner_subtitle" value="{{.Division.BannerSubtitle}}" />
+        </div>
+
+        {{/* Current banner preview */}}
+        <div class="admin-image-field {{if not .Division.BannerImage}}empty{{end}}" id="banner-preview">
+          {{if .Division.BannerImage}}
+          <img class="admin-image-field-thumb" src="{{.Division.BannerImage}}" alt="" id="banner-preview-img" />
+          <div class="admin-image-field-info">
+            <div class="admin-image-field-name" id="banner-preview-name">Banner saat ini</div>
+            <div class="admin-image-field-actions">
+              <button type="button" class="btn btn-ghost btn-sm" onclick="Admin.ImagePicker.open({
+                images: {{.Images | json}},
+                selectedId: '{{.Division.BannerImageID}}',
+                onSelect: function(img, refresh) {
+                  if (refresh) { location.reload(); return; }
+                  if (img) {
+                    document.getElementById('banner_image_id').value = img.id;
+                    document.getElementById('banner_image').value = '';
+                    document.getElementById('banner-preview-img').src = img.url;
+                    document.getElementById('banner-preview-name').textContent = img.name;
+                    document.getElementById('banner-preview').classList.remove('empty');
+                  }
+                }
+              })">Pilih dari Pustaka</button>
+              <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('banner_image').value='';document.getElementById('banner_image_id').value='';document.getElementById('banner-preview').classList.add('empty');document.getElementById('banner-preview-img').src='';">Hapus</button>
+            </div>
+          </div>
+          {{else}}
+          <div class="admin-image-field-placeholder">Belum ada banner</div>
+          {{end}}
+        </div>
+        <input type="hidden" id="banner_image_id" name="banner_image_id" value="{{.Division.BannerImageID}}" />
+        <input type="text" class="admin-form-input" id="banner_image" name="banner_image" value="{{.Division.BannerImage}}" placeholder="atau URL manual" style="margin-top:8px;" />
       </div>
-      <div class="field">
-        <label>Kolom Portofolio</label>
+
+      {{/* Portfolio Columns */}}
+      <div class="admin-form-row">
+        <label class="admin-form-label">Kolom Portofolio</label>
         {{range $ci, $col := .Division.PortfolioColumns}}
-        <div class="admin-col-box">
-          <label for="col_title_{{$ci}}" class="admin-col-label">Judul Kolom</label>
-          <input type="text" id="col_title_{{$ci}}" name="col_title_{{$ci}}" value="{{$col.Title}}" style="margin-bottom:0.5rem;" />
-          <div class="admin-col-label" style="margin-bottom:0.3rem;">Proyek ({{len $col.Projects}}):</div>
-          {{range $col.Projects}}
-          <div class="admin-project-row">
-            <span class="admin-project-name">{{.Year}} &mdash; {{.Name}}</span>
-            <a href="/admin/project/edit/{{.ID}}" class="nav-btn admin-btn-sm">Edit</a>
-            <a href="/admin/project/delete/{{.ID}}" class="nav-btn admin-btn-sm admin-btn-danger" onclick="return confirm('Hapus proyek ini?')">Hapus</a>
+        <div style="background:var(--admin-surface-2);border:1px solid var(--admin-border);border-radius:var(--admin-radius);padding:16px;margin-bottom:12px;">
+          <div class="admin-form-row" style="gap:4px;">
+            <label class="admin-form-label" for="col_title_{{$ci}}" style="font-size:0.75rem;color:var(--admin-text-dim);">Judul Kolom</label>
+            <input class="admin-form-input" type="text" id="col_title_{{$ci}}" name="col_title_{{$ci}}" value="{{$col.Title}}" />
           </div>
-          {{end}}
-          <div class="admin-add-link">
-            <a href="/admin/project/add/{{$.Division.Slug}}/{{$ci}}" class="nav-btn admin-btn-sm">+ Tambah Proyek</a>
+          <div style="margin-top:12px;">
+            <div style="font-size:0.75rem;color:var(--admin-text-dim);font-weight:600;margin-bottom:8px;">Proyek ({{len $col.Projects}})</div>
+            <div class="admin-project-cards">
+              {{range $col.Projects}}
+              <div class="admin-project-card">
+                <div class="admin-project-card-info">
+                  <div class="admin-project-card-title">{{.Year}} &mdash; {{.Name}}</div>
+                  <div class="admin-project-card-sub">{{.Client}}</div>
+                </div>
+                <div class="admin-project-card-actions">
+                  <a href="/admin/project/edit/{{.ID}}" class="btn btn-ghost btn-sm">Edit</a>
+                  <a href="/admin/project/delete/{{.ID}}" class="btn btn-danger btn-sm" data-confirm="Hapus proyek {{.Name}}?">Hapus</a>
+                </div>
+              </div>
+              {{end}}
+            </div>
+            <a href="/admin/project/add/{{$.Division.Slug}}/{{$ci}}" class="btn btn-ghost btn-sm" style="margin-top:8px;">+ Tambah Proyek</a>
           </div>
         </div>
         {{end}}
       </div>
-      <div class="field">
-        <label for="skills">Bidang Keahlian (satu per baris)</label>
-        <textarea id="skills" name="skills" rows="6">{{range .Division.Skills}}{{.}}
+
+      {{/* Skills */}}
+      <div class="admin-form-row">
+        <label class="admin-form-label" for="skills">Bidang Keahlian</label>
+        <p class="admin-form-desc">Satu per baris</p>
+        <textarea class="admin-form-textarea" id="skills" name="skills" rows="5" style="min-height:120px;">{{range .Division.Skills}}{{.}}
 {{end}}</textarea>
       </div>
-      <input type="submit" value="Simpan Perubahan" />
-    </form>
-  </div>
+
+      <div style="display:flex;gap:12px;">
+        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+        <a href="/admin/dashboard" class="btn btn-ghost">Batal</a>
+      </div>
+    </div>
+
+    {{/* RIGHT COLUMN — Preview */}}
+    <div class="admin-form-right">
+      <div class="admin-preview-card">
+        {{if .Division.BannerImage}}
+        <img class="admin-preview-card-img" src="{{.Division.BannerImage}}" alt="" />
+        {{else}}
+        <div class="admin-preview-card-placeholder">🖼</div>
+        {{end}}
+        <div class="admin-preview-card-body">
+          <div class="admin-preview-card-year">Preview Halaman</div>
+          <div class="admin-preview-card-name">{{.Division.BannerTitle}}</div>
+          <div class="admin-preview-card-client">{{.Division.BannerSubtitle}}</div>
+          <div class="admin-preview-card-desc">
+            <strong>{{len .Division.PortfolioColumns}} Kolom</strong> · 
+            {{$tc := 0}}{{range .Division.PortfolioColumns}}{{$tc = add $tc (len .Projects)}}{{end}}
+            <strong>{{$tc}} Proyek</strong> · 
+            <strong>{{len .Division.Skills}} Keahlian</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 </section>
 {{end}}

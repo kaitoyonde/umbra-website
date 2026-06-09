@@ -1,0 +1,257 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Umbra Jaya Angkasa" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Umbra Jaya Angkasa" [ref=e5]
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Beranda" [ref=e8] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e9]:
+          - link "Creative Softworks" [ref=e10] [cursor=pointer]:
+            - /url: /UmbraCreativeSoftworks
+        - listitem [ref=e11]:
+          - link "Umbra Suara" [ref=e12] [cursor=pointer]:
+            - /url: /UmbraSuara
+        - listitem [ref=e13]:
+          - link "Penumbra" [ref=e14] [cursor=pointer]:
+            - /url: /Penumbra
+        - listitem [ref=e15]:
+          - link "Hubungi Kami" [ref=e16] [cursor=pointer]:
+            - /url: https://wa.me/6281807988102
+  - generic [ref=e17]:
+    - img "Umbra Creative Softworks" [ref=e18]
+    - generic [ref=e20]:
+      - heading "Custom Software & Creative Technology" [level=2] [ref=e21]
+      - paragraph [ref=e22]: Platform digital kustom untuk konteks yang tidak bisa dipenuhi dari rak — pameran, panggung interaktif, dan instalasi yang menuntut solusi bentukan khusus.
+  - generic [ref=e24]:
+    - generic [ref=e25]: Divisi
+    - heading "Umbra Creative Softworks" [level=1] [ref=e26]
+    - paragraph [ref=e27]: Perangkat lunak untuk konteks yang tidak bisa dipenuhi dari rak eceran. Tur galeri virtual 360°, sistem kendali proyeksi mapping multi-proyektor, platform AR try-on untuk fashion — seluruh proyek lahir dari kebutuhan spesifik klien, dikerjakan dengan takaran yang sama antara logika rekayasa dan naluri artistik.
+  - generic [ref=e29]:
+    - generic [ref=e30]: Klien
+    - heading "Trusted By" [level=1] [ref=e31]
+    - generic [ref=e32]:
+      - img "Sampoerna" [ref=e33]
+      - img "Pertamina" [ref=e34]
+      - img "Danantara" [ref=e35]
+      - img "Streems" [ref=e36]
+      - img "Kisruh" [ref=e37]
+      - img "Agak Laen Team" [ref=e38]
+      - img "Rockesroll" [ref=e39]
+      - img "Rock in Rain" [ref=e40]
+      - img "Hashtag" [ref=e41]
+      - img "Vikri & My Magic Friend" [ref=e42]
+      - img "Raddict.id" [ref=e43]
+      - img "RRI" [ref=e44]
+  - generic [ref=e46]:
+    - generic [ref=e47]: Portofolio
+    - heading "Proyek Terpilih" [level=1] [ref=e48]
+    - generic [ref=e49]:
+      - link "KemCerKuy Part 1 2024 KemCerKuy Part 1 Interactive Binaural Audio & Projection Mapping Vikri & My Magic Friend" [ref=e50] [cursor=pointer]:
+        - /url: /project/sw1
+        - img "KemCerKuy Part 1" [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e54]: "2024"
+          - generic [ref=e55]: KemCerKuy Part 1
+          - generic [ref=e56]: Interactive Binaural Audio & Projection Mapping
+          - generic [ref=e57]: Vikri & My Magic Friend
+      - link "Sunset Dikebun Cibodas 2024 Sunset Dikebun Cibodas Interactive Wide Beam Binaural Audio Mapping Vikri & My Magic Friend" [ref=e58] [cursor=pointer]:
+        - /url: /project/sw2
+        - img "Sunset Dikebun Cibodas" [ref=e60]
+        - generic [ref=e61]:
+          - generic [ref=e62]: "2024"
+          - generic [ref=e63]: Sunset Dikebun Cibodas
+          - generic [ref=e64]: Interactive Wide Beam Binaural Audio Mapping
+          - generic [ref=e65]: Vikri & My Magic Friend
+      - link "Sunset Dikebun Kebun Raya 2025 Sunset Dikebun Kebun Raya Interactive Binaural Audio Mapping Vikri & My Magic Friend" [ref=e66] [cursor=pointer]:
+        - /url: /project/sw3
+        - img "Sunset Dikebun Kebun Raya" [ref=e68]
+        - generic [ref=e69]:
+          - generic [ref=e70]: "2025"
+          - generic [ref=e71]: Sunset Dikebun Kebun Raya
+          - generic [ref=e72]: Interactive Binaural Audio Mapping
+          - generic [ref=e73]: Vikri & My Magic Friend
+      - link "Cipete Creative District 2024 Cipete Creative District Live Edge-Generation AI Imagery Vikri & My Magic Friend" [ref=e74] [cursor=pointer]:
+        - /url: /project/sw4
+        - img "Cipete Creative District" [ref=e76]
+        - generic [ref=e77]:
+          - generic [ref=e78]: "2024"
+          - generic [ref=e79]: Cipete Creative District
+          - generic [ref=e80]: Live Edge-Generation AI Imagery
+          - generic [ref=e81]: Vikri & My Magic Friend
+      - link "StreemsRadio 2023 StreemsRadio Public Interactive Chat System for Radio Station Streems" [ref=e82] [cursor=pointer]:
+        - /url: /project/sw5
+        - img "StreemsRadio" [ref=e84]
+        - generic [ref=e85]:
+          - generic [ref=e86]: "2023"
+          - generic [ref=e87]: StreemsRadio
+          - generic [ref=e88]: Public Interactive Chat System for Radio Station
+          - generic [ref=e89]: Streems
+      - link "Organic Chemistry Class 2023 Organic Chemistry Class Sub Atomic Nuclear Interactive Education System Certain University" [ref=e90] [cursor=pointer]:
+        - /url: /project/sw6
+        - img "Organic Chemistry Class" [ref=e92]
+        - generic [ref=e93]:
+          - generic [ref=e94]: "2023"
+          - generic [ref=e95]: Organic Chemistry Class
+          - generic [ref=e96]: Sub Atomic Nuclear Interactive Education System
+          - generic [ref=e97]: Certain University
+      - link "Bilateral Business Meeting 2023 Bilateral Business Meeting AI Live Transcription Engine Certain International Institution" [ref=e98] [cursor=pointer]:
+        - /url: /project/sw7
+        - img "Bilateral Business Meeting" [ref=e100]
+        - generic [ref=e101]:
+          - generic [ref=e102]: "2023"
+          - generic [ref=e103]: Bilateral Business Meeting
+          - generic [ref=e104]: AI Live Transcription Engine
+          - generic [ref=e105]: Certain International Institution
+      - link "Ngumpul Skena-nya 2023 Ngumpul Skena-nya Interactive Guest Driven Art Installation Raddict.id" [ref=e106] [cursor=pointer]:
+        - /url: /project/sw8
+        - img "Ngumpul Skena-nya" [ref=e108]
+        - generic [ref=e109]:
+          - generic [ref=e110]: "2023"
+          - generic [ref=e111]: Ngumpul Skena-nya
+          - generic [ref=e112]: Interactive Guest Driven Art Installation
+          - generic [ref=e113]: Raddict.id
+      - link "Selatan Di Kota Hujan 2024 Selatan Di Kota Hujan Interactive Ticket-Synced Generative Stage Canvas Ruang Rampai" [ref=e114] [cursor=pointer]:
+        - /url: /project/sw9
+        - img "Selatan Di Kota Hujan" [ref=e116]
+        - generic [ref=e117]:
+          - generic [ref=e118]: "2024"
+          - generic [ref=e119]: Selatan Di Kota Hujan
+          - generic [ref=e120]: Interactive Ticket-Synced Generative Stage Canvas
+          - generic [ref=e121]: Ruang Rampai
+      - link "\"Agak Laen\" Promotion Event 2024 \"Agak Laen\" Promotion Event Live Guest-Message Stage LED Screen Agak Laen Team, Raddict.id" [ref=e122] [cursor=pointer]:
+        - /url: /project/sw10
+        - img "\"Agak Laen\" Promotion Event" [ref=e124]
+        - generic [ref=e125]:
+          - generic [ref=e126]: "2024"
+          - generic [ref=e127]: "\"Agak Laen\" Promotion Event"
+          - generic [ref=e128]: Live Guest-Message Stage LED Screen
+          - generic [ref=e129]: Agak Laen Team, Raddict.id
+      - link "Bersoekaria Rest Area 2024 Bersoekaria Rest Area Live Guest-Greeting LED Screen Sampoerna, Raddict.id" [ref=e130] [cursor=pointer]:
+        - /url: /project/sw11
+        - img "Bersoekaria Rest Area" [ref=e132]
+        - generic [ref=e133]:
+          - generic [ref=e134]: "2024"
+          - generic [ref=e135]: Bersoekaria Rest Area
+          - generic [ref=e136]: Live Guest-Greeting LED Screen
+          - generic [ref=e137]: Sampoerna, Raddict.id
+      - link "Hajatan Warga Lokal 2024 Hajatan Warga Lokal Interactive Games Installation Raddict.id" [ref=e138] [cursor=pointer]:
+        - /url: /project/sw12
+        - img "Hajatan Warga Lokal" [ref=e140]
+        - generic [ref=e141]:
+          - generic [ref=e142]: "2024"
+          - generic [ref=e143]: Hajatan Warga Lokal
+          - generic [ref=e144]: Interactive Games Installation
+          - generic [ref=e145]: Raddict.id
+  - generic [ref=e147]:
+    - generic [ref=e148]: Layanan
+    - heading "Bidang Keahlian" [level=1] [ref=e149]
+    - generic [ref=e150]:
+      - generic [ref=e151]: Creative Coding
+      - generic [ref=e152]: Computer Vision
+      - generic [ref=e153]: Augmented Reality
+      - generic [ref=e154]: Generative Art
+      - generic [ref=e155]: Interactive Installation
+      - generic [ref=e156]: Real-Time Graphics
+      - generic [ref=e157]: Machine Learning
+      - generic [ref=e158]: Web & Mobile Apps
+  - generic [ref=e160]:
+    - generic [ref=e161]: Estimator Proyek
+    - heading "Kalkulator Instalasi Interaktif" [level=1] [ref=e162]
+    - paragraph [ref=e163]: Pilih parameter teknis sistem interaktif Anda untuk mendapatkan estimasi pengerjaan dari software engine kami.
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - generic [ref=e167]: 1. Tipe Interaksi & Software Engine
+          - combobox "1. Tipe Interaksi & Software Engine" [ref=e169] [cursor=pointer]:
+            - option "Single-Input System & Screen Sync (Layar Sentuh/Tablet ke LED/Screen)" [selected]
+            - option "Environmental Mapping & Real-Time Generative Engine (Projection/Audio-Reactive)"
+            - option "Multi-Sensory Tracking & Computer Vision (Depth Camera/LIDAR/Sensor Fisik)"
+          - paragraph [ref=e170]: Menentukan logika pemrosesan data input dan transmisi visual real-time di lokasi.
+        - generic [ref=e171]:
+          - generic [ref=e172]: 2. Kompleksitas Visual & Logika
+          - combobox "2. Kompleksitas Visual & Logika" [ref=e174] [cursor=pointer]:
+            - option "Standard Integration (Menggunakan Core Engine Umbra + Branding Logo Anda)" [selected]
+            - option "Bespoke Creative Engineering (Aset Grafis 2D/3D dari Nol & Simulasi Gerak Baru)"
+          - paragraph [ref=e175]: Kebutuhan aset visual orisinal, manipulasi partikel rumit, atau pemrograman logika interaksi baru.
+        - generic [ref=e176]:
+          - generic [ref=e177]: 3. Skala Acara & Standby
+          - combobox "3. Skala Acara & Standby" [ref=e179] [cursor=pointer]:
+            - option "Event Regional / Privat (Hingga 4 Jam Standby Hari-H)" [selected]
+            - option "Event Korporat Nasional / Grand Launching (Full Day / 16 Jam Standby Hari-H)"
+          - paragraph [ref=e180]: Menentukan kebutuhan redundansi sistem (backup server) serta durasi standby tim teknis di lokasi.
+        - generic [ref=e181]:
+          - generic [ref=e183]:
+            - text: "4. Durasi Acara (Jam):"
+            - strong [ref=e184]: 16 Jam (0.7 Hari)
+          - generic [ref=e185]:
+            - slider [ref=e186]: "16"
+            - textbox [ref=e187]: "16"
+          - generic [ref=e188]:
+            - generic [ref=e189]: 1 Jam
+            - generic [ref=e190]: 72 Jam (3 Hari)
+          - paragraph [ref=e191]: Tentukan total durasi operasional acara. Anda dapat mengetikkan jam secara manual di kotak sebelah kanan.
+        - generic [ref=e192]:
+          - generic [ref=e193]: 5. Integrasi Fitur AI (Opsional)
+          - combobox "5. Integrasi Fitur AI (Opsional)" [ref=e195] [cursor=pointer]:
+            - option "Tanpa Fitur AI" [selected]
+            - option "AI Percakapan & Asisten Pintar (Smart Chat/Voice)"
+            - option "AI Generator Foto & Seni Gambar (Real-time Photo/Art)"
+            - option "AI Generator Animasi & Video Pendek (Real-time Motion/Video)"
+          - paragraph [ref=e196]: Menghubungkan instalasi ke jaringan neural cloud untuk memproses input kreatif secara dinamis.
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - generic [ref=e199]: 6. Butuh Bantuan Sewa Hardware?
+            - generic [ref=e200] [cursor=pointer]:
+              - checkbox
+          - generic [ref=e202]:
+            - generic [ref=e203]: Biaya Sewa Hardware Vendor AV (IDR)
+            - textbox "Biaya Sewa Hardware Vendor AV (IDR)" [ref=e204]: "0"
+            - paragraph [ref=e205]: Masukkan total anggaran sewa hardware dari vendor AV pilihan Anda agar dapat kami kelola dan uji secara menyeluruh.
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - generic [ref=e209]: Total Estimasi Proyek
+          - generic [ref=e210]: Rp 7.405.420
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]: Pengembangan Software
+            - generic [ref=e214]: Rp 2.166.000
+          - generic [ref=e215]:
+            - generic [ref=e216]: Kalibrasi Lapangan
+            - generic [ref=e217]: Rp 499.800
+          - generic [ref=e218]:
+            - generic [ref=e219]: Standby Acara Hari-H
+            - generic [ref=e220]: Rp 566.400
+          - generic [ref=e221]:
+            - generic [ref=e222]: Sistem Keandalan & Penjaminan Mutu
+            - generic [ref=e223]: Rp 673.220
+          - generic [ref=e224]:
+            - generic [ref=e225]: Kebutuhan Tim Tambahan (14 Orang)
+            - generic [ref=e226]: Rp 3.500.000
+        - link "Diskusikan Konfigurasi Ini dengan Umbra" [ref=e227] [cursor=pointer]:
+          - /url: https://wa.me/6281807988102?text=Halo%20Umbra%2C%20saya%20ingin%20mendiskusikan%20instalasi%20interaktif%3A%0A%0A%E2%80%A2%20Tipe%20Interaksi%3A%20Single-Input%20System%20%26%20Screen%20Sync%20(Layar%20Sentuh%2FTablet%20ke%20LED%2FScreen)%0A%E2%80%A2%20Kompleksitas%20Visual%3A%20Standard%20Integration%20(Menggunakan%20Core%20Engine%20Umbra%20%2B%20Branding%20Logo%20Anda)%0A%E2%80%A2%20Skala%20Acara%3A%20Event%20Regional%20%2F%20Privat%20(Hingga%204%20Jam%20Standby%20Hari-H)%0A%E2%80%A2%20Durasi%20Acara%3A%2016%20Jam%0A%E2%80%A2%20Fitur%20AI%3A%20Tanpa%20Fitur%20AI%0A%E2%80%A2%20Sewa%20Hardware%3A%20Tidak%0A%0ATotal%20Estimasi%3A%20Rp%207.405.420
+  - contentinfo [ref=e228]:
+    - generic [ref=e229]:
+      - list [ref=e230]:
+        - listitem [ref=e231]:
+          - link "Beranda" [ref=e232] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e233]:
+          - link "Creative Softworks" [ref=e234] [cursor=pointer]:
+            - /url: /UmbraCreativeSoftworks
+        - listitem [ref=e235]:
+          - link "Umbra Suara" [ref=e236] [cursor=pointer]:
+            - /url: /UmbraSuara
+        - listitem [ref=e237]:
+          - link "Rumah Ilmu Penumbra" [ref=e238] [cursor=pointer]:
+            - /url: /Penumbra
+        - listitem [ref=e239]:
+          - link "Hubungi Kami" [ref=e240] [cursor=pointer]:
+            - /url: https://wa.me/6281807988102
+      - paragraph [ref=e241]:
+        - text: "Korespondensi:"
+        - link "kontak@umbrajayaangkasa.com" [ref=e242] [cursor=pointer]:
+          - /url: mailto:kontak@umbrajayaangkasa.com
+      - paragraph [ref=e243]: © 2026 Umbra. Hak Cipta Dilindungi.

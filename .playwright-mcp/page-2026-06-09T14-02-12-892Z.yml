@@ -1,0 +1,222 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Umbra Jaya Angkasa" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Umbra Jaya Angkasa" [ref=e5]
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Beranda" [ref=e8] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e9]:
+          - link "Creative Softworks" [ref=e10] [cursor=pointer]:
+            - /url: /UmbraCreativeSoftworks
+        - listitem [ref=e11]:
+          - link "Umbra Suara" [ref=e12] [cursor=pointer]:
+            - /url: /UmbraSuara
+        - listitem [ref=e13]:
+          - link "Penumbra" [ref=e14] [cursor=pointer]:
+            - /url: /Penumbra
+        - listitem [ref=e15]:
+          - link "Hubungi Kami" [ref=e16] [cursor=pointer]:
+            - /url: https://wa.me/6281807988102
+  - generic [ref=e17]:
+    - img "Umbra Suara" [ref=e18]
+    - generic [ref=e20]:
+      - heading "Rekayasa Suara & Solusi Akustik" [level=2] [ref=e21]
+      - paragraph [ref=e22]: Dari produksi musik dan foley hingga konsultasi akustik arsitektural — setiap desibel melalui perhitungan, bukan perkiraan.
+  - generic [ref=e24]:
+    - generic [ref=e25]: Divisi
+    - heading "Umbra Suara" [level=1] [ref=e26]
+    - paragraph [ref=e27]: Suara bukan sekadar gelombang. Ia adalah dimensi yang harus dihitung, dipetakan, dan dibentuk berdasarkan karakter unik setiap ruang. Dari produksi musik yang menangkap emosi mentah, foley untuk film yang tidak bisa diambil dari library mana pun, hingga konsultasi akustik untuk ruang monumental seperti masjid dan gedung konser — kami menangani suara dari hulu ke hilir dengan toleransi yang tidak bisa ditawar.
+  - generic [ref=e29]:
+    - generic [ref=e30]: Portofolio
+    - heading "Proyek Terpilih" [level=1] [ref=e31]
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - heading "Songs / Audio" [level=2] [ref=e34]
+        - generic [ref=e35]:
+          - link "Paribastone — \"Grave of Future\" (Single) 2025 Paribastone — \"Grave of Future\" (Single) Music Producing · Stoner Rock/Metal · Bogor" [ref=e36] [cursor=pointer]:
+            - /url: /project/su1
+            - img "Paribastone — \"Grave of Future\" (Single)" [ref=e37]
+            - generic [ref=e38]:
+              - generic [ref=e39]: "2025"
+              - generic [ref=e40]: Paribastone — "Grave of Future" (Single)
+              - generic [ref=e41]: Music Producing · Stoner Rock/Metal · Bogor
+          - link "Tono Prance — \"Juru Selamat\" (Single) 2024 Tono Prance — \"Juru Selamat\" (Single) Music Producing · Rock Band · Jakarta" [ref=e42] [cursor=pointer]:
+            - /url: /project/su2
+            - img "Tono Prance — \"Juru Selamat\" (Single)" [ref=e43]
+            - generic [ref=e44]:
+              - generic [ref=e45]: "2024"
+              - generic [ref=e46]: Tono Prance — "Juru Selamat" (Single)
+              - generic [ref=e47]: Music Producing · Rock Band · Jakarta
+          - link "Shroom Eater — \"Gods of The Gaps\" (Album) 2024 Shroom Eater — \"Gods of The Gaps\" (Album) Music Producing · Stoner Rock · Bogor" [ref=e48] [cursor=pointer]:
+            - /url: /project/su3
+            - img "Shroom Eater — \"Gods of The Gaps\" (Album)" [ref=e49]
+            - generic [ref=e50]:
+              - generic [ref=e51]: "2024"
+              - generic [ref=e52]: Shroom Eater — "Gods of The Gaps" (Album)
+              - generic [ref=e53]: Music Producing · Stoner Rock · Bogor
+          - link "Deadnun — \"24\" (Single) 2024 Deadnun — \"24\" (Single) Music Producing · Instrumental Loud Doom · Bandung" [ref=e54] [cursor=pointer]:
+            - /url: /project/su4
+            - img "Deadnun — \"24\" (Single)" [ref=e55]
+            - generic [ref=e56]:
+              - generic [ref=e57]: "2024"
+              - generic [ref=e58]: Deadnun — "24" (Single)
+              - generic [ref=e59]: Music Producing · Instrumental Loud Doom · Bandung
+          - link "Halfless — \"11\" (Single) 2024 Halfless — \"11\" (Single) Music Producing · Ignorant Indie · Bogor" [ref=e60] [cursor=pointer]:
+            - /url: /project/su5
+            - img "Halfless — \"11\" (Single)" [ref=e61]
+            - generic [ref=e62]:
+              - generic [ref=e63]: "2024"
+              - generic [ref=e64]: Halfless — "11" (Single)
+              - generic [ref=e65]: Music Producing · Ignorant Indie · Bogor
+          - link "Iluasi — \"Sampai\" (Album) 2023 Iluasi — \"Sampai\" (Album) Music Producing · Alternative Pop · Bogor" [ref=e66] [cursor=pointer]:
+            - /url: /project/su6
+            - img "Iluasi — \"Sampai\" (Album)" [ref=e67]
+            - generic [ref=e68]:
+              - generic [ref=e69]: "2023"
+              - generic [ref=e70]: Iluasi — "Sampai" (Album)
+              - generic [ref=e71]: Music Producing · Alternative Pop · Bogor
+          - link "Radio Bean — \"It's True\" (Single) 2023 Radio Bean — \"It's True\" (Single) Music Producing · RNB/Funk · Bogor" [ref=e72] [cursor=pointer]:
+            - /url: /project/su7
+            - img "Radio Bean — \"It's True\" (Single)" [ref=e73]
+            - generic [ref=e74]:
+              - generic [ref=e75]: "2023"
+              - generic [ref=e76]: Radio Bean — "It's True" (Single)
+              - generic [ref=e77]: Music Producing · RNB/Funk · Bogor
+      - generic [ref=e78]:
+        - heading "Live Production" [level=2] [ref=e79]
+        - generic [ref=e80]:
+          - link "Streems Radio — Katapel 2023 Streems Radio — Katapel Radio Show" [ref=e81] [cursor=pointer]:
+            - /url: /project/su8
+            - img "Streems Radio — Katapel" [ref=e82]
+            - generic [ref=e83]:
+              - generic [ref=e84]: "2023"
+              - generic [ref=e85]: Streems Radio — Katapel
+              - generic [ref=e86]: Radio Show
+          - link "Vikri & Magic Friends 2023 Vikri & Magic Friends Live Session" [ref=e87] [cursor=pointer]:
+            - /url: /project/su9
+            - img "Vikri & Magic Friends" [ref=e88]
+            - generic [ref=e89]:
+              - generic [ref=e90]: "2023"
+              - generic [ref=e91]: Vikri & Magic Friends
+              - generic [ref=e92]: Live Session
+          - link "On Deck — Sousade & Noise Clvb 2022 On Deck — Sousade & Noise Clvb Event Creator" [ref=e93] [cursor=pointer]:
+            - /url: /project/su10
+            - img "On Deck — Sousade & Noise Clvb" [ref=e94]
+            - generic [ref=e95]:
+              - generic [ref=e96]: "2022"
+              - generic [ref=e97]: On Deck — Sousade & Noise Clvb
+              - generic [ref=e98]: Event Creator
+      - generic [ref=e99]:
+        - heading "Event Collaboration" [level=2] [ref=e100]
+        - generic [ref=e101]:
+          - link "\"The Fish That Lives in Water\" — Feature Film 2024 \"The Fish That Lives in Water\" — Feature Film Equipment Vendor" [ref=e102] [cursor=pointer]:
+            - /url: /project/su11
+            - img "\"The Fish That Lives in Water\" — Feature Film" [ref=e103]
+            - generic [ref=e104]:
+              - generic [ref=e105]: "2024"
+              - generic [ref=e106]: "\"The Fish That Lives in Water\" — Feature Film"
+              - generic [ref=e107]: Equipment Vendor
+          - link "Umbra Suara × Janari Rekords — Every Picture Tells a Story 2023 Umbra Suara × Janari Rekords — Every Picture Tells a Story Kolaborasi" [ref=e108] [cursor=pointer]:
+            - /url: /project/su12
+            - img "Umbra Suara × Janari Rekords — Every Picture Tells a Story" [ref=e109]
+            - generic [ref=e110]:
+              - generic [ref=e111]: "2023"
+              - generic [ref=e112]: Umbra Suara × Janari Rekords — Every Picture Tells a Story
+              - generic [ref=e113]: Kolaborasi
+  - generic [ref=e115]:
+    - generic [ref=e116]: Layanan
+    - heading "Bidang Keahlian" [level=1] [ref=e117]
+    - generic [ref=e118]:
+      - generic [ref=e119]: Sound Design
+      - generic [ref=e120]: Music Production
+      - generic [ref=e121]: Acoustic Consulting
+      - generic [ref=e122]: Spatial Audio
+      - generic [ref=e123]: Foley & ADR
+      - generic [ref=e124]: System Integration
+      - generic [ref=e125]: Room Calibration
+      - generic [ref=e126]: Live Sound Engineering
+  - generic [ref=e128]:
+    - generic [ref=e129]: Estimator
+    - heading "Kalkulator Biaya Produksi" [level=1] [ref=e130]
+    - paragraph [ref=e131]: Pilih jalur produksi yang sesuai dengan kebutuhan proyek Anda. Harga diperbarui secara otomatis.
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - button "Produksi Musik & Rekaman Studio" [ref=e134] [cursor=pointer]
+        - button "Audio Komersial & B2B" [active] [ref=e135] [cursor=pointer]
+      - generic [ref=e207]:
+        - heading "Audio Komersial & Sound Design B2B" [level=3] [ref=e209]
+        - generic [ref=e210]:
+          - generic [ref=e211]:
+            - generic [ref=e212]:
+              - generic [ref=e213]: Tipe Proyek
+              - combobox "Tipe Proyek" [ref=e214] [cursor=pointer]:
+                - option "Audio Bumper / Iklan Pendek Kustom (<1 Menit) — Rp 3.500.000" [selected]
+                - option "Jingle Komersial Standar (30-45 Detik) — Rp 5.000.000"
+                - option "Sound Design & Skor Video Korporat (2-3 Menit) — Rp 10.000.000"
+            - generic [ref=e215]:
+              - generic [ref=e216]: Lisensi & Cakupan Penggunaan
+              - combobox "Lisensi & Cakupan Penggunaan" [ref=e217] [cursor=pointer]:
+                - option "Media Digital Saja (YouTube, Instagram, Website) — 1.0x" [selected]
+                - option "Siaran Nasional (TV, Radio, Bioskop Nasional) — 1.5x"
+                - option "Siaran Global / Pembelian Penuh — 2.0x"
+            - generic [ref=e218]:
+              - generic [ref=e219]:
+                - text: "Jumlah Revisi:"
+                - strong [ref=e220]: "0"
+              - slider [ref=e221] [cursor=pointer]: "0"
+              - generic [ref=e222]:
+                - generic [ref=e223]: "0"
+                - generic [ref=e224]: "10"
+              - generic [ref=e225]: Rp350.000/revisi — Rp450.000/revisi jika Layanan Cepat aktif
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - generic [ref=e228] [cursor=pointer]:
+                - checkbox "Casting & Rekaman Voice-Over Casting, rekam, dan edit Voice-Over Artist profesional +Rp 1.500.000" [ref=e229]
+                - generic [ref=e230]:
+                  - generic [ref=e231]: Casting & Rekaman Voice-Over
+                  - generic [ref=e232]: Casting, rekam, dan edit Voice-Over Artist profesional
+                  - generic [ref=e233]: +Rp 1.500.000
+              - generic [ref=e234] [cursor=pointer]:
+                - checkbox "Layanan Cepat (Selesai 72 Jam) Prioritas pengerjaan kilat +30% + Rp250.000 flat" [ref=e235]
+                - generic [ref=e236]:
+                  - generic [ref=e237]: Layanan Cepat (Selesai 72 Jam)
+                  - generic [ref=e238]: Prioritas pengerjaan kilat
+                  - generic [ref=e239]: +30% + Rp250.000 flat
+            - generic [ref=e240]:
+              - generic [ref=e241]:
+                - generic [ref=e242]: Harga Dasar
+                - generic [ref=e243]: Rp 3.500.000
+              - generic [ref=e244]:
+                - generic [ref=e245]: Pengali Lisensi
+                - generic [ref=e246]: 1.0x
+            - generic [ref=e247]:
+              - generic [ref=e248]: Total Estimasi
+              - generic [ref=e249]: Rp 3.500.000
+            - link "Ajukan Invoice / Proposal Resmi" [ref=e250] [cursor=pointer]:
+              - /url: https://wa.me/6289682723927?text=Halo%20Umbra%2C%20saya%20tertarik%20dengan%20layanan%20audio%20komersial%3A%0A%0A%E2%80%A2%20Tipe%20Proyek%3A%20Audio%20Bumper%20%2F%20Iklan%20Pendek%20Kustom%20(%3C1%20Menit)%20%E2%80%94%20Rp%203.500.000%0A%E2%80%A2%20Lisensi%3A%20Media%20Digital%20Saja%20(YouTube%2C%20Instagram%2C%20Website)%20%E2%80%94%201.0x%0A%E2%80%A2%20Voice-Over%3A%20Tidak%0A%0ATotal%20Estimasi%3A%20Rp%203.500.000
+  - contentinfo [ref=e191]:
+    - generic [ref=e192]:
+      - list [ref=e193]:
+        - listitem [ref=e194]:
+          - link "Beranda" [ref=e195] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e196]:
+          - link "Creative Softworks" [ref=e197] [cursor=pointer]:
+            - /url: /UmbraCreativeSoftworks
+        - listitem [ref=e198]:
+          - link "Umbra Suara" [ref=e199] [cursor=pointer]:
+            - /url: /UmbraSuara
+        - listitem [ref=e200]:
+          - link "Rumah Ilmu Penumbra" [ref=e201] [cursor=pointer]:
+            - /url: /Penumbra
+        - listitem [ref=e202]:
+          - link "Hubungi Kami" [ref=e203] [cursor=pointer]:
+            - /url: https://wa.me/6281807988102
+      - paragraph [ref=e204]:
+        - text: "Korespondensi:"
+        - link "kontak@umbrajayaangkasa.com" [ref=e205] [cursor=pointer]:
+          - /url: mailto:kontak@umbrajayaangkasa.com
+      - paragraph [ref=e206]: © 2026 Umbra. Hak Cipta Dilindungi.
