@@ -19,5 +19,9 @@ Thumbs.db
 .env
 .env.local
 
+# Node (for pm2 wrapper)
+node_modules/
+
 # Build artifacts
 build-errors.log
+*.exe

@@ -1,15 +1,20 @@
 module.exports = {
-    apps: [
-      {
-        name: "go-air-app",
-        script: "~/go/bin/air",            // PM2 executes the 'air' tool
-        interpreter: "none",      // Tells PM2 it's a binary executible, not a JS file
-        merge_logs: true,         // Aggregates standard logs
-        env: {
-          NODE_ENV: "production",
-          // Ensure your system Go paths are accessible by PM2
-          PATH: process.env.PATH + ":" + process.env.GOPATH + "/bin"
-        }
-      }
-    ]
-  };
+  apps: [
+    {
+      name: 'umbra-cms',
+      script: './build-and-run.js',
+
+      // Watch all source — rebuild & restart on any change
+      watch: ['.'],
+      ignore_watch: ['tmp/', '.git', 'node_modules', '.env'],
+      watch_options: { followSymlinks: false },
+      restart_delay: 1000,
+      max_restarts: 10,
+
+      // Env — .env file is loaded by loadEnv() at startup
+      env: {
+        PORT: '8080',
+      },
+    },
+  ],
+};
